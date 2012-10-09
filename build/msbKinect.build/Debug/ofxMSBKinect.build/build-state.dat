@@ -1,0 +1,1772 @@
+TofxMSBKinect
+v7
+r3
+t321574645.311746
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/Info.plist openFrameworks-Info.plist
+cProcessPCH++ /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/main.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/testApp.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxThread.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvColorImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvContourFinder.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/emmintrin.h
+c000000004A119834000000000000EA8F
+t1242667060
+s60047
+i<xmmintrin.h>
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/float.h
+c000000004A1198340000000000001538
+t1242667060
+s5432
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/mm_malloc.h
+c000000004A119834000000000000093D
+t1242667060
+s2365
+i<stdlib.h>
+i<errno.h>
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/mmintrin.h
+c000000004A1198340000000000009260
+t1242667060
+s37472
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004A1198340000000000003197
+t1242667060
+s12695
+i<machine/ansi.h>
+i<sys/_types.h>
+
+N/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/xmmintrin.h
+c000000004A119834000000000000BECA
+t1242667060
+s48842
+i<mmintrin.h>
+i<mm_malloc.h>
+i<emmintrin.h>
+
+N/System/Library/Frameworks/AGL.framework/AGL
+c000000004BD2589F0000000000043820
+t1272076447
+s276512
+
+N/System/Library/Frameworks/AppKit.framework/AppKit
+c000000004CD606210000000002B48610
+t1289094689
+s45385232
+
+N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004A12050E0000000000022140
+t1242694926
+s139584
+
+N/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
+c000000004C46DAC00000000000000477
+t1279711936
+s1143
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004CD6066B00000000004D2720
+t1289094763
+s5056288
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000004C0FDD7E000000000000A5F0
+t1276108158
+s42480
+
+N/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+c000000004C44E75100000000000005FF
+t1279584081
+s1535
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000004CD4F57800000000002181A0
+t1289024888
+s2195872
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004CD606A40000000000781330
+t1289094820
+s7869232
+
+N/System/Library/Frameworks/CoreServices.framework/CoreServices
+c000000004C23F49F0000000000021710
+t1277424799
+s136976
+
+N/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
+c000000004C46BBD80000000000000401
+t1279704024
+s1025
+
+N/System/Library/Frameworks/IOKit.framework/IOKit
+c000000004CD606F8000000000017B260
+t1289094904
+s1552992
+
+N/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
+c0000000049EE83DA0000000000025B59
+t1240368090
+s154457
+
+N/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
+c0000000049EE83DA0000000000003F84
+t1240368090
+s16260
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000004D22BC490000000000043330
+t1294122057
+s275248
+
+N/System/Library/Frameworks/QuickTime.framework/Headers/QuickTime.h
+c000000004A1500B60000000000000659
+t1242890422
+s1625
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c000000004CD605B90000000000783950
+t1289094585
+s7878992
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cv.hpp
+c000000004D6DD65E0000000000004361
+t1299043934
+s17249
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cvcompat.h
+c000000004D6DD65E000000000000A309
+t1299043934
+s41737
+i<string.h>
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cvtypes.h
+c000000004D6DD65E0000000000003259
+t1299043934
+s12889
+i<assert.h>
+i<stdlib.h>
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cvver.h
+c000000004D6DD65E0000000000000979
+t1299043934
+s2425
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cxcore.h
+c000000004D6DD65E0000000000012A6B
+t1299043934
+s76395
+i"ipl.h"
+i"ipl/ipl.h"
+i"cxtypes.h"
+i"cxerror.h"
+i"cvver.h"
+i"cxcore.hpp"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cxcore.hpp
+c000000004D6DD65E000000000000301D
+t1299043934
+s12317
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cxerror.h
+c000000004D6DD65E00000000000022B1
+t1299043934
+s8881
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/libs/opencv/include/cxtypes.h
+c000000004D6DD65E000000000000D3E4
+t1299043934
+s54244
+i<assert.h>
+i<stdlib.h>
+i<string.h>
+i<float.h>
+i<emmintrin.h>
+i<fastmath.h>
+i<mathimf.h>
+i<math.h>
+i<ipl.h>
+i<ipl/ipl.h>
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvBlob.h
+c000000004D6DD660000000000000057E
+t1299043936
+s1406
+i"ofxCvConstants.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvColorImage.h
+c000000004D6DD66000000000000019F7
+t1299043936
+s6647
+i"ofxCvImage.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvConstants.h
+c000000004D6DD40700000000000000DC
+t1299043335
+s220
+i"cv.h"
+i<vector>
+i"ofMain.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvContourFinder.h
+c000000004D6DD6600000000000000822
+t1299043936
+s2082
+i"ofxCvConstants.h"
+i"ofxCvBlob.h"
+i"ofxCvGrayscaleImage.h"
+i<algorithm>
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvFloatImage.h
+c000000004D6DD6600000000000001DD2
+t1299043936
+s7634
+i"ofxCvImage.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.h
+c000000004D6DD6600000000000001C1A
+t1299043936
+s7194
+i"ofxCvImage.h"
+i"ofxCvBlob.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvImage.h
+c000000004D6DD6600000000000001983
+t1299043936
+s6531
+i"ofxCvConstants.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxOpenCv/src/ofxCvShortImage.h
+c000000004D6DD6600000000000001777
+t1299043936
+s6007
+i"ofxCvImage.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxThread/src/ofxThread.h
+c000000004D6DD660000000000000058F
+t1299043936
+s1423
+i"ofConstants.h"
+i<process.h>
+i<pthread.h>
+
+N/Volumes/windows/openFrameworks/addons/ofxVectorMath/src/ofxMatrix3x3.h
+c000000004D6DD6600000000000000AA7
+t1299043936
+s2727
+
+N/Volumes/windows/openFrameworks/addons/ofxVectorMath/src/ofxMatrix4x4.h
+c000000004D6DD66000000000000067E7
+t1299043936
+s26599
+i"ofxVec3f.h"
+i"ofxVec4f.h"
+i"ofxQuaternion.h"
+i<cmath>
+
+N/Volumes/windows/openFrameworks/addons/ofxVectorMath/src/ofxQuaternion.h
+c000000004D6DD660000000000000257B
+t1299043936
+s9595
+i"ofxVec3f.h"
+i"ofxVec4f.h"
+i<cmath>
+
+N/Volumes/windows/openFrameworks/addons/ofxVectorMath/src/ofxVec3f.h
+c000000004D6DD66000000000000068A8
+t1299043936
+s26792
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/addons/ofxVectorMath/src/ofxVec4f.h
+c000000004D6DD660000000000000301D
+t1299043936
+s12317
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/libs/opencv/include/cv.h
+c000000004D6DD65E00000000000104FE
+t1299043934
+s66814
+i<chdl.h>
+i"cxcore.h"
+i"cvtypes.h"
+i"cv.hpp"
+i"cvcompat.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/libs/opencv/lib/osx/openCV.a
+c000000004D6DD660000000000163A260
+t1299043936
+s23306848
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp
+c000000004D6DD6600000000000003A4F
+t1299043936
+s14927
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvShortImage.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp
+c000000004D6DD6600000000000001AE9
+t1299043936
+s6889
+i"ofxCvContourFinder.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvFloatImage.cpp
+c000000004D6DD6600000000000004D1E
+t1299043936
+s19742
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvShortImage.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp
+c000000004D6DD6600000000000003611
+t1299043936
+s13841
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvShortImage.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.cpp
+c000000004D6DD66000000000000056FE
+t1299043936
+s22270
+i"ofxCvImage.h"
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvBlob.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvShortImage.cpp
+c000000004D6DD6600000000000003205
+t1299043936
+s12805
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvShortImage.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxOpenCv.h
+c000000004D6DD6600000000000000195
+t1299043936
+s405
+i"ofxCvConstants.h"
+i"ofxCvImage.h"
+i"ofxCvGrayscaleImage.h"
+i"ofxCvColorImage.h"
+i"ofxCvFloatImage.h"
+i"ofxCvShortImage.h"
+i"ofxCvContourFinder.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp
+c000000004D6DD6600000000000000FA2
+t1299043936
+s4002
+i"ofxThread.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxMatrix3x3.cpp
+c000000004D6DD66000000000000016BA
+t1299043936
+s5818
+i"ofxMatrix3x3.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxMatrix4x4.cpp
+c000000004D6DD660000000000000AB51
+t1299043936
+s43857
+i"ofxMatrix4x4.h"
+i<limits>
+i<stdlib.h>
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxQuaternion.cpp
+c000000004D6DD66000000000000022AA
+t1299043936
+s8874
+i<stdio.h>
+i"ofxQuaternion.h"
+i"ofxMatrix4x4.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/FreeImage/lib/osx/freeimage.a
+c000000004D6DD6620000000000AA64B0
+t1299043938
+s11166896
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/GLee/include/GLee.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/GLee/lib/osx/GLee.a
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/fmodex/include/fmod.h
+c000000004D6DD66200000000000297ED
+t1299043938
+s169965
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/fmodex/include/fmod_errors.h
+c000000004D6DD4140000000000003482
+t1299043348
+s13442
+i"fmod.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/fmodex/lib/osx/libfmodex.dylib
+c000000004D6DD41400000000001DD8CC
+t1299043348
+s1956044
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/freeimage/include/FreeImage.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/freetype/lib/osx/freetype.a
+c000000004D6DD66200000000004D82C8
+t1299043938
+s5079752
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/include/GLee.h
+c000000004D6DD66200000000000934B4
+t1299043938
+s603316
+i<windows.h>
+i<GL/gl.h>
+i<OpenGL/gl.h>
+i<GL/gl.h>
+i<GL/glx.h>
+i<stddef.h>
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/linux/GLee.c
+c000000004D6DD66200000000000AFF9A
+t1299043938
+s720794
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i"GLee.h"
+i<Carbon/Carbon.h>
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/linux/libGLee.a
+c000000004D6DD662000000000005AF18
+t1299043938
+s372504
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/linux64/libGLee.a
+c000000004D6DD66200000000000BCE20
+t1299043938
+s773664
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/osx/GLee.a
+c000000004D6DD66200000000000C88C8
+t1299043938
+s821448
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/vs2008/GLee.lib
+c000000004D6DD6620000000000114E2E
+t1299043938
+s1134126
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/vs2010/GLee.lib
+c000000004D6DD6620000000000114E2E
+t1299043938
+s1134126
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/win_cb/GLee.lib
+c000000004D6DD6620000000000114E2E
+t1299043938
+s1134126
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx/GLUT.framework
+c000000004D6DD4150000000000000000
+t1299043349
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx/GLUT.framework/GLUT
+c000000004D6DD4150000000000000015
+t1299043349
+s21
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/openFrameworksCompiled/lib/osx/openFrameworks.a
+c000000004D6DDDA9000000000068F948
+t1299045801
+s6879560
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a
+c000000004D7A938000000000006103C0
+t1299878784
+s6357952
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/poco/lib/osx/CppUnit.a
+c000000004D6DD664000000000003ABB0
+t1299043940
+s240560
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/poco/lib/osx/PocoFoundation.a
+c000000004D6DD66400000000005A62E8
+t1299043940
+s5923560
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/poco/lib/osx/PocoNet.a
+c000000004D6DD6650000000000378278
+t1299043941
+s3637880
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/poco/lib/osx/PocoUtil.a
+c000000004D6DD66500000000000FFB80
+t1299043941
+s1047424
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/poco/lib/osx/PocoXML.a
+c000000004D6DD6650000000000239BC0
+t1299043941
+s2333632
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/rtAudio/lib/osx/rtAudio.a
+c000000004D6DD42300000000000BC8E8
+t1299043363
+s772328
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app
+t1299878626
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/Info.plist
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/MacOS/ofMilkscanner_Debug
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/PkgInfo
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/ofMilkscanner_Debug.app/Contents/Frameworks/GLUT.framework
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/GLee.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofMilkscanner_Debug.LinkFileList
+c000000004D7A92DF0000000000000817
+t1299878623
+s2071
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvColorImage.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvContourFinder.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvFloatImage.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvGrayscaleImage.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvImage.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvShortImage.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxMatrix3x3.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxMatrix4x4.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxQuaternion.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxThread.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/testApp.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxml.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxmlerror.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxmlparser.o
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+c000000004D7A92DF0000000000000113
+t1299878623
+s275
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp
+c000000004D6D56A600000000000001B4
+t1299011238
+s436
+i"ofMain.h"
+i"testApp.h"
+i"ofAppGlutWindow.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp
+c000000004D7A965C00000000000022FE
+t1299879516
+s8958
+i"testApp.h"
+i<windows.h>
+i<stdio.h>
+i<conio.h>
+i<tchar.h>
+i"actor.h"
+i"sliderButton.h"
+i"textInputButton.h"
+i"assignButton.h"
+i"msbLight.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h
+c000000004D7A965C0000000000000473
+t1299879516
+s1139
+i"ofMain.h"
+i"ofxOpenCv.h"
+i"ofxKinect.h"
+i"msbOFCore.h"
+i"actor.h"
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxml.cpp
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxmlerror.cpp
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxmlparser.cpp
+c00000000000000000000000000000000
+t2
+s0
+
+N/Volumes/windows/openFrameworks/libs/fmodex/include/fmod.h
+c000000004D6DD66200000000000297ED
+t1299043938
+s169965
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Volumes/windows/openFrameworks/libs/fmodex/include/fmod_codec.h
+c000000004D6DD41400000000000033E9
+t1299043348
+s13289
+
+N/Volumes/windows/openFrameworks/libs/fmodex/include/fmod_dsp.h
+c000000004D6DD4140000000000008BD6
+t1299043348
+s35798
+
+N/Volumes/windows/openFrameworks/libs/fmodex/include/fmod_memoryinfo.h
+c000000004D6DD4140000000000003D5D
+t1299043348
+s15709
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000004D6DD6620000000000000474
+t1299043938
+s1140
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/app/ofAppGlutWindow.h
+c000000004D6DD66200000000000006B6
+t1299043938
+s1718
+i"ofConstants.h"
+i"ofAppBaseWindow.h"
+i"glut.h"
+i<GLUT/glut.h>
+i<GL/glut.h>
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/app/ofAppRunner.h
+c000000004D6DD662000000000000053B
+t1299043938
+s1339
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/app/ofBaseApp.h
+c000000004D6DD662000000000000039F
+t1299043938
+s927
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/communication/ofArduino.h
+c000000004D6DD6620000000000003ED4
+t1299043938
+s16084
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/communication/ofSerial.h
+c000000004D6DD6620000000000000DAF
+t1299043938
+s3503
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/events/ofEventUtils.h
+c000000004D6DD4170000000000000B4C
+t1299043351
+s2892
+i"ofConstants.h"
+i"Poco/FIFOEvent.h"
+i"Poco/Delegate.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/events/ofEvents.h
+c000000004D6DD662000000000000131A
+t1299043938
+s4890
+i"ofConstants.h"
+i"ofUtils.h"
+i"ofEventUtils.h"
+i"ofxEventUtils.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/graphics/ofGraphics.h
+c000000004D6DD6620000000000000DD3
+t1299043938
+s3539
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/graphics/ofImage.h
+c000000004D6DD6620000000000000D7E
+t1299043938
+s3454
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/graphics/ofTexture.h
+c000000004D6DD6620000000000000CB7
+t1299043938
+s3255
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/graphics/ofTrueTypeFont.h
+c000000004D6DD66200000000000008D8
+t1299043938
+s2264
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/ofMain.h
+c000000004D6DD6620000000000000375
+t1299043938
+s885
+i"ofConstants.h"
+i"ofMath.h"
+i"ofUtils.h"
+i"ofTypes.h"
+i"ofSerial.h"
+i"ofArduino.h"
+i"ofTexture.h"
+i"ofTrueTypeFont.h"
+i"ofGraphics.h"
+i"ofImage.h"
+i"ofBaseApp.h"
+i"ofAppRunner.h"
+i"ofSoundStream.h"
+i"ofSoundPlayer.h"
+i"ofVideoGrabber.h"
+i"ofVideoPlayer.h"
+i"ofEvents.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/sound/ofSoundPlayer.h
+c000000004D6DD6620000000000000713
+t1299043938
+s1811
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/sound/ofSoundStream.h
+c000000004D6DD6620000000000000265
+t1299043938
+s613
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/utils/ofConstants.h
+c000000004D6DD6620000000000002C5A
+t1299043938
+s11354
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<cstdlib>
+i<cstdio>
+i<cstdarg>
+i<cmath>
+i<ctime>
+i<cstdlib>
+i<string>
+i<iostream>
+i<vector>
+i<cstring>
+i<sstream>
+i<iomanip>
+i<fstream>
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/utils/ofMath.h
+c000000004D6DD6620000000000000AAC
+t1299043938
+s2732
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/utils/ofTypes.h
+c000000004D6DD6620000000000001ED5
+t1299043938
+s7893
+i"ofConstants.h"
+i"ofUtils.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/utils/ofUtils.h
+c000000004D6DD66200000000000005E2
+t1299043938
+s1506
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/video/ofGstUtils.h
+c000000004D6DD6620000000000000BF0
+t1299043938
+s3056
+i<gst/gst.h>
+i<pthread.h>
+i"ofConstants.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/video/ofQtUtils.h
+c000000004D6DD662000000000000070A
+t1299043938
+s1802
+i"ofConstants.h"
+i"ofGraphics.h"
+i<QuickTime/QuickTime.h>
+i<CoreServices/CoreServices.h>
+i<ApplicationServices/ApplicationServices.h>
+i<QTML.h>
+i<FixMath.h>
+i<QuickTimeComponents.h>
+i<TextUtils.h>
+i<MediaHandlers.h>
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/video/ofVideoGrabber.h
+c000000004D6DD6620000000000000D23
+t1299043938
+s3363
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworks/video/ofVideoPlayer.h
+c000000004D6DD6620000000000000CB5
+t1299043938
+s3253
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Volumes/windows/openFrameworks/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a
+c000000004D7A938000000000006103C0
+t1299878784
+s6357952
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/AbstractDelegate.h
+c000000004D6DD6620000000000000B8E
+t1299043938
+s2958
+i"Poco/Foundation.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/AbstractEvent.h
+c000000004D6DD6620000000000002DB7
+t1299043938
+s11703
+i"Poco/Foundation.h"
+i"Poco/SingletonHolder.h"
+i"Poco/SharedPtr.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveMethod.h"
+i"Poco/Mutex.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ActiveMethod.h
+c000000004D6DD6620000000000001D54
+t1299043938
+s7508
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveRunnable.h"
+i"Poco/ActiveStarter.h"
+i"Poco/AutoPtr.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ActiveResult.h
+c000000004D6DD662000000000000306B
+t1299043938
+s12395
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ActiveRunnable.h
+c000000004D6DD6620000000000001882
+t1299043938
+s6274
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/Runnable.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i"Poco/Exception.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ActiveStarter.h
+c000000004D6DD662000000000000096D
+t1299043938
+s2413
+i"Poco/Foundation.h"
+i"Poco/ThreadPool.h"
+i"Poco/ActiveRunnable.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/AutoPtr.h
+c000000004D6DD6620000000000001F86
+t1299043938
+s8070
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Bugcheck.h
+c000000004D6DD66200000000000013A3
+t1299043938
+s5027
+i"Poco/Foundation.h"
+i<string>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/CompareFunctions.h
+c000000004D6DD662000000000000082B
+t1299043938
+s2091
+i"Poco/Foundation.h"
+i<functional>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Config.h
+c000000004D6DD66200000000000008F9
+t1299043938
+s2297
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Delegate.h
+c000000004D6DD66200000000000018EE
+t1299043938
+s6382
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/FunctionDelegate.h"
+i"Poco/Expire.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Event.h
+c000000004D6DD6620000000000000EB0
+t1299043938
+s3760
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Event_WIN32.h"
+i"Poco/Event_POSIX.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Event_POSIX.h
+c000000004D6DD6620000000000000AF4
+t1299043938
+s2804
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Event_WIN32.h
+c000000004D6DD66200000000000009A1
+t1299043938
+s2465
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Exception.h
+c000000004D6DD66200000000000027B4
+t1299043938
+s10164
+i"Poco/Foundation.h"
+i<stdexcept>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Expire.h
+c000000004D6DD6620000000000000D75
+t1299043938
+s3445
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/Timestamp.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/FIFOEvent.h
+c000000004D6DD6620000000000000B2E
+t1299043938
+s2862
+i"Poco/AbstractEvent.h"
+i"Poco/FIFOStrategy.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/CompareFunctions.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/FIFOStrategy.h
+c000000004D6DD6620000000000001199
+t1299043938
+s4505
+i"Poco/NotificationStrategy.h"
+i<map>
+i<list>
+i<memory>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Foundation.h
+c000000004D6DD66200000000000010AF
+t1299043938
+s4271
+i"Poco/Config.h"
+i"Poco/Platform.h"
+i"Poco/Platform_WIN32.h"
+i"Poco/Platform_VMS.h"
+i"Poco/Platform_POSIX.h"
+i"Poco/Bugcheck.h"
+i"Poco/Types.h"
+i<string>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/FunctionDelegate.h
+c000000004D6DD662000000000000149A
+t1299043938
+s5274
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Mutex.h
+c000000004D6DD6620000000000001B4E
+t1299043938
+s6990
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/ScopedLock.h"
+i"Poco/Mutex_WIN32.h"
+i"Poco/Mutex_POSIX.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Mutex_POSIX.h
+c000000004D6DD6620000000000000B30
+t1299043938
+s2864
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Mutex_WIN32.h
+c000000004D6DD6620000000000000A72
+t1299043938
+s2674
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/NotificationStrategy.h
+c000000004D6DD6630000000000000A89
+t1299043939
+s2697
+i"Poco/Foundation.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Platform.h
+c000000004D6DD6630000000000001AF7
+t1299043939
+s6903
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Platform_POSIX.h
+c000000004D6DD663000000000000087C
+t1299043939
+s2172
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Platform_VMS.h
+c000000004D6DD6630000000000000C06
+t1299043939
+s3078
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Platform_WIN32.h
+c000000004D6DD6630000000000000DA9
+t1299043939
+s3497
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/RefCountedObject.h
+c000000004D6DD6630000000000000B72
+t1299043939
+s2930
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Runnable.h
+c000000004D6DD66300000000000008A4
+t1299043939
+s2212
+i"Poco/Foundation.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ScopedLock.h
+c000000004D6DD6630000000000000939
+t1299043939
+s2361
+i"Poco/Foundation.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/SharedPtr.h
+c000000004D6DD6630000000000002388
+t1299043939
+s9096
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Mutex.h"
+i<algorithm>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/SignalHandler.h
+c000000004D6DD6630000000000001282
+t1299043939
+s4738
+i"Poco/Foundation.h"
+i<vector>
+i<setjmp.h>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/SingletonHolder.h
+c000000004D6DD6630000000000000ABD
+t1299043939
+s2749
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Thread.h
+c000000004D6DD6630000000000001D5C
+t1299043939
+s7516
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Thread_WIN32.h"
+i"Poco/Thread_POSIX.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/ThreadPool.h
+c000000004D6DD6630000000000001911
+t1299043939
+s6417
+i"Poco/Foundation.h"
+i"Poco/Thread.h"
+i"Poco/Mutex.h"
+i<vector>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Thread_POSIX.h
+c000000004D6DD663000000000000136E
+t1299043939
+s4974
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/SignalHandler.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i<pthread.h>
+i<sys/select.h>
+i<errno.h>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Thread_WIN32.h
+c000000004D6DD6630000000000001123
+t1299043939
+s4387
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Timestamp.h
+c000000004D6DD6630000000000001AAB
+t1299043939
+s6827
+i"Poco/Foundation.h"
+i<ctime>
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/Types.h
+c000000004D6DD66300000000000019E6
+t1299043939
+s6630
+i"Poco/Foundation.h"
+
+N/Volumes/windows/openFrameworks/libs/poco/include/Poco/UnWindows.h
+c000000004D6DD663000000000000103F
+t1299043939
+s4159
+i<windows.h>
+
+N/usr/include/TargetConditionals.h
+c000000004A11A9B300000000000031E9
+t1242671539
+s12777
+
+N/usr/include/assert.h
+c000000004A5C14A60000000000000DCB
+t1247548582
+s3531
+
+N/usr/include/ctype.h
+c000000004A5C14A60000000000002C18
+t1247548582
+s11288
+
+N/usr/include/dirent.h
+c000000004A5C14A700000000000016D3
+t1247548583
+s5843
+
+N/usr/include/errno.h
+c000000004A5C14A600000000000003EB
+t1247548582
+s1003
+
+N/usr/include/fcntl.h
+c000000004A5C14A600000000000003EA
+t1247548582
+s1002
+
+N/usr/include/getopt.h
+c000000004A5C14A60000000000000CBC
+t1247548582
+s3260
+
+N/usr/include/math.h
+c000000004A5C14A000000000000004F1
+t1247548576
+s1265
+
+N/usr/include/pthread.h
+c000000004A5C14A700000000000038F0
+t1247548583
+s14576
+
+N/usr/include/setjmp.h
+c000000004A5C14A60000000000000438
+t1247548582
+s1080
+
+N/usr/include/stdio.h
+c000000004A5C14A70000000000004174
+t1247548583
+s16756
+
+N/usr/include/stdlib.h
+c000000004A5C14A70000000000002DF5
+t1247548583
+s11765
+
+N/usr/include/string.h
+c000000004A5C14A70000000000001731
+t1247548583
+s5937
+
+N/usr/include/sys/_types.h
+c000000004A73D6560000000000001845
+t1249105494
+s6213
+
+N/usr/include/sys/ioctl.h
+c000000004A73D651000000000000116C
+t1249105489
+s4460
+
+N/usr/include/sys/select.h
+c000000004A73D65400000000000016A2
+t1249105492
+s5794
+
+N/usr/include/termios.h
+c000000004A5C14A600000000000004D4
+t1247548582
+s1236
+
+N/usr/include/unistd.h
+c000000004A5C14A7000000000000563E
+t1247548583
+s22078
+
+N/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/emmintrin.h
+c000000004A119834000000000000EA8F
+t1242667060
+s60047
+i<xmmintrin.h>
+
+N/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/float.h
+c000000004A1198340000000000001538
+t1242667060
+s5432
+
+N/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/mm_malloc.h
+c000000004A119834000000000000093D
+t1242667060
+s2365
+i<stdlib.h>
+i<errno.h>
+
+N/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/mmintrin.h
+c000000004A1198340000000000009260
+t1242667060
+s37472
+
+N/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/xmmintrin.h
+c000000004A119834000000000000BECA
+t1242667060
+s48842
+i<mmintrin.h>
+i<mm_malloc.h>
+i<emmintrin.h>
+
+N/usr/local/include/FreeImage.h
+c000000004B1C1201000000000000D04C
+t1260130817
+s53324
+
+N/usr/local/include/GL/glut.h
+c000000004B1BB767000000000000027F
+t1260107623
+s639
+
+N/var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-akgjvzgencfjczgmcthmalmpzyax/Carbon.h.gch
+t2
+s0
+
+N/var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h.gch
+t1299881183
+s53716784
+
+N/var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-flcvxvwyhdnommcnyzyocemsgtjq/Carbon.h.gch
+t1299878634
+s53716784
+
+NopenFrameworks-Info.plist
+c00000000000000000000000000000000
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies321574214#321574228#0(0"0(0#1#0"8609791328#0"0#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/GLee.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glee/lib/linux/GLee.c normal i386 c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/main.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s321574228.979051
+e321574489.255206
+r0
+xCompileC
+xbuild/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/main.o
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from ../../../libs/openFrameworks/ofMain.h:6,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:
+o../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/app/ofAppRunner.h:8,
+o                 from ../../../libs/openFrameworks/graphics/ofImage.h:7,
+o                 from ../../../libs/openFrameworks/ofMain.h:23,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:
+o../../../libs/openFrameworks/app/ofAppGlutWindow.h:11:24: error: GLUT/glut.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/ofMain.h:33,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:8:18: error: fmod.h: No such file or directory
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:9:25: error: fmod_errors.h: No such file or directory
+oIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:2:
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:7:23: error: ofxKinect.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:8:23: error: msbOFCore.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:9:19: error: actor.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/ofMain.h:33,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:74: error: 'FMOD_RESULT' does not name a type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: expected ';' before '*' token
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: ISO C++ forbids declaration of 'FMOD_SOUND' with no type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: expected ';' before '*' token
+oIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:2:
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:15: error: expected class-name before '{' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:36: error: 'Actor' has not been declared
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:38: error: 'HANDLE' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:39: error: 'LPCTSTR' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:41: error: 'ofxKinect' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: ISO C++ forbids declaration of 'Input' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: expected ';' before '*' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: ISO C++ forbids declaration of 'Renderer' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: expected ';' before '*' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: ISO C++ forbids declaration of 'Actor' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: expected ';' before '*' token
+lSLF07#2@76"Compile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574228#321574489#0(3552"In file included from ../../../libs/openFrameworks/ofMain.h:6,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directoryIn file included from ../../../libs/openFrameworks/app/ofAppRunner.h:8,                 from ../../../libs/openFrameworks/graphics/ofImage.h:7,                 from ../../../libs/openFrameworks/ofMain.h:23,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:../../../libs/openFrameworks/app/ofAppGlutWindow.h:11:24: error: GLUT/glut.h: No such file or directoryIn file included from ../../../libs/openFrameworks/ofMain.h:33,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:../../../libs/openFrameworks/sound/ofSoundPlayer.h:8:18: error: fmod.h: No such file or directory../../../libs/openFrameworks/sound/ofSoundPlayer.h:9:25: error: fmod_errors.h: No such file or directoryIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:2:/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:7:23: error: ofxKinect.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:8:23: error: msbOFCore.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:9:19: error: actor.h: No such file or directoryIn file included from ../../../libs/openFrameworks/ofMain.h:33,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:1:../../../libs/openFrameworks/sound/ofSoundPlayer.h:74: error: 'FMOD_RESULT' does not name a type../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: expected ';' before '*' token../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: ISO C++ forbids declaration of 'FMOD_SOUND' with no type../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: expected ';' before '*' tokenIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp:2:/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:15: error: expected class-name before '{' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:36: error: 'Actor' has not been declared/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:38: error: 'HANDLE' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:39: error: 'LPCTSTR' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:41: error: 'ofxKinect' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: ISO C++ forbids declaration of 'Input' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: expected ';' before '*' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: ISO C++ forbids declaration of 'Renderer' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: expected ';' before '*' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: ISO C++ forbids declaration of 'Actor' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: expected ';' before '*' token23(4@33"GLee.h: No such file or directory321574232#157#97#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574232#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574232#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574232#6#0#6#0#0"0(13@85"GLee.h: No such file or directory in ../../../libs/openFrameworks/utils/ofConstants.h321574232#18446744073709551615#0#0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574232#89#0#89#0#0"0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574232#89#0#89#0#28"*: No such file or directory0(4@38"GLUT/glut.h: No such file or directory321574417#557#104#5(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574417#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574417#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574417#23#0#23#0#0"0(7@69"In file included from ../../../libs/openFrameworks/graphics/ofImage.h321574417#18446744073709551615#0#0(6@47"../../../libs/openFrameworks/graphics/ofImage.h321574417#7#0#7#0#0"0(7@68"In file included from ../../../libs/openFrameworks/app/ofAppRunner.h321574417#18446744073709551615#0#0(6@46"../../../libs/openFrameworks/app/ofAppRunner.h321574417#8#0#8#0#0"0(13@92"GLUT/glut.h: No such file or directory in ../../../libs/openFrameworks/app/ofAppGlutWindow.h321574417#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/app/ofAppGlutWindow.h321574417#11#0#11#0#0"0(6@50"../../../libs/openFrameworks/app/ofAppGlutWindow.h321574417#11#0#11#0#28"*: No such file or directory0(4@33"Fmod.h: No such file or directory321574425#819#98#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574425#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574425#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574425#33#0#33#0#0"0(13@87"Fmod.h: No such file or directory in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574425#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574425#8#0#8#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574425#8#0#8#0#28"*: No such file or directory0(4@40"Fmod_errors.h: No such file or directory321574426#917#105#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574425#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574425#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574425#33#0#33#0#0"0(13@94"Fmod_errors.h: No such file or directory in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#9#0#9#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#9#0#9#0#28"*: No such file or directory0(4@38"OfxKinect.h: No such file or directory321574483#1116#122#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574483#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@111"OfxKinect.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574483#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#7#0#7#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#7#0#7#0#28"*: No such file or directory0(4@38"MsbOFCore.h: No such file or directory321574484#1238#122#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574483#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@111"MsbOFCore.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574484#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#8#0#8#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#8#0#8#0#28"*: No such file or directory0(4@34"Actor.h: No such file or directory321574485#1360#118#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574483#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@107"Actor.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574485#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#9#0#9#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#9#0#9#0#28"*: No such file or directory0(4@34"'FMOD_RESULT' does not name a type321574486#1636#97#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574486#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574486#33#0#33#0#0"0(13@88"'FMOD_RESULT' does not name a type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#74#0#74#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#74#0#74#0#24"'*' does not name a type0(4@58"ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type321574486#1733#121#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574486#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574486#33#0#33#0#0"0(13@112"ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#75#0#75#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#75#0#75#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574486#1854#92#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574486#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574486#33#0#33#0#0"0(13@83"Expected ';' before '*' token in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#75#0#75#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#75#0#75#0#19"expected * before *0(4@56"ISO C++ forbids declaration of 'FMOD_SOUND' with no type321574486#1946#119#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574486#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574486#33#0#33#0#0"0(13@110"ISO C++ forbids declaration of 'FMOD_SOUND' with no type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#76#0#76#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#76#0#76#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574486#2065#92#3(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#1#0#1#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574486#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574486#33#0#33#0#0"0(13@83"Expected ';' before '*' token in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#76#0#76#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574486#76#0#76#0#19"expected * before *0(4@36"Expected class-name before '{' token321574486#2251#118#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@109"Expected class-name before '{' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#15#0#15#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#15#0#15#0#19"expected * before *0(4@29"'Actor' has not been declared321574486#2369#111#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@102"'Actor' has not been declared in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#36#0#36#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#36#0#36#0#25"'*' has not been declared0(4@29"'HANDLE' does not name a type321574486#2480#111#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@102"'HANDLE' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#38#0#38#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#38#0#38#0#24"'*' does not name a type0(4@30"'LPCTSTR' does not name a type321574486#2591#112#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@103"'LPCTSTR' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#39#0#39#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#39#0#39#0#24"'*' does not name a type0(4@32"'ofxKinect' does not name a type321574486#2703#114#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@105"'ofxKinect' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#41#0#41#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#41#0#41#0#24"'*' does not name a type0(4@51"ISO C++ forbids declaration of 'Input' with no type321574486#2817#133#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@124"ISO C++ forbids declaration of 'Input' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574486#2950#111#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#19"expected * before *0(4@54"ISO C++ forbids declaration of 'Renderer' with no type321574486#3061#136#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@127"ISO C++ forbids declaration of 'Renderer' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574486#3197#111#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#19"expected * before *0(4@51"ISO C++ forbids declaration of 'Actor' with no type321574486#3308#133#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@124"ISO C++ forbids declaration of 'Actor' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574486#3441#111#2(7@90"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp321574486#18446744073709551615#0#0(6@68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp320704038#2#0#2#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#19"expected * before *0(0#0#68"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp8603082304#1870"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h -c /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/main.cpp -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/main.o1#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvColorImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s321574500.591316
+e321574645.311693
+r0
+xCompileC
+xbuild/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvColorImage.o
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from ../../../libs/openFrameworks/ofMain.h:6,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvConstants.h:7,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.h:17,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h:14,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp:3:
+o../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory
+lSLF07#2@113"Compile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp321574500#321574645#0(678"In file included from ../../../libs/openFrameworks/ofMain.h:6,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvConstants.h:7,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.h:17,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h:14,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp:3:../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory1(4@33"GLee.h: No such file or directory321574579#581#97#6(7@127"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp321574579#18446744073709551615#0#0(6@105"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp320736736#3#0#3#0#0"0(7@129"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h321574579#18446744073709551615#0#0(6@107"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h320736736#14#0#14#0#0"0(7@120"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.h321574579#18446744073709551615#0#0(6@98"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.h320736736#17#0#17#0#0"0(7@124"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvConstants.h321574578#18446744073709551615#0#0(6@102"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvConstants.h320736135#7#0#7#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574578#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574578#6#0#6#0#0"0(13@85"GLee.h: No such file or directory in ../../../libs/openFrameworks/utils/ofConstants.h321574579#18446744073709551615#0#0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574579#89#0#89#0#0"0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574579#89#0#89#0#28"*: No such file or directory0(0#0#105"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp8609282592#1918"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h -c /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvColorImage.o2#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvContourFinder.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s321574616.500710
+e321574645.201743
+r0
+xCompileC
+xbuild/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvContourFinder.o
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@116"Compile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp321574616#321574645#0(0"0(0#0#108"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp8609852608#1924"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h -c /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvContourFinder.o2#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvFloatImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvFloatImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvGrayscaleImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxCvShortImage.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxOpenCv/src/ofxCvShortImage.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxMatrix3x3.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxMatrix3x3.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxMatrix4x4.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxMatrix4x4.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxQuaternion.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxVectorMath/src/ofxQuaternion.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxThread.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s321574489.255413
+e321574616.500469
+r0
+xCompileC
+xbuild/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxThread.o
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.h:4,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp:1:
+o../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory
+lSLF07#2@107"Compile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp321574489#321574616#0(345"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.h:4,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp:1:../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory1(4@33"GLee.h: No such file or directory321574497#248#97#3(7@121"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp321574497#18446744073709551615#0#0(6@99"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp320736736#1#0#1#0#0"0(7@119"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.h321574497#18446744073709551615#0#0(6@97"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.h320736736#4#0#4#0#0"0(13@85"GLee.h: No such file or directory in ../../../libs/openFrameworks/utils/ofConstants.h321574497#18446744073709551615#0#0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574497#89#0#89#0#0"0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574497#89#0#89#0#28"*: No such file or directory0(0#0#99"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp8609959040#1906"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h -c /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../addons/ofxThread/src/ofxThread.cpp -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/ofxThread.o1#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/testApp.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s321574228.980541
+e321574500.591098
+r0
+xCompileC
+xbuild/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/testApp.o
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from ../../../libs/openFrameworks/ofMain.h:6,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/app/ofAppRunner.h:8,
+o                 from ../../../libs/openFrameworks/graphics/ofImage.h:7,
+o                 from ../../../libs/openFrameworks/ofMain.h:23,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o../../../libs/openFrameworks/app/ofAppGlutWindow.h:11:24: error: GLUT/glut.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/ofMain.h:33,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:8:18: error: fmod.h: No such file or directory
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:9:25: error: fmod_errors.h: No such file or directory
+oIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:7:23: error: ofxKinect.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:8:23: error: msbOFCore.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:9:19: error: actor.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:3:21: error: windows.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:5:19: error: conio.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:6:19: error: tchar.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:9:26: error: sliderButton.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:10:29: error: textInputButton.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:11:26: error: assignButton.h: No such file or directory
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:12:22: error: msbLight.h: No such file or directory
+oIn file included from ../../../libs/openFrameworks/ofMain.h:33,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,
+o                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:74: error: 'FMOD_RESULT' does not name a type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: expected ';' before '*' token
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: ISO C++ forbids declaration of 'FMOD_SOUND' with no type
+o../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: expected ';' before '*' token
+oIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:15: error: expected class-name before '{' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:36: error: 'Actor' has not been declared
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:38: error: 'HANDLE' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:39: error: 'LPCTSTR' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:41: error: 'ofxKinect' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: ISO C++ forbids declaration of 'Input' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: expected ';' before '*' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: ISO C++ forbids declaration of 'Renderer' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: expected ';' before '*' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: ISO C++ forbids declaration of 'Actor' with no type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: expected ';' before '*' token
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:15: error: 'TCHAR' does not name a type
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::setup()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:22: error: 'renderer' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:22: error: 'Renderer' has not been declared
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:23: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:23: error: 'Input' has not been declared
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:29: error: expected type-specifier before 'Actor'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:29: error: expected `;' before 'Actor'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:30: error: 'Vector3f' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: 'Actor' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: 'myActor' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: expected type-specifier before 'Actor'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: expected `;' before 'Actor'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:42: error: 'Vector4f' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:43: error: 'DRAW_POINTPATCH' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:53: error: 'patchActor' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:55: error: 'SliderButton' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:55: error: 'but' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:57: error: expected type-specifier before 'SliderButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:57: error: expected `;' before 'SliderButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:74: error: 'TextInputButton' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:74: error: 'tiBut' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:76: error: expected type-specifier before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:76: error: expected `;' before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:92: error: expected type-specifier before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:92: error: expected `;' before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:108: error: expected type-specifier before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:108: error: expected `;' before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:124: error: expected type-specifier before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:124: error: expected `;' before 'TextInputButton'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:143: error: 'kinect' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:147: error: 'hMapFile' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:148: error: 'INVALID_HANDLE_VALUE' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:150: error: 'PAGE_READWRITE' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:153: error: 'szName' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:153: error: 'CreateFileMapping' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:157: error: 'TEXT' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:158: error: 'GetLastError' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:158: error: '_tprintf' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: 'pBuf' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: 'LPTSTR' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: expected `;' before 'MapViewOfFile'
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:170: error: 'TEXT' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:171: error: 'GetLastError' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:171: error: '_tprintf' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:173: error: 'CloseHandle' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'void testApp::registerProperties()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:187: error: 'createMemberID' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'int testApp::shareMemory()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:196: error: 'kinect' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:232: error: 'PVOID' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:232: error: 'CopyMemory' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::update()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:244: error: 'kinect' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:249: error: 'renderer' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:251: error: 'patchActor' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::draw()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:258: error: 'renderer' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:263: error: 'kinect' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::exit()':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:272: error: 'pBuf' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:272: error: 'UnmapViewOfFile' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:273: error: 'hMapFile' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:273: error: 'CloseHandle' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::keyPressed(int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:283: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::keyReleased(int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:290: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseMoved(int, int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:298: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseDragged(int, int, int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:305: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mousePressed(int, int, int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:311: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseReleased(int, int, int)':
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:317: error: 'input' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: At global scope:
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: variable or field 'trigger' declared void
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: 'Actor' was not declared in this scope
+o/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: 'other' was not declared in this scope
+lSLF07#2@79"Compile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574228#321574500#0(14864"In file included from ../../../libs/openFrameworks/ofMain.h:6,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:../../../libs/openFrameworks/utils/ofConstants.h:89:19: error: GLee.h: No such file or directoryIn file included from ../../../libs/openFrameworks/app/ofAppRunner.h:8,                 from ../../../libs/openFrameworks/graphics/ofImage.h:7,                 from ../../../libs/openFrameworks/ofMain.h:23,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:../../../libs/openFrameworks/app/ofAppGlutWindow.h:11:24: error: GLUT/glut.h: No such file or directoryIn file included from ../../../libs/openFrameworks/ofMain.h:33,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:../../../libs/openFrameworks/sound/ofSoundPlayer.h:8:18: error: fmod.h: No such file or directory../../../libs/openFrameworks/sound/ofSoundPlayer.h:9:25: error: fmod_errors.h: No such file or directoryIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:7:23: error: ofxKinect.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:8:23: error: msbOFCore.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:9:19: error: actor.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:3:21: error: windows.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:5:19: error: conio.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:6:19: error: tchar.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:9:26: error: sliderButton.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:10:29: error: textInputButton.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:11:26: error: assignButton.h: No such file or directory/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:12:22: error: msbLight.h: No such file or directoryIn file included from ../../../libs/openFrameworks/ofMain.h:33,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:4,                 from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:../../../libs/openFrameworks/sound/ofSoundPlayer.h:74: error: 'FMOD_RESULT' does not name a type../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type../../../libs/openFrameworks/sound/ofSoundPlayer.h:75: error: expected ';' before '*' token../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: ISO C++ forbids declaration of 'FMOD_SOUND' with no type../../../libs/openFrameworks/sound/ofSoundPlayer.h:76: error: expected ';' before '*' tokenIn file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:1:/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:15: error: expected class-name before '{' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:36: error: 'Actor' has not been declared/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:38: error: 'HANDLE' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:39: error: 'LPCTSTR' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:41: error: 'ofxKinect' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: ISO C++ forbids declaration of 'Input' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:50: error: expected ';' before '*' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: ISO C++ forbids declaration of 'Renderer' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:51: error: expected ';' before '*' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: ISO C++ forbids declaration of 'Actor' with no type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h:52: error: expected ';' before '*' token/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:15: error: 'TCHAR' does not name a type/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::setup()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:22: error: 'renderer' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:22: error: 'Renderer' has not been declared/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:23: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:23: error: 'Input' has not been declared/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:29: error: expected type-specifier before 'Actor'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:29: error: expected `;' before 'Actor'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:30: error: 'Vector3f' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: 'Actor' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: 'myActor' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: expected type-specifier before 'Actor'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:39: error: expected `;' before 'Actor'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:42: error: 'Vector4f' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:43: error: 'DRAW_POINTPATCH' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:53: error: 'patchActor' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:55: error: 'SliderButton' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:55: error: 'but' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:57: error: expected type-specifier before 'SliderButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:57: error: expected `;' before 'SliderButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:74: error: 'TextInputButton' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:74: error: 'tiBut' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:76: error: expected type-specifier before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:76: error: expected `;' before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:92: error: expected type-specifier before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:92: error: expected `;' before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:108: error: expected type-specifier before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:108: error: expected `;' before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:124: error: expected type-specifier before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:124: error: expected `;' before 'TextInputButton'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:143: error: 'kinect' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:147: error: 'hMapFile' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:148: error: 'INVALID_HANDLE_VALUE' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:150: error: 'PAGE_READWRITE' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:153: error: 'szName' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:153: error: 'CreateFileMapping' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:157: error: 'TEXT' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:158: error: 'GetLastError' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:158: error: '_tprintf' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: 'pBuf' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: 'LPTSTR' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:161: error: expected `;' before 'MapViewOfFile'/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:170: error: 'TEXT' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:171: error: 'GetLastError' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:171: error: '_tprintf' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:173: error: 'CloseHandle' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'void testApp::registerProperties()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:187: error: 'createMemberID' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'int testApp::shareMemory()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:196: error: 'kinect' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:232: error: 'PVOID' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:232: error: 'CopyMemory' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::update()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:244: error: 'kinect' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:249: error: 'renderer' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:251: error: 'patchActor' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::draw()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:258: error: 'renderer' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:263: error: 'kinect' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::exit()':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:272: error: 'pBuf' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:272: error: 'UnmapViewOfFile' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:273: error: 'hMapFile' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:273: error: 'CloseHandle' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::keyPressed(int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:283: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::keyReleased(int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:290: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseMoved(int, int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:298: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseDragged(int, int, int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:305: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mousePressed(int, int, int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:311: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: In member function 'virtual void testApp::mouseReleased(int, int, int)':/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:317: error: 'input' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp: At global scope:/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: variable or field 'trigger' declared void/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: 'Actor' was not declared in this scope/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp:324: error: 'other' was not declared in this scope98(4@33"GLee.h: No such file or directory321574233#255#97#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574233#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574233#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574232#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574232#6#0#6#0#0"0(13@85"GLee.h: No such file or directory in ../../../libs/openFrameworks/utils/ofConstants.h321574233#18446744073709551615#0#0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574233#89#0#89#0#0"0(6@48"../../../libs/openFrameworks/utils/ofConstants.h321574233#89#0#89#0#28"*: No such file or directory0(4@38"GLUT/glut.h: No such file or directory321574418#753#104#6(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574418#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574418#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574418#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574418#23#0#23#0#0"0(7@69"In file included from ../../../libs/openFrameworks/graphics/ofImage.h321574418#18446744073709551615#0#0(6@47"../../../libs/openFrameworks/graphics/ofImage.h321574418#7#0#7#0#0"0(7@68"In file included from ../../../libs/openFrameworks/app/ofAppRunner.h321574418#18446744073709551615#0#0(6@46"../../../libs/openFrameworks/app/ofAppRunner.h321574418#8#0#8#0#0"0(13@92"GLUT/glut.h: No such file or directory in ../../../libs/openFrameworks/app/ofAppGlutWindow.h321574418#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/app/ofAppGlutWindow.h321574418#11#0#11#0#0"0(6@50"../../../libs/openFrameworks/app/ofAppGlutWindow.h321574418#11#0#11#0#28"*: No such file or directory0(4@33"Fmod.h: No such file or directory321574426#1113#98#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574426#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574426#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574426#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574426#33#0#33#0#0"0(13@87"Fmod.h: No such file or directory in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#8#0#8#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574426#8#0#8#0#28"*: No such file or directory0(4@40"Fmod_errors.h: No such file or directory321574427#1211#105#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574426#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574426#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574426#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574426#33#0#33#0#0"0(13@94"Fmod_errors.h: No such file or directory in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574427#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574427#9#0#9#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574427#9#0#9#0#28"*: No such file or directory0(4@38"OfxKinect.h: No such file or directory321574485#1413#122#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574485#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@111"OfxKinect.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574485#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#7#0#7#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#7#0#7#0#28"*: No such file or directory0(4@38"MsbOFCore.h: No such file or directory321574486#1535#122#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574485#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@111"MsbOFCore.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574486#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#8#0#8#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#8#0#8#0#28"*: No such file or directory0(4@34"Actor.h: No such file or directory321574489#1657#118#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574485#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@107"Actor.h: No such file or directory in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574489#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#9#0#9#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#9#0#9#0#28"*: No such file or directory0(4@36"Windows.h: No such file or directory321574491#1775#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#3#0#3#0#28"*: No such file or directory0(4@34"Conio.h: No such file or directory321574492#1897#120#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#5#0#5#0#28"*: No such file or directory0(4@34"Tchar.h: No such file or directory321574493#2017#120#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#6#0#6#0#28"*: No such file or directory0(4@41"SliderButton.h: No such file or directory321574494#2137#127#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#9#0#9#0#28"*: No such file or directory0(4@44"TextInputButton.h: No such file or directory321574495#2264#131#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#10#0#10#0#28"*: No such file or directory0(4@41"AssignButton.h: No such file or directory321574496#2395#128#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#11#0#11#0#28"*: No such file or directory0(4@37"MsbLight.h: No such file or directory321574497#2523#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#12#0#12#0#28"*: No such file or directory0(4@34"'FMOD_RESULT' does not name a type321574497#2903#97#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574497#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574497#33#0#33#0#0"0(13@88"'FMOD_RESULT' does not name a type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#74#0#74#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#74#0#74#0#24"'*' does not name a type0(4@58"ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type321574497#3000#121#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574497#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574497#33#0#33#0#0"0(13@112"ISO C++ forbids declaration of 'FMOD_CHANNEL' with no type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#75#0#75#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#75#0#75#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574497#3121#92#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574497#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574497#33#0#33#0#0"0(13@83"Expected ';' before '*' token in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#75#0#75#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#75#0#75#0#19"expected * before *0(4@56"ISO C++ forbids declaration of 'FMOD_SOUND' with no type321574497#3213#119#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574497#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574497#33#0#33#0#0"0(13@110"ISO C++ forbids declaration of 'FMOD_SOUND' with no type in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#76#0#76#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#76#0#76#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574497#3332#92#4(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(7@91"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#4#0#4#0#0"0(7@59"In file included from ../../../libs/openFrameworks/ofMain.h321574497#18446744073709551615#0#0(6@37"../../../libs/openFrameworks/ofMain.h321574497#33#0#33#0#0"0(13@83"Expected ';' before '*' token in ../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#18446744073709551615#0#0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#76#0#76#0#0"0(6@50"../../../libs/openFrameworks/sound/ofSoundPlayer.h321574497#76#0#76#0#19"expected * before *0(4@36"Expected class-name before '{' token321574497#3521#118#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@109"Expected class-name before '{' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#15#0#15#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#15#0#15#0#19"expected * before *0(4@29"'Actor' has not been declared321574497#3639#111#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@102"'Actor' has not been declared in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#36#0#36#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#36#0#36#0#25"'*' has not been declared0(4@29"'HANDLE' does not name a type321574497#3750#111#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@102"'HANDLE' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#38#0#38#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#38#0#38#0#24"'*' does not name a type0(4@30"'LPCTSTR' does not name a type321574497#3861#112#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@103"'LPCTSTR' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#39#0#39#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#39#0#39#0#24"'*' does not name a type0(4@32"'ofxKinect' does not name a type321574497#3973#114#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@105"'ofxKinect' does not name a type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#41#0#41#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#41#0#41#0#24"'*' does not name a type0(4@51"ISO C++ forbids declaration of 'Input' with no type321574497#4087#133#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@124"ISO C++ forbids declaration of 'Input' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574497#4220#111#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#50#0#50#0#19"expected * before *0(4@54"ISO C++ forbids declaration of 'Renderer' with no type321574497#4331#136#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@127"ISO C++ forbids declaration of 'Renderer' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574497#4467#111#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#51#0#51#0#19"expected * before *0(4@51"ISO C++ forbids declaration of 'Actor' with no type321574497#4578#133#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@124"ISO C++ forbids declaration of 'Actor' with no type in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#47"ISO C++ forbids declaration of '*' with no type0(4@29"Expected ';' before '*' token321574497#4711#111#2(7@93"In file included from /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321574497#18446744073709551615#0#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#1#0#1#0#0"0(13@102"Expected ';' before '*' token in /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321574497#18446744073709551615#0#0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#0"0(6@69"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.h321572316#52#0#52#0#19"expected * before *0(4@28"'TCHAR' does not name a type321574497#4822#112#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#15#0#15#0#24"'*' does not name a type0(4@41"'renderer' was not declared in this scope321574497#5059#125#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#22#0#22#0#34"'*' was not declared in this scope0(4@32"'Renderer' has not been declared321574497#5184#116#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#22#0#22#0#25"'*' has not been declared0(4@38"'input' was not declared in this scope321574497#5300#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#23#0#23#0#34"'*' was not declared in this scope0(4@29"'Input' has not been declared321574497#5422#113#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#23#0#23#0#25"'*' has not been declared0(4@38"Expected type-specifier before 'Actor'321574497#5535#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#29#0#29#0#19"expected * before *0(4@27"Expected `;' before 'Actor'321574497#5657#111#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#29#0#29#0#19"expected * before *0(4@41"'Vector3f' was not declared in this scope321574497#5768#125#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#30#0#30#0#34"'*' was not declared in this scope0(4@38"'Actor' was not declared in this scope321574497#5893#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#39#0#39#0#34"'*' was not declared in this scope0(4@40"'myActor' was not declared in this scope321574497#6015#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#39#0#39#0#34"'*' was not declared in this scope0(4@38"Expected type-specifier before 'Actor'321574497#6139#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#39#0#39#0#19"expected * before *0(4@27"Expected `;' before 'Actor'321574497#6261#111#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#39#0#39#0#19"expected * before *0(4@41"'Vector4f' was not declared in this scope321574497#6372#125#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#42#0#42#0#34"'*' was not declared in this scope0(4@48"'DRAW_POINTPATCH' was not declared in this scope321574497#6497#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#43#0#43#0#34"'*' was not declared in this scope0(4@43"'patchActor' was not declared in this scope321574497#6629#127#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#53#0#53#0#34"'*' was not declared in this scope0(4@45"'SliderButton' was not declared in this scope321574497#6756#129#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#55#0#55#0#34"'*' was not declared in this scope0(4@36"'but' was not declared in this scope321574497#6885#120#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#55#0#55#0#34"'*' was not declared in this scope0(4@45"Expected type-specifier before 'SliderButton'321574497#7005#129#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#57#0#57#0#19"expected * before *0(4@34"Expected `;' before 'SliderButton'321574497#7134#118#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#57#0#57#0#19"expected * before *0(4@48"'TextInputButton' was not declared in this scope321574497#7252#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#74#0#74#0#34"'*' was not declared in this scope0(4@38"'tiBut' was not declared in this scope321574497#7384#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#74#0#74#0#34"'*' was not declared in this scope0(4@48"Expected type-specifier before 'TextInputButton'321574497#7506#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#76#0#76#0#19"expected * before *0(4@37"Expected `;' before 'TextInputButton'321574497#7638#121#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#76#0#76#0#19"expected * before *0(4@48"Expected type-specifier before 'TextInputButton'321574497#7759#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#92#0#92#0#19"expected * before *0(4@37"Expected `;' before 'TextInputButton'321574497#7891#121#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#92#0#92#0#19"expected * before *0(4@48"Expected type-specifier before 'TextInputButton'321574497#8012#133#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#108#0#108#0#19"expected * before *0(4@37"Expected `;' before 'TextInputButton'321574497#8145#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#108#0#108#0#19"expected * before *0(4@48"Expected type-specifier before 'TextInputButton'321574497#8267#133#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#124#0#124#0#19"expected * before *0(4@37"Expected `;' before 'TextInputButton'321574497#8400#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#124#0#124#0#19"expected * before *0(4@39"'kinect' was not declared in this scope321574497#8522#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#143#0#143#0#34"'*' was not declared in this scope0(4@41"'hMapFile' was not declared in this scope321574497#8646#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#147#0#147#0#34"'*' was not declared in this scope0(4@53"'INVALID_HANDLE_VALUE' was not declared in this scope321574497#8772#138#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#148#0#148#0#34"'*' was not declared in this scope0(4@47"'PAGE_READWRITE' was not declared in this scope321574497#8910#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#150#0#150#0#34"'*' was not declared in this scope0(4@39"'szName' was not declared in this scope321574497#9042#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#153#0#153#0#34"'*' was not declared in this scope0(4@50"'CreateFileMapping' was not declared in this scope321574497#9166#135#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#153#0#153#0#34"'*' was not declared in this scope0(4@37"'TEXT' was not declared in this scope321574497#9301#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#157#0#157#0#34"'*' was not declared in this scope0(4@45"'GetLastError' was not declared in this scope321574497#9423#130#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#158#0#158#0#34"'*' was not declared in this scope0(4@41"'_tprintf' was not declared in this scope321574497#9553#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#158#0#158#0#34"'*' was not declared in this scope0(4@37"'pBuf' was not declared in this scope321574497#9679#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#161#0#161#0#34"'*' was not declared in this scope0(4@39"'LPTSTR' was not declared in this scope321574497#9801#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#161#0#161#0#34"'*' was not declared in this scope0(4@35"Expected `;' before 'MapViewOfFile'321574497#9925#120#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#161#0#161#0#19"expected * before *0(4@37"'TEXT' was not declared in this scope321574497#10045#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#170#0#170#0#34"'*' was not declared in this scope0(4@45"'GetLastError' was not declared in this scope321574497#10167#130#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#171#0#171#0#34"'*' was not declared in this scope0(4@41"'_tprintf' was not declared in this scope321574497#10297#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#171#0#171#0#34"'*' was not declared in this scope0(4@44"'CloseHandle' was not declared in this scope321574497#10423#129#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#173#0#173#0#34"'*' was not declared in this scope0(4@47"'createMemberID' was not declared in this scope321574497#10682#132#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#187#0#187#0#34"'*' was not declared in this scope0(4@39"'kinect' was not declared in this scope321574497#10936#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#196#0#196#0#34"'*' was not declared in this scope0(4@38"'PVOID' was not declared in this scope321574497#11060#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#232#0#232#0#34"'*' was not declared in this scope0(4@43"'CopyMemory' was not declared in this scope321574497#11183#128#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#232#0#232#0#34"'*' was not declared in this scope0(4@39"'kinect' was not declared in this scope321574497#11437#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#244#0#244#0#34"'*' was not declared in this scope0(4@41"'renderer' was not declared in this scope321574497#11561#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#249#0#249#0#34"'*' was not declared in this scope0(4@43"'patchActor' was not declared in this scope321574497#11687#128#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#251#0#251#0#34"'*' was not declared in this scope0(4@41"'renderer' was not declared in this scope321574497#11939#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#258#0#258#0#34"'*' was not declared in this scope0(4@39"'kinect' was not declared in this scope321574497#12065#124#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#263#0#263#0#34"'*' was not declared in this scope0(4@37"'pBuf' was not declared in this scope321574497#12313#122#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#272#0#272#0#34"'*' was not declared in this scope0(4@48"'UnmapViewOfFile' was not declared in this scope321574497#12435#133#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#272#0#272#0#34"'*' was not declared in this scope0(4@41"'hMapFile' was not declared in this scope321574497#12568#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#273#0#273#0#34"'*' was not declared in this scope0(4@44"'CloseHandle' was not declared in this scope321574497#12694#129#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#273#0#273#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#12956#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#283#0#283#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#13213#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#290#0#290#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#13474#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#298#0#298#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#13742#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#305#0#305#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#14010#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#311#0#311#0#34"'*' was not declared in this scope0(4@38"'input' was not declared in this scope321574497#14279#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#317#0#317#0#34"'*' was not declared in this scope0(23@16"At global scope:321574497#14402#90#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#0#0#0#0#0"0(4@41"Variable or field 'trigger' declared void321574497#14492#126#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#324#0#324#0#0"0(4@38"'Actor' was not declared in this scope321574497#14618#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#324#0#324#0#34"'*' was not declared in this scope0(4@38"'other' was not declared in this scope321574497#14741#123#0(6@71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp321572316#324#0#324#0#34"'*' was not declared in this scope0(0#0#71"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp8602746368#1876"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h -c /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/testApp.cpp -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/testApp.o1#
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxml.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxml.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxmlerror.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxmlerror.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/msbKinect.build/Debug/ofxMSBKinect.build/Objects-normal/i386/tinyxmlparser.o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/src/tinyxml/tinyxmlparser.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CLd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/MacOS/ofMilkscanner_Debug normal i386
+r0
+
+CPBXCp bin/ofMilkscanner_Debug.app/Contents/Frameworks/GLUT.framework ../../../libs/glut/lib/osx/GLUT.framework
+r0
+
+CPhaseScriptExecution "Run Script" /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+r0
+
+CProcessInfoPlistFile /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/Info.plist openFrameworks-Info.plist
+s321574228.975700
+e321574228.978815
+r0
+xProcessInfoPlistFile
+x/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/Info.plist
+xopenFrameworks-Info.plist
+lSLF07#2@33"Process openFrameworks-Info.plist321574228#321574228#0(100"error: The file “openFrameworks-Info.plist” couldn’t be opened because there is no such file.1(4@92"The file “openFrameworks-Info.plist” couldn’t be opened because there is no such file.321574228#18446744073709551615#0#0(6@0"321574228#0#0#0#0#0"0(0#0#81"/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/openFrameworks-Info.plist8603293248#378"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    builtin-infoPlistUtility openFrameworks-Info.plist -genpkginfo /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app/Contents/Info.plist1#
+
+CProcessPCH /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-akgjvzgencfjczgmcthmalmpzyax/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c com.apple.compilers.gcc.4_2
+r0
+
+CProcessPCH++ /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.gcc.4_2
+s321573425.819264
+e321573983.771051
+r1
+xProcessPCH++
+x/var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h.gch
+x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h321573425#321573983#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#60"/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h7308604914260668416#1734"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/ofMilkscanner_Debug.app -Ibin/shaders -Ibin/ofMilkscanner_Debug.app/Contents -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-faszolyqihgomwfufoxmtspawdfm/Carbon.h.gch0#
+
+CProcessPCH++ /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-flcvxvwyhdnommcnyzyocemsgtjq/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.gcc.4_2
+s321571426.076941
+e321571434.866701
+r1
+xProcessPCH++
+x/var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-flcvxvwyhdnommcnyzyocemsgtjq/Carbon.h.gch
+x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h321571426#321571455#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#60"/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h8633532128#1665"    cd /Volumes/windows/openFrameworks/apps/msbTools/msbKinect    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -mfix-and-continue -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/ofMilkscanner_Debug.hmap -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin -F/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/../../../libs/glut/lib/osx -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin/include -I. -Ibin -Isrc -Ibin/data -Ibin/icons -Ibin/shaders -Ibin/shaders/post -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources/i386 -I/Volumes/windows/openFrameworks/apps/msbTools/msbKinect/build/msbKinect.build/Debug/ofxMSBKinect.build/DerivedSources -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/ye/yeAtjsN2FmKQHOJrbTyDhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-flcvxvwyhdnommcnyzyocemsgtjq/Carbon.h.gch0#
+
+CTouch /Volumes/windows/openFrameworks/apps/msbTools/msbKinect/bin//ofMilkscanner_Debug.app
+r0
+
