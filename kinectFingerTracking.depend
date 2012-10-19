@@ -4277,7 +4277,7 @@
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1334442212 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.h
+1350604555 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.h
 	"ofMain.h"
 	"ofxKinect.h"
 	"ofxOsc.h"
@@ -4285,7 +4285,7 @@
 	"msbOFCore.h"
 	"actor.h"
 
-1349199980 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.cpp
+1350606664 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.cpp
 	"testApp.h"
 	"actor.h"
 	"sliderButton.h"

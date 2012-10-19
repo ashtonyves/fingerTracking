@@ -26,6 +26,7 @@ void testApp::setup(){
     bFoundMat=false;
     bFingerOut=false;
     bSending=false;
+    bScrubingPlayhead=false; // do not scrub playhead to start
 
     fistFactor=0;
 
@@ -33,15 +34,8 @@ void testApp::setup(){
 
     ofSetFrameRate(25);
 
-    //ipAddress="128.61.22.174"; // Nick's IP
-    //ipAddressMSB="192.168.1.3";
-    ipAddressMSB="169.254.75.192";
-    //ipAddress="169.254.208.35";
-    //ipAddressMSB="127.0.0.1";
-    //ipAddressMSB="143.215.199.192";
-
+    ipAddressMSB="143.215.199.192";
     ipAddressProc="127.0.0.1";
-    //ipAddress="192.168.1.24";
 
     // osc_senderMSB.setup(ipAddressMSB,3184+channelMSB);
     // osc_senderProcessing.setup(ipAddressProc,3184+channelProc);
@@ -51,7 +45,6 @@ void testApp::setup(){
 
     msbSetup();
 
-    //interface setup
     interfaceSetup();
 
     //OF_STUFF
@@ -64,14 +57,14 @@ void testApp::setup(){
 	myImage.allocate(640,480, OF_IMAGE_COLOR);
 	myImage.setUseTexture(true);
 
-
 	colorImg.allocate(640,480);
 	grayImage.allocate(640,480);
 	grayBg.allocate(640,480);
 	grayDiff.allocate(640,480);
 
-
 	pixelData=new unsigned char[640*480*3];
+
+	playheadFrame = 0;
 }
 
 void testApp::msbSetup(){
@@ -111,10 +104,12 @@ void testApp::msbSetup(){
     renderer->layerList[0]->actorList.push_back(myActor);
 
     patchActor=myActor;
+
+    input->updateTime=7;
+
 }
 
 void testApp::interfaceSetup(){
-
 
     TextInputButton *tiBut;
 
@@ -150,7 +145,6 @@ void testApp::interfaceSetup(){
     renderer->buttonList.push_back(tiBut);
     tiBut->bPermanent=true;
     tiBut->setup();
-
 
 }
 
@@ -201,14 +195,14 @@ int testApp::shareMemory(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    //cout << "UPDATE TIME" << glutGet(GLUT_ELAPSED_TIME) << "\n";
     fingerStart*=0;
     fingerEnd*=0;
 
     bSending=false;
     bFoundMat=false;
     bFingerOut=false;
-
+    bScrubingPlayhead=false;
 
 	ofBackground(100, 100, 100);
 	kinect.update();
@@ -229,7 +223,6 @@ void testApp::update(){
 
    colorImg.setFromPixels(pixelData, 640,480);
 
-
    grayImage = colorImg;
 
     grayImage.threshold(thresh);
@@ -238,7 +231,6 @@ void testApp::update(){
     // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
     // also, find holes is set to true so we will get interior contours as well....
     contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// find holes
-
 
     Matrix4f idMatrix;
     idMatrix.identity();
@@ -249,10 +241,9 @@ void testApp::update(){
 
     //I made these changes to test data transfer, please remove comments!
     if (bFoundMat && bFingerOut){
-        sendData();
+        sendData("setCameraPos");
         bSending=true;
     }
-
 
 }
 
@@ -640,47 +631,49 @@ bool testApp::findFinger(){
 
 }
 
-void testApp::sendData(){
 
+void testApp::sendData(string e){
 
-        ofxOscMessage myMessage;
+    ofxOscMessage myMessage;
+    cout<< "I am sending stuff to:" << ipAddressMSB << endl;
 
+    string oscAddress;
+    if(e == "setCameraPos") {
+            //fingerTransformation.transpose();
+            oscAddress = "/setPropertyForSelected/string/matrix4f";
+            //oscAddress = "/pilot/float/float"
+            myMessage.addStringArg("TRANSFORMMATRIX");
+            myMessage.addFloatArg(fingerTransformation.data[0]);
+            myMessage.addFloatArg(fingerTransformation.data[1]);
+            myMessage.addFloatArg(fingerTransformation.data[2]);
+            myMessage.addFloatArg(fingerTransformation.data[3]);
+            myMessage.addFloatArg(fingerTransformation.data[4]);
+            myMessage.addFloatArg(fingerTransformation.data[5]);
+            myMessage.addFloatArg(fingerTransformation.data[6]);
+            myMessage.addFloatArg(fingerTransformation.data[7]);
+            myMessage.addFloatArg(fingerTransformation.data[8]);
+            myMessage.addFloatArg(fingerTransformation.data[9]);
+            myMessage.addFloatArg(fingerTransformation.data[10]);
+            myMessage.addFloatArg(fingerTransformation.data[11]);
+            myMessage.addFloatArg(fingerTransformation.data[12]);
+            myMessage.addFloatArg(fingerTransformation.data[13]);
+            myMessage.addFloatArg(fingerTransformation.data[14]);
+            myMessage.addFloatArg(fingerTransformation.data[15]);
+    }
 
-        cout<< "I am sending stuff to:" << ipAddressMSB << endl;
+    else if("sendPlayhead") { // scrub mode
 
-        //fingerTransformation.transpose();
+        oscAddress = "/setPlayheadFrame/int";
+        myMessage.addIntArg(playheadFrame);
+        //cout << "playheadFrame currently at: " << playheadFrame << endl;
 
-        string oscAddress = "/setPropertyForSelected/string/matrix4f";
-        //oscAddress = "/pilot/float/float"
-
-        myMessage.addStringArg("TRANSFORMMATRIX");
-        myMessage.addFloatArg(fingerTransformation.data[0]);
-        myMessage.addFloatArg(fingerTransformation.data[1]);
-        myMessage.addFloatArg(fingerTransformation.data[2]);
-        myMessage.addFloatArg(fingerTransformation.data[3]);
-        myMessage.addFloatArg(fingerTransformation.data[4]);
-        myMessage.addFloatArg(fingerTransformation.data[5]);
-        myMessage.addFloatArg(fingerTransformation.data[6]);
-        myMessage.addFloatArg(fingerTransformation.data[7]);
-        myMessage.addFloatArg(fingerTransformation.data[8]);
-        myMessage.addFloatArg(fingerTransformation.data[9]);
-        myMessage.addFloatArg(fingerTransformation.data[10]);
-        myMessage.addFloatArg(fingerTransformation.data[11]);
-        myMessage.addFloatArg(fingerTransformation.data[12]);
-        myMessage.addFloatArg(fingerTransformation.data[13]);
-        myMessage.addFloatArg(fingerTransformation.data[14]);
-        myMessage.addFloatArg(fingerTransformation.data[15]);
+    }
 
         myMessage.setAddress(oscAddress);
-
         osc_senderMSB.sendMessage(myMessage);
-
-        //send to Processing
         osc_senderProcessing.sendMessage(myMessage);
 
-    //cout << "sending..." << fingerTransformation << endl;
 }
-
 
 //--------------------------------------------------------------
 void testApp::draw(){
@@ -758,6 +751,13 @@ void testApp::keyPressed (int key){
     input->normalKeyDown(key,mouseX,mouseY);
     input->specialKeyDown(key,mouseX,mouseY);
 
+  //replace for kinect input
+    if(key == 't') {
+        // toggle scrub state
+        bScrubingPlayhead = true;
+        sendData("sendPlayheadData");
+    }
+
 }
 
 void testApp::keyReleased(int key){
@@ -765,6 +765,9 @@ void testApp::keyReleased(int key){
     input->keyUp(key,mouseX,mouseY);
     input->specialKeyUp(key,mouseX,mouseY);
 
+    // change to select cameras by selecting the camera from the data manager class that has a start time
+    // closest the the value for playheadFrame.
+    // set that camera as activeCam, and run this OSC message when it is selected
     if (key>'0' && key<='4'){
         selectedCamera=key-'1';
 
@@ -801,6 +804,16 @@ void testApp::mouseMoved(int x, int y){
 
     input->moveMouse(x,y);
 
+        if(bScrubingPlayhead) {
+
+            int distance = x - oldX;
+            //cout << "distance = " << distance << endl; // positive for forward, negative for backward
+            int newPlayheadFrame = playheadFrame + distance;
+            if (newPlayheadFrame < 0) {newPlayheadFrame = 0;} // playhead stops at the beginning of the timeline
+            playheadFrame = newPlayheadFrame;
+            cout<< "playhead =  " << playheadFrame << endl;
+        }
+        oldX = x;
 }
 
 //--------------------------------------------------------------

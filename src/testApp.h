@@ -31,7 +31,7 @@ class testApp : public ofBaseApp, public Actor
         bool findFingerMatrix();
         bool findFinger();
 
-		void sendData();
+		void sendData(string e);
 
         void draw();
 		void exit();
@@ -111,7 +111,10 @@ class testApp : public ofBaseApp, public Actor
                           four,
                           five,
                           six;
-
+        bool    bScrubingPlayhead;
+        int     playheadFrame;
+        void    sendPlayheadData();
+        int     oldX;
 
 };
 

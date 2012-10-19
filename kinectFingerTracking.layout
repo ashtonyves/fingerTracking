@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="debug" />
+	<File name="..\..\..\addons\msbOFCore\actor.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="13412" topLine="539" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\actor.h" open="1" top="0" tabpos="5">
+		<Cursor position="1891" topLine="56" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\basicButton.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1234" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\input.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="16604" topLine="676" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\input.h" open="1" top="1" tabpos="7">
+		<Cursor position="4961" topLine="146" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\interpolationHelper.h" open="0" top="0" tabpos="6">
+		<Cursor position="655" topLine="15" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\msbButtons\textInputButton.h" open="0" top="0" tabpos="0">
+		<Cursor position="128" topLine="0" />
+	</File>
 	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1624" topLine="64" />
+		<Cursor position="9321" topLine="383" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\renderer.h" open="1" top="0" tabpos="4">
-		<Cursor position="9542" topLine="0" />
+		<Cursor position="4035" topLine="16" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="3">
 		<Cursor position="49186" topLine="0" />
@@ -19,10 +40,10 @@
 	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="0">
 		<Cursor position="3000" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="252" topLine="0" />
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="22704" topLine="326" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="2">
-		<Cursor position="1641" topLine="46" />
+		<Cursor position="1531" topLine="66" />
 	</File>
 </CodeBlocks_layout_file>
