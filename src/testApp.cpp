@@ -25,14 +25,17 @@ void testApp::setup(){
 
     bFoundMat=false;
     bFingerOut=false;
+    bTwoHands=false;
+
     bSending=false;
     bScrubingPlayhead=false; // do not scrub playhead to start
+
 
     fistFactor=0;
 
     offsetVector=Vector3f(400,600,3);
 
-    ofSetFrameRate(25);
+    ofSetFrameRate(30);
 
     ipAddressMSB="143.215.199.192";
     ipAddressProc="127.0.0.1";
@@ -104,8 +107,6 @@ void testApp::msbSetup(){
     renderer->layerList[0]->actorList.push_back(myActor);
 
     patchActor=myActor;
-
-    input->updateTime=7;
 
 }
 
@@ -202,6 +203,8 @@ void testApp::update(){
     bSending=false;
     bFoundMat=false;
     bFingerOut=false;
+    bTwoHands=false;
+
     bScrubingPlayhead=false;
 
 	ofBackground(100, 100, 100);
@@ -221,16 +224,16 @@ void testApp::update(){
             }
     }
 
-   colorImg.setFromPixels(pixelData, 640,480);
+    colorImg.setFromPixels(pixelData, 640,480);
 
-   grayImage = colorImg;
-
+    grayImage = colorImg;
     grayImage.threshold(thresh);
     grayImage.invert();
 
     // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
     // also, find holes is set to true so we will get interior contours as well....
-    contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// find holes
+    // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
+    contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// no find holes
 
     Matrix4f idMatrix;
     idMatrix.identity();
@@ -238,12 +241,22 @@ void testApp::update(){
 
     bFoundMat=findFingerMatrix();
     bFingerOut=findFinger();
+    bTwoHands=findHands();
 
-    //I made these changes to test data transfer, please remove comments!
-    if (bFoundMat && bFingerOut){
+    // there are two hands.
+    if(bTwoHands) {
+        cout << "two hands" << endl;
+        // we can now scrub playhead.
+
+        // and if the right hand is a fist, then we grab the active camera
+    }
+
+    if (bFoundMat && bFingerOut && !bTwoHands){
         sendData("setCameraPos");
         bSending=true;
     }
+
+
 
 }
 
@@ -271,7 +284,7 @@ bool testApp::findFingerMatrix(){
 
                 //find furthest point
 
-                //if wider than long - figure out if point closest to edge is left or right
+                //if wider than tall - figure out if point closest to edge is left or right
                 if (contourFinder.blobs[i].boundingRect.width>contourFinder.blobs[i].boundingRect.height){
 
 
@@ -316,7 +329,7 @@ bool testApp::findFingerMatrix(){
 
 
                 //find furthest point
-                ///Things flip to longer than wide here!
+                // Things flip to longer than wide here!
                 //if longer than wide - figure out if point closest to edge is up or right
                 if (contourFinder.blobs[i].boundingRect.width<contourFinder.blobs[i].boundingRect.height){
 
@@ -363,10 +376,10 @@ bool testApp::findFingerMatrix(){
 
 
                 //find furthest point
-                ///Things flip to longer than wide here!
+                // Things flip to longer than wide here!
                 //if longer than wide - figure out if point closest to edge is up or right
                 if (contourFinder.blobs[i].boundingRect.width<contourFinder.blobs[i].boundingRect.height){
-
+                cout << "right" << endl;
 
                     //find lower edge point
                     for (int b=0;b<contourFinder.blobs[i].nPts;b++){
@@ -388,6 +401,8 @@ bool testApp::findFingerMatrix(){
                         edge=edTwo;
                     }
 
+
+
                 }
                 //if wider (width) than long(height)
                 else{
@@ -403,7 +418,6 @@ bool testApp::findFingerMatrix(){
         ///BOTTOM
         if (contourFinder.blobs[i].boundingRect.height + contourFinder.blobs[i].boundingRect.y > 470){
 
-
                 //not in picture enough
                 if (contourFinder.blobs[i].boundingRect.y>400)
                     return false;
@@ -413,6 +427,7 @@ bool testApp::findFingerMatrix(){
 
                 //if wider than long - figure out if point closest to edge is left or right
                 if (contourFinder.blobs[i].boundingRect.width>contourFinder.blobs[i].boundingRect.height){
+
 
 
                     //find right edge point
@@ -631,6 +646,34 @@ bool testApp::findFinger(){
 
 }
 
+bool testApp::findHands() {
+    if(contourFinder.nBlobs == 2) {
+
+        ofPoint* scrubPoint = NULL;
+        ofxCvBlob* activeHand = NULL;
+
+        if(contourFinder.blobs[0].boundingRect.x > contourFinder.blobs[1].boundingRect.x) {
+            activeHand = &contourFinder.blobs[0];
+        } else  {
+            activeHand = &contourFinder.blobs[1];
+        }
+
+
+        //setPlayHeadFrame( /*centroid of active hand*/);
+
+
+
+
+        return true;
+        // find the blob with the highest x value
+    } else {
+        return false;
+    }
+}
+
+
+
+
 
 void testApp::sendData(string e){
 
@@ -737,6 +780,14 @@ void testApp::draw(){
 
 
     glPopMatrix();
+
+    contourFinder.draw(0,0);
+
+     // print report String to interface
+    char reportStr[1024];
+    sprintf(reportStr, "current value of playheadFrame: %i\nnumber of blobs %i\n fist factor: %i", playheadFrame, contourFinder.nBlobs, fistFactor);
+    ofDrawBitmapString(reportStr, 20, 700);
+
 }
 
 //--------------------------------------------------------------

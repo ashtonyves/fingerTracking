@@ -30,6 +30,7 @@ class testApp : public ofBaseApp, public Actor
 
         bool findFingerMatrix();
         bool findFinger();
+        bool findHands();
 
 		void sendData(string e);
 
@@ -100,6 +101,10 @@ class testApp : public ofBaseApp, public Actor
         bool    bFoundMat;
         bool    bFingerOut;
         bool    bSending;
+        bool    bTwoHands;
+
+
+        // bool bPalmOut
 
         int         fistFactor;
 
@@ -111,6 +116,7 @@ class testApp : public ofBaseApp, public Actor
                           four,
                           five,
                           six;
+
         bool    bScrubingPlayhead;
         int     playheadFrame;
         void    sendPlayheadData();
