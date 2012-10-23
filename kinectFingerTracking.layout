@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="debug" />
-	<File name="..\..\..\addons\msbOFCore\actor.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="13412" topLine="539" />
+	<File name="..\..\..\addons\msbOFCore\actor.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="13412" topLine="572" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\actor.h" open="1" top="0" tabpos="5">
+	<File name="..\..\..\addons\msbOFCore\actor.h" open="0" top="0" tabpos="5">
 		<Cursor position="1891" topLine="56" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\basicButton.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1234" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\input.cpp" open="1" top="0" tabpos="8">
+	<File name="..\..\..\addons\msbOFCore\input.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="16604" topLine="676" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\input.h" open="1" top="0" tabpos="7">
+	<File name="..\..\..\addons\msbOFCore\input.h" open="0" top="0" tabpos="7">
 		<Cursor position="4959" topLine="123" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\interpolationHelper.h" open="0" top="0" tabpos="6">
@@ -22,28 +22,37 @@
 	<File name="..\..\..\addons\msbOFCore\msbButtons\textInputButton.h" open="0" top="0" tabpos="0">
 		<Cursor position="128" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="9321" topLine="383" />
+	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="9385" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.h" open="1" top="0" tabpos="4">
+	<File name="..\..\..\addons\msbOFCore\renderer.h" open="0" top="0" tabpos="4">
 		<Cursor position="4035" topLine="16" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="3">
-		<Cursor position="49186" topLine="0" />
+		<Cursor position="17390" topLine="708" />
 	</File>
 	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="13237" topLine="62" />
 	</File>
-	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.h" open="0" top="0" tabpos="3">
-		<Cursor position="5131" topLine="0" />
+	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.h" open="1" top="0" tabpos="3">
+		<Cursor position="40" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" open="0" top="0" tabpos="0">
+		<Cursor position="257" topLine="0" />
 	</File>
 	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="0">
 		<Cursor position="3000" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="20749" topLine="524" />
+	<File name="src\cam.h" open="1" top="1" tabpos="5">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\main.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="487" topLine="0" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="2">
-		<Cursor position="469" topLine="9" />
+		<Cursor position="2403" topLine="81" />
 	</File>
 </CodeBlocks_layout_file>

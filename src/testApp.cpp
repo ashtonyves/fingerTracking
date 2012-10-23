@@ -26,6 +26,9 @@ void testApp::setup(){
     bFoundMat=false;
     bFingerOut=false;
     bTwoHands=false;
+    bCameraSelected=false;
+
+    activeCamera=0;
 
     bSending=false;
     bScrubingPlayhead=false; // do not scrub playhead to start

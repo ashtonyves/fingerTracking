@@ -96,14 +96,18 @@ class testApp : public ofBaseApp, public Actor
 
         int     bufferLength;
 
+        // TODO: these should both be camera objects
         int     selectedCamera;
+        int     activeCamera;
+
 
         bool    bFoundMat;
+
         bool    bFingerOut;
-        bool    bSending;
         bool    bTwoHands;
+        bool    bCameraSelected;    // maybe this should be a property of Cam
 
-
+        bool    bSending;
         // bool bPalmOut
 
         int         fistFactor;
