@@ -1,18 +1,17 @@
 #include "kCam.h"
+#include "msbOFCore.h"
 
-KCam::KCam() {
-
+kCam::kCam() {
     // set the initial properties
 }
 
-void KCam::grab() {
+void kCam::setCameraStartTime() {
+    cout << "camera position set";
 }
 
-void KCam::setPosition() {
+void kCam::setCameraPosition() {
+    cout << "camera position set in space";
 }
-
-void KCam::drop() {
-}
-
-void KCam::remove() {
+void kCam::removeCamera() {
+    cout << "camera removed";
 }

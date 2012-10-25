@@ -1,12 +1,14 @@
 #include "testApp.h"
 
 #include "actor.h"
+#include "kCam.h"
 #include "sliderButton.h"
 #include "textInputButton.h"
 #include "assignButton.h"
 #include "msbLight.h"
 
 #define BUF_SIZE 640*480*4*32
+#define NUM_CAMS 20
 
 
 //--------------------------------------------------------------
@@ -16,23 +18,21 @@ void testApp::setup(){
     bLearnBackground=true;
     cutOffDepth=4096;
     bSetCutoffToZero=false;
-    channelMSB=1;
-    channelProc=2;
     bufferLength=10;
 
-    selectedCamera=0;
+    // TODO: create camera vector array
+
+    selectedCamera=0; // perhaps change this to the first camera in the created vector array?
     thresh= 66;
 
     bFoundMat=false;
     bFingerOut=false;
     bTwoHands=false;
-    bCameraSelected=false;
 
-    activeCamera=0;
+    bCameraSelected=false;
 
     bSending=false;
     bScrubingPlayhead=false; // do not scrub playhead to start
-
 
     fistFactor=0;
 
@@ -42,17 +42,15 @@ void testApp::setup(){
 
     ipAddressMSB="143.215.199.192";
     ipAddressProc="127.0.0.1";
-
-    // osc_senderMSB.setup(ipAddressMSB,3184+channelMSB);
-    // osc_senderProcessing.setup(ipAddressProc,3184+channelProc);
-
     osc_senderMSB.setup(ipAddressMSB,31841);
     osc_senderProcessing.setup(ipAddressProc,31842);
 
     msbSetup();
-
     interfaceSetup();
+    cameraListSetup();
 
+    cout << "number of cameras : " << cameraList.size() << endl;
+    activeCamera=*cameraList[0];
     //OF_STUFF
 
 	//kinect.init(true);  //shows infrared image
@@ -70,7 +68,15 @@ void testApp::setup(){
 
 	pixelData=new unsigned char[640*480*3];
 
-	playheadFrame = 0;
+	playheadFrame = 0;      // starting position of the playhead. GUI should start the same way
+    oldPlayheadFrame = 0;
+}
+
+void testApp::cameraListSetup() {
+    for(int i = 0; i < 20; i++) {
+        kCam c;
+        cameraList.push_back(&c);
+    }
 }
 
 void testApp::msbSetup(){
@@ -92,6 +98,7 @@ void testApp::msbSetup(){
     if (!kinect.bImage)
         return;
 
+    // AG: what is this?
     //Adding MSB content
     //heightfield based on videoTexture from OF
     Actor* myActor = new Actor;
@@ -135,7 +142,7 @@ void testApp::interfaceSetup(){
 
 
     tiBut= new TextInputButton;
-    tiBut->location.x=100;
+    tiBut->location.x=10;
     tiBut->location.y=650;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
@@ -154,7 +161,6 @@ void testApp::interfaceSetup(){
 
 
 void testApp::registerProperties(){
-
    createMemberID("OFFSETVECTOR",&offsetVector,this);
    createMemberID("THRESH",&thresh,this);
 }
@@ -192,9 +198,6 @@ int testApp::shareMemory(){
         }
 	}
    // _getch();
-
-
-
 }
 
 //--------------------------------------------------------------
@@ -241,24 +244,23 @@ void testApp::update(){
     Matrix4f idMatrix;
     idMatrix.identity();
 
-
+    // set booleans by running functions on each loop
     bFoundMat=findFingerMatrix();
     bFingerOut=findFinger();
-    bTwoHands=findHands();
+    bTwoHands=findHands();  //and additionally this will check if both hands are palms or palm and fist
 
     // there are two hands.
     if(bTwoHands) {
         cout << "two hands" << endl;
-        // we can now scrub playhead.
-
+        // now track the right blob and scrub its playhead playhead based on its lateral position.
+        // run that on update
         // and if the right hand is a fist, then we grab the active camera
     }
 
-    if (bFoundMat && bFingerOut && !bTwoHands){
+    if (bFoundMat && bFingerOut && !bTwoHands){ // do not set position if two hands are in the frame
         sendData("setCameraPos");
         bSending=true;
     }
-
 
 
 }
@@ -650,32 +652,45 @@ bool testApp::findFinger(){
 }
 
 bool testApp::findHands() {
+
     if(contourFinder.nBlobs == 2) {
+        // later encapsulate in
+        // if (both hands fists.....
 
-        ofPoint* scrubPoint = NULL;
-        ofxCvBlob* activeHand = NULL;
+        ofxCvBlob activeHand;
 
-        if(contourFinder.blobs[0].boundingRect.x > contourFinder.blobs[1].boundingRect.x) {
-            activeHand = &contourFinder.blobs[0];
+        // find the blob with the highest x value. It's the one on the right.
+        if(contourFinder.blobs[0].centroid.x > contourFinder.blobs[1].centroid.x) {
+            activeHand = contourFinder.blobs[0];
         } else  {
-            activeHand = &contourFinder.blobs[1];
+            activeHand = contourFinder.blobs[1];
         }
 
-
-        //setPlayHeadFrame( /*centroid of active hand*/);
-
-
-
-
-        return true;
-        // find the blob with the highest x value
+        //scrubPlayhead(activeHand.centriod.x);
+        cout << activeHand.centroid.x << endl;
     } else {
         return false;
     }
 }
 
+void testApp::scrubPlayhead(int pos) {
 
+        int distance = pos - oldPlayheadFrame;
 
+        //cout << "distance = " << distance << endl; // positive for forward, negative for backward
+        int newPlayheadFrame = playheadFrame + distance;
+
+        if (newPlayheadFrame < 0) {
+            newPlayheadFrame = 0;
+        } // playhead stops at the beginning of the timeline
+
+        playheadFrame = newPlayheadFrame;
+        cout<< "playhead =  " << playheadFrame << endl;
+
+        //save playhead before you change it.
+        oldPlayheadFrame = playheadFrame;
+
+}
 
 
 void testApp::sendData(string e){
@@ -748,15 +763,13 @@ void testApp::draw(){
         glPushMatrix();
 
         ofSetColor(0,255,0);
-        ofLine(fingerStart.x,fingerStart.y,fingerEnd.x,fingerEnd.y);
-
+        ofLine(fingerStart.x+5,fingerStart.y,fingerEnd.x+5,fingerEnd.y);
 
         ofSetColor(128,0,0);
         ofRect(fingerStart.x,fingerStart.y,10,10);
 
         ofSetColor(255,0,0);
         ofRect(fingerEnd.x,fingerEnd.y,10,10);
-
 
         ofSetColor(64,64,255);
         ofRect(one.x,one.y,5,5);
@@ -771,20 +784,17 @@ void testApp::draw(){
          ofSetColor(0,255,0);
      else
          ofSetColor(128,128,128);
-
     ofCircle(700,500,20);
 
     if (bSending)
         ofSetColor(255,0,0);
     else
         ofSetColor(0,0,0);
-
     ofCircle(700,550,20);
-
 
     glPopMatrix();
 
-    contourFinder.draw(0,0);
+    //contourFinder.draw(0,0);
 
      // print report String to interface
     char reportStr[1024];
@@ -860,14 +870,14 @@ void testApp::mouseMoved(int x, int y){
 
         if(bScrubingPlayhead) {
 
-            int distance = x - oldX;
+            int distance = x - oldPlayheadFrame;
             //cout << "distance = " << distance << endl; // positive for forward, negative for backward
             int newPlayheadFrame = playheadFrame + distance;
             if (newPlayheadFrame < 0) {newPlayheadFrame = 0;} // playhead stops at the beginning of the timeline
             playheadFrame = newPlayheadFrame;
             cout<< "playhead =  " << playheadFrame << endl;
         }
-        oldX = x;
+        oldPlayheadFrame = x;
 }
 
 //--------------------------------------------------------------

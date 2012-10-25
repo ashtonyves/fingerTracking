@@ -1,11 +1,8 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
-
-
-
 #include "ofMain.h"
-
+#include "kCam.h"
 #include "ofxKinect.h"
 #include "ofxOsc.h"
 #include "ofxOpenCv.h"
@@ -25,6 +22,7 @@ class testApp : public ofBaseApp, public Actor
         void msbSetup();
 		void interfaceSetup();
 		void filemappingSetup();
+		void cameraListSetup();
 
 		void update();
 
@@ -55,12 +53,8 @@ class testApp : public ofBaseApp, public Actor
         ofxOscSender        osc_senderMSB;
         ofxOscSender        osc_senderProcessing;
 
-
         string              ipAddressMSB;
         string              ipAddressProc;
-        int                     channelMSB;
-        int                     channelProc;
-
 
         bool                bSetCutoffToZero;
         bool                bFullscreen;
@@ -75,11 +69,9 @@ class testApp : public ofBaseApp, public Actor
         Actor*          patchActor;
 
         float           cutOffDepth;
-
         float           thresh;
 
-        ofxCvColorImage		colorImg;
-
+        ofxCvColorImage		    colorImg;
         ofxCvGrayscaleImage 	grayImage;
 		ofxCvGrayscaleImage 	grayBg;
 		ofxCvGrayscaleImage 	grayDiff;
@@ -87,7 +79,7 @@ class testApp : public ofBaseApp, public Actor
         ofxCvContourFinder 	contourFinder;
 
         ofImage         myImage;
-        unsigned char*           pixelData;
+        unsigned char*  pixelData;
 
         Matrix4f        fingerTransformation;
         Vector3f        offsetVector;
@@ -96,19 +88,23 @@ class testApp : public ofBaseApp, public Actor
 
         int     bufferLength;
 
-        // TODO: these should both be camera objects
-        int     selectedCamera;
-        int     activeCamera;
-
+        int     playheadFrame;
+        int     oldPlayheadFrame;   // to caluclate distanace from old to new and add or subtract that value
 
         bool    bFoundMat;
-
         bool    bFingerOut;
         bool    bTwoHands;
+
         bool    bCameraSelected;    // maybe this should be a property of Cam
 
         bool    bSending;
+        bool    bScrubingPlayhead;
         // bool bPalmOut
+
+        // TODO: these should both be camera objects assigned after fired events
+        // Assigned because the camera's start time preceded the playheadFrame
+        int     selectedCamera; // should be kCam
+        kCam    activeCamera;
 
         int         fistFactor;
 
@@ -121,10 +117,11 @@ class testApp : public ofBaseApp, public Actor
                           five,
                           six;
 
-        bool    bScrubingPlayhead;
-        int     playheadFrame;
-        void    sendPlayheadData();
-        int     oldX;
+
+        void    scrubPlayhead(int pos);
+
+        // list of all cameras in scene
+        vector<kCam*> cameraList;
 
 };
 

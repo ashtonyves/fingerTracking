@@ -4,28 +4,35 @@
 #include "ofMain.h"
 #include "msbOFCore.h"
 
-class KCam {
+class kCam {
 
 public:
     // Constructor
-    KCam();
+    kCam();
 
-    // methods
-    void grab();        // make selected and change the start time.
-    void setPosition();    // change the transform matrix
-    void drop();        // drop cam and adjust start time
-    void remove();      // remove from the timeline
-
-    // properties
+     // properties
     int id;             // id of the camer
     int startFrame;     // starting frame, corresponding to x position of blob
     Matrix4f transform; // transform matrix
 
+    bool visible;       // whether to show them in MSB or not
+
     // maybe these are best indicated in the main class, rather than declaring each one active or selected...
     bool active;        // is this camera active?
     bool selected;      // is this camera selected
+
+
+    // methods
+    void setCameraPosition();           // change the transform matrix - refactor from current findFingerMatrix
+    void setCameraStartTime();          // drop cam and adjust start time
+    void removeCamera();                // remove from the timeline
+
+    void createID();
+
+    int getCameraStartTime();
+
+    //void updateSortOrder();
+
 };
 
-
-
-#endif _KCAM
+#endif
