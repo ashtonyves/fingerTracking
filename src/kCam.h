@@ -11,7 +11,7 @@ public:
     kCam();
 
      // properties
-    int id;             // id of the camer
+    int id;             // id of the camera
     int startFrame;     // starting frame, corresponding to x position of blob
     Matrix4f transform; // transform matrix
 

@@ -3,11 +3,13 @@
 
 #include "ofMain.h"
 #include "kCam.h"
+#include "kCamManager.h"
 #include "ofxKinect.h"
 #include "ofxOsc.h"
 #include "ofxOpenCv.h"
 #include "msbOFCore.h"
 #include "actor.h"
+
 
 struct actorID;
 struct memberID;
@@ -17,12 +19,12 @@ class testApp : public ofBaseApp, public Actor
 
 	public:
 
-		void setup();
+        ofTrueTypeFont type;
 
+		void setup();
         void msbSetup();
 		void interfaceSetup();
 		void filemappingSetup();
-		void cameraListSetup();
 
 		void update();
 
@@ -104,7 +106,7 @@ class testApp : public ofBaseApp, public Actor
         // TODO: these should both be camera objects assigned after fired events
         // Assigned because the camera's start time preceded the playheadFrame
         int     selectedCamera; // should be kCam
-        kCam    activeCamera;
+        //kCam    activeCamera;
 
         int         fistFactor;
 
@@ -120,8 +122,9 @@ class testApp : public ofBaseApp, public Actor
 
         void    scrubPlayhead(int pos);
 
-        // list of all cameras in scene
-        vector<kCam*> cameraList;
+        kCamManager     manager; // camera manager key
+
+        // int camKey;
 
 };
 

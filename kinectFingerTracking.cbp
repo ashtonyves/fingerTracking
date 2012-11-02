@@ -346,6 +346,16 @@
 		<Unit filename="src\kCam.h">
 			<Option virtualFolder="src\" />
 		</Unit>
+		<Unit filename="src\kCamManager.cpp">
+			<Option virtualFolder="src\" />
+			<Option target="release" />
+			<Option target="debug" />
+		</Unit>
+		<Unit filename="src\kCamManager.h">
+			<Option virtualFolder="src\" />
+			<Option target="release" />
+			<Option target="debug" />
+		</Unit>
 		<Unit filename="src\main.cpp">
 			<Option virtualFolder="src\" />
 		</Unit>

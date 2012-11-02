@@ -2,10 +2,10 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="debug" />
 	<File name="..\..\..\addons\msbOFCore\actor.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="13412" topLine="572" />
+		<Cursor position="37598" topLine="1348" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\actor.h" open="0" top="0" tabpos="5">
-		<Cursor position="1602" topLine="41" />
+		<Cursor position="3182" topLine="0" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\basicButton.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="48" topLine="0" />
@@ -22,14 +22,17 @@
 	<File name="..\..\..\addons\msbOFCore\msbButtons\textInputButton.h" open="0" top="0" tabpos="0">
 		<Cursor position="125" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="9385" topLine="0" />
+	<File name="..\..\..\addons\msbOFCore\node.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="6439" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.h" open="0" top="0" tabpos="4">
-		<Cursor position="4035" topLine="16" />
+	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="20610" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="3">
-		<Cursor position="61629" topLine="2424" />
+	<File name="..\..\..\addons\msbOFCore\renderer.h" open="0" top="0" tabpos="5">
+		<Cursor position="3997" topLine="39" />
+	</File>
+	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="7">
+		<Cursor position="61629" topLine="39" />
 	</File>
 	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="13237" topLine="62" />
@@ -44,18 +47,24 @@
 		<Cursor position="3000" topLine="0" />
 	</File>
 	<File name="src\kCam.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="153" topLine="0" />
+		<Cursor position="298" topLine="0" />
 	</File>
 	<File name="src\kCam.h" open="1" top="0" tabpos="3">
-		<Cursor position="858" topLine="0" />
+		<Cursor position="32" topLine="0" />
+	</File>
+	<File name="src\kCamManager.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="798" topLine="21" />
+	</File>
+	<File name="src\kCamManager.h" open="1" top="0" tabpos="5">
+		<Cursor position="737" topLine="0" />
 	</File>
 	<File name="src\main.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="23037" topLine="266" />
+		<Cursor position="2971" topLine="67" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="2">
-		<Cursor position="2079" topLine="87" />
+		<Cursor position="474" topLine="15" />
 	</File>
 </CodeBlocks_layout_file>

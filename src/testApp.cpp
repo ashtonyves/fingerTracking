@@ -14,24 +14,28 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
+    type.loadFont("DroidSans.ttf", 12);
+
+ // TODO: create kCamManager Class to handle Camera vector array?
+    // ------------ cameras
+    playheadFrame = 0;      // starting position of the playhead. GUI should start the same way
+    oldPlayheadFrame = 0;
+    selectedCamera=0; // perhaps change this to the first camera in the created vector array?
+
     bFullscreen=false;
     bLearnBackground=true;
     cutOffDepth=4096;
     bSetCutoffToZero=false;
     bufferLength=10;
 
-    // TODO: create camera vector array
-
-    selectedCamera=0; // perhaps change this to the first camera in the created vector array?
     thresh= 66;
 
     bFoundMat=false;
     bFingerOut=false;
     bTwoHands=false;
 
-    bCameraSelected=false;
-
     bSending=false;
+    bCameraSelected=false;
     bScrubingPlayhead=false; // do not scrub playhead to start
 
     fistFactor=0;
@@ -47,10 +51,8 @@ void testApp::setup(){
 
     msbSetup();
     interfaceSetup();
-    cameraListSetup();
+    manager.setup();    // add one camera at 0
 
-    cout << "number of cameras : " << cameraList.size() << endl;
-    activeCamera=*cameraList[0];
     //OF_STUFF
 
 	//kinect.init(true);  //shows infrared image
@@ -68,15 +70,6 @@ void testApp::setup(){
 
 	pixelData=new unsigned char[640*480*3];
 
-	playheadFrame = 0;      // starting position of the playhead. GUI should start the same way
-    oldPlayheadFrame = 0;
-}
-
-void testApp::cameraListSetup() {
-    for(int i = 0; i < 20; i++) {
-        kCam c;
-        cameraList.push_back(&c);
-    }
 }
 
 void testApp::msbSetup(){
@@ -125,8 +118,8 @@ void testApp::interfaceSetup(){
     TextInputButton *tiBut;
 
     tiBut= new TextInputButton;
-    tiBut->location.x=10;
-    tiBut->location.y=550;
+    tiBut->location.x=650;
+    tiBut->location.y=5;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
@@ -142,8 +135,8 @@ void testApp::interfaceSetup(){
 
 
     tiBut= new TextInputButton;
-    tiBut->location.x=10;
-    tiBut->location.y=650;
+    tiBut->location.x=650;
+    tiBut->location.y=20;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
@@ -796,11 +789,22 @@ void testApp::draw(){
 
     //contourFinder.draw(0,0);
 
+    ofSetColor(255,255,255);
      // print report String to interface
-    char reportStr[1024];
-    sprintf(reportStr, "current value of playheadFrame: %i\nnumber of blobs %i\n fist factor: %i", playheadFrame, contourFinder.nBlobs, fistFactor);
-    ofDrawBitmapString(reportStr, 20, 700);
+    char CameraReportStr[1024];
+    sprintf(CameraReportStr, "CAMERA INFO\nnumber of cameras: %i\nselected camera id: %i\nactive camera id: %i\n", manager.getNumCams(), manager.activeCam, manager.selectedCam);
 
+    char BlobReportStr[1024];
+    sprintf(BlobReportStr, "BLOB INFO\nnumber of blobs %i\nFist factor: %i", contourFinder.nBlobs, fistFactor);
+
+    type.drawString(CameraReportStr, 20, 600);
+    type.drawString(BlobReportStr, 320, 600);
+    type.drawString("Playhead: " + ofToString(playheadFrame),20, 550);
+
+    type.drawString("CAMERAS", 650, 380);
+    for(int i = 0; i < manager.getNumCams(); i++) {
+        type.drawString("id: " + ofToString(manager.roster[i].id) + " start: " + ofToString(manager.roster[i].startFrame), 650, 400 + 20*i);
+    }
 }
 
 //--------------------------------------------------------------
@@ -859,6 +863,15 @@ void testApp::keyReleased(int key){
         osc_senderMSB.sendMessage(myMessageSwitch);
 
 
+    }
+
+    switch(key) {
+        case('a'):
+            manager.addCamera(playheadFrame);
+            break;
+        case('r'):
+            manager.removeCamera();
+            break;
     }
 
 }
