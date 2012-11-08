@@ -803,7 +803,7 @@ void testApp::draw(){
 
     type.drawString("CAMERAS", 650, 380);
     for(int i = 0; i < manager.getNumCams(); i++) {
-        type.drawString("id: " + ofToString(manager.roster[i].id) + " start: " + ofToString(manager.roster[i].startFrame), 650, 400 + 20*i);
+       type.drawString("id: " + ofToString(manager.roster[i].id) + " start: " + ofToString(manager.roster[i].startFrame), 650, 400 + 20*i);
     }
 }
 

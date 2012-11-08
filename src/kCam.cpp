@@ -12,6 +12,3 @@ void kCam::setCameraStartTime() {
 void kCam::setCameraPosition() {
     cout << "camera position set in space";
 }
-void kCam::removeCamera() {
-    cout << "camera removed";
-}

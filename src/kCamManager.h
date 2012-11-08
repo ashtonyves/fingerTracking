@@ -17,15 +17,16 @@ public:
     vector<kCam> roster;       // list of all cameras in scene
 
     int camKey;                 // increment the unique key for new cameras. Used to make "camera2" id for MSB
-    int activeCam;
-    int selectedCam;
+    int activeCam;              // kCam.id
+    int selectedCam;            // kCam.id
+
 
     // methods
     void setup();
     void addCamera(int startFrame);
     void removeCamera();
 
-    bool sortByStartTime();     // comparison function
+    bool sortByStartTime();
 
     void updateSortOrder();     // runs a comparison function to easily identify the start times of previous and next shots in the sequence
 

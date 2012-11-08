@@ -105,8 +105,8 @@ class testApp : public ofBaseApp, public Actor
 
         // TODO: these should both be camera objects assigned after fired events
         // Assigned because the camera's start time preceded the playheadFrame
-        int     selectedCamera; // should be kCam
-        //kCam    activeCamera;
+        int     selectedCamera; // This is actually the active camera, set in the kCamManagerClass.
+
 
         int         fistFactor;
 
