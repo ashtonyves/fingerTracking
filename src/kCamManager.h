@@ -5,6 +5,9 @@
 #include "msbOFCore.h"
 #include "kCam.h"
 
+
+
+
 class kCamManager {
 
 public:
@@ -21,6 +24,8 @@ public:
     void setup();
     void addCamera(int startFrame);
     void removeCamera();
+
+    bool sortByStartTime();     // comparison function
 
     void updateSortOrder();     // runs a comparison function to easily identify the start times of previous and next shots in the sequence
 

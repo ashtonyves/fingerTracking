@@ -26,10 +26,10 @@ void kCamManager::addCamera(int frame) {
 
     camKey++;               // increment unique key
 
-    updateSortOrder();
+    //updateSortOrder();
 
-    cout << "added camera : " << c.id << endl;
-    cout << "number of cameras : " << getNumCams() << endl;
+    //cout << "added camera : " << c.id << endl;
+    //cout << "number of cameras : " << getNumCams() << endl;
 }
 
 //---------------------------------------------
@@ -40,13 +40,20 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
         return;
     }
 
+    // you can only erase the camera if it's currently active
+    // So erase the active camera from the the vector
       for(int i = 0; i < getNumCams(); i++) {
+        cout << "i: " + ofToString(i) << endl;
         if(roster[i].id == activeCam) {
+
+            // set the activeCam to the one prior to the camera we just deleted
+            activeCam = roster[i-1].id;
+
+            // this will only work if we reorder the cameras before we cound upwards from the beginning
             roster.erase(roster.begin() + i);
             // TODO: destroy the kCam item at roster[i]
-            selectedCam = activeCam = i - 1;  // set the activeCam to the one prior to the camera we just deleted
         }
-      }
+    }
     // remove the active camera from the roster
    /* for(int i = 0; i < getNumCams(); i++) { // we skip 0, the first element which cannot be deleted
         if(roster.[i] == getActiveCam) {
@@ -64,11 +71,10 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
 }
 
 
+
 //---------------------------------------------
 void kCamManager::updateSortOrder() {
-
-
-
+    //sort(roster.begin(), roster.end() );
     // TODO: compaison function
     // std::sort(roster.begin(), roster.end(), [ comparison function ] );
     cout << "sorting cameras" << endl;

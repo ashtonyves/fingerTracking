@@ -792,7 +792,7 @@ void testApp::draw(){
     ofSetColor(255,255,255);
      // print report String to interface
     char CameraReportStr[1024];
-    sprintf(CameraReportStr, "CAMERA INFO\nnumber of cameras: %i\nselected camera id: %i\nactive camera id: %i\n", manager.getNumCams(), manager.activeCam, manager.selectedCam);
+    sprintf(CameraReportStr, "CAMERA INFO\nnumber of cameras: %i\nselected camera id: %i\nactive camera id: %i\n", manager.getNumCams(), manager.selectedCam, manager.activeCam);
 
     char BlobReportStr[1024];
     sprintf(BlobReportStr, "BLOB INFO\nnumber of blobs %i\nFist factor: %i", contourFinder.nBlobs, fistFactor);
