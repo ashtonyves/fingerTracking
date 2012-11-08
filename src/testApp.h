@@ -2,13 +2,17 @@
 #define _TEST_APP
 
 #include "ofMain.h"
-#include "kCam.h"
-#include "kCamManager.h"
-#include "ofxKinect.h"
+
 #include "ofxOsc.h"
 #include "ofxOpenCv.h"
 #include "msbOFCore.h"
+
+#include "kCam.h"
+#include "kCamManager.h"
+#include "ofxKinect.h"
+
 #include "actor.h"
+
 
 
 struct actorID;
@@ -52,6 +56,7 @@ class testApp : public ofBaseApp, public Actor
         void trigger(Actor* other);
 
         ofxKinect           kinect;
+
         ofxOscSender        osc_senderMSB;
         ofxOscSender        osc_senderProcessing;
 
@@ -97,7 +102,7 @@ class testApp : public ofBaseApp, public Actor
         bool    bFingerOut;
         bool    bTwoHands;
 
-        bool    bCameraSelected;    // maybe this should be a property of Cam
+        bool    bCameraSelected;    // maybe this should be a property of kCamManager
 
         bool    bSending;
         bool    bScrubingPlayhead;

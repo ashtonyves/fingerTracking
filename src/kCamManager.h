@@ -4,9 +4,7 @@
 #include "ofMain.h"
 #include "msbOFCore.h"
 #include "kCam.h"
-
-
-
+#include "ofxOsc.h"
 
 class kCamManager {
 
@@ -20,13 +18,10 @@ public:
     int activeCam;              // kCam.id
     int selectedCam;            // kCam.id
 
-
     // methods
     void setup();
     void addCamera(int startFrame);
-    void removeCamera();
-
-    bool sortByStartTime();
+    void removeCamera();        // removes the active camera
 
     void updateSortOrder();     // runs a comparison function to easily identify the start times of previous and next shots in the sequence
 
@@ -34,6 +29,14 @@ public:
     int getNumCams();
     kCam getActiveCam();
     kCam getSelectedCam();
+
+    // put in own pilot class
+        ofxOscSender       kosc_senderMSB;
+        ofxOscSender       kosc_senderProcessing;
+
+        string              kipAddressMSB;
+        string              kipAddressProc;
+
 
 };
 

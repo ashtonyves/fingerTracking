@@ -1,6 +1,7 @@
 #include "kCamManager.h"
 #include "msbOFCore.h"
 #include "kCam.h"
+#include "ofxOsc.h"
 
 bool lessThanKey(kCam a, kCam b) {
     return a.startFrame < b.startFrame;
@@ -53,6 +54,9 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
             if (i == 0) {
                 cout << "You cannot delete the first camera" << endl;
             } else {
+
+           // TODO: send OSC
+
                 // set the activeCam to the one prior to the camera we just deleted
                 activeCam = roster[i-1].id;
                 // erase the camera from the roster
@@ -60,6 +64,8 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
             }
         }
     }
+
+
 
     // and update the sort order to reflect the new arrangement
     updateSortOrder();

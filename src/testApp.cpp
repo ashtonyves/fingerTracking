@@ -715,12 +715,18 @@ void testApp::sendData(string e){
             myMessage.addFloatArg(fingerTransformation.data[15]);
     }
 
-    else if("sendPlayhead") { // scrub mode
+    else if(e == "sendPlayhead") { // scrub mode
 
         oscAddress = "/setPlayheadFrame/int";
         myMessage.addIntArg(playheadFrame);
         //cout << "playheadFrame currently at: " << playheadFrame << endl;
 
+    } else if (e == "addCamera") {
+        cout << " OSC add camera" << endl;
+    }
+
+    else if (e == "removeCamera") {
+        cout << " OSC remove camera" << endl;
     }
 
         myMessage.setAddress(oscAddress);
