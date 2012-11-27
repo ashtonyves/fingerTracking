@@ -18,12 +18,12 @@ public:
     bool visible;       // TODO:whether to show them in MSB or not
 
     // methods
-    void setCameraPosition();           // TODO change the transform matrix - refactor from current findFingerMatrix
-    void setCameraStartTime();          // drop cam and adjust startFrame
+    //void setCameraPosition();           // TODO change the transform matrix - refactor from current findFingerMatrix
+    //void setCameraStartTime();          // drop cam and adjust startFrame
 
-    void createID();
-
+    // should just be getters in this class
     int getCameraStartTime();
+    Matrix4f getCameraPosition();
 
     //void updateSortOrder();
 

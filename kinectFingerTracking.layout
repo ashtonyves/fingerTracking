@@ -46,25 +46,25 @@
 	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="0">
 		<Cursor position="3000" topLine="0" />
 	</File>
-	<File name="src\kCam.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="97" topLine="0" />
+	<File name="src\kCam.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="179" topLine="0" />
 	</File>
-	<File name="src\kCam.h" open="0" top="0" tabpos="3">
-		<Cursor position="157" topLine="0" />
+	<File name="src\kCam.h" open="0" top="0" tabpos="5">
+		<Cursor position="764" topLine="0" />
 	</File>
-	<File name="src\kCamManager.cpp" open="1" top="1" tabpos="4">
-		<Cursor position="561" topLine="3" />
+	<File name="src\kCamManager.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="432" topLine="7" />
 	</File>
 	<File name="src\kCamManager.h" open="1" top="0" tabpos="1">
-		<Cursor position="870" topLine="29" />
+		<Cursor position="871" topLine="0" />
 	</File>
 	<File name="src\main.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1315" topLine="40" />
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="1265" topLine="36" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="3">
-		<Cursor position="63" topLine="0" />
+		<Cursor position="2543" topLine="35" />
 	</File>
 </CodeBlocks_layout_file>

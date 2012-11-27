@@ -15,6 +15,7 @@ public:
     vector<kCam> roster;       // list of all cameras in scene
 
     int camKey;                 // increment the unique key for new cameras. Used to make "camera2" id for MSB
+
     int activeCam;              // kCam.id
     int selectedCam;            // kCam.id
 
@@ -30,13 +31,8 @@ public:
     kCam getActiveCam();
     kCam getSelectedCam();
 
-    // put in own pilot class
-        ofxOscSender       kosc_senderMSB;
-        ofxOscSender       kosc_senderProcessing;
 
-        string              kipAddressMSB;
-        string              kipAddressProc;
-
+    ofxOscSender ofSender;
 
 };
 

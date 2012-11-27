@@ -4277,7 +4277,7 @@
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1352406079 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.h
+1352413289 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.h
 	"ofMain.h"
 	"ofxOsc.h"
 	"ofxOpenCv.h"
@@ -4296,25 +4296,24 @@
 	"assignButton.h"
 	"msbLight.h"
 
-1352398271 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcam.h
+1353961872 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcam.h
 	"ofMain.h"
 	"msbOFCore.h"
 
-1352398224 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcam.cpp
+1353961896 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcam.cpp
 	"kCam.h"
 	"msbOFCore.h"
 
-1352406300 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcammanager.h
+1353962742 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcammanager.h
 	"ofMain.h"
 	"msbOFCore.h"
 	"kCam.h"
 	"ofxOsc.h"
 
-1352406348 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcammanager.cpp
+1353964663 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\kcammanager.cpp
 	"kCamManager.h"
 	"msbOFCore.h"
 	"kCam.h"
-	"ofxOsc.h"
 
 1352404181 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\pilot.h
 	"ofMain.h"

@@ -1,7 +1,6 @@
 #include "kCamManager.h"
 #include "msbOFCore.h"
 #include "kCam.h"
-#include "ofxOsc.h"
 
 bool lessThanKey(kCam a, kCam b) {
     return a.startFrame < b.startFrame;
@@ -14,13 +13,14 @@ kCamManager::kCamManager() {
 void kCamManager::setup() {
     camKey = 0;              // start unique key at 0
     addCamera(0);            // add one camera at the beginning of the playhead
+    ofSender.setup("127.0.0.1", 31842);
 }
 
 //---------------------------------------------
 void kCamManager::addCamera(int frame) {
     kCam c;
     c.id=camKey;
-    c.startFrame = frame;   // start the camera where the playhead is.
+    c.startFrame = frame;   // start the camera where the playhead is. TODO: THIS IS NOT SAVING THE RIGHT NUMBER - ONLY 0
     c.transform.data[15];
 
     roster.push_back(c);    // push this camera to the end of the stack by default
@@ -31,6 +31,17 @@ void kCamManager::addCamera(int frame) {
     selectedCam = activeCam;    // and select it
 
     // TODO: send this information out VIA OSC
+    ofxOscMessage myMessage;
+    string oscAddress = "/cameraAdded";
+    myMessage.addIntArg(c.id);
+    myMessage.addIntArg(c.startFrame);
+    myMessage.setAddress(oscAddress);
+
+    if(c.id !=0) {
+        ofSender.sendMessage(myMessage);
+    }
+
+
 
     camKey++;               // increment unique key
 

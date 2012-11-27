@@ -204,7 +204,7 @@ void testApp::update(){
     bFingerOut=false;
     bTwoHands=false;
 
-    bScrubingPlayhead=false;
+    //bScrubingPlayhead=false;
 
 	ofBackground(100, 100, 100);
 	kinect.update();
@@ -253,6 +253,12 @@ void testApp::update(){
     if (bFoundMat && bFingerOut && !bTwoHands){ // do not set position if two hands are in the frame
         sendData("setCameraPos");
         bSending=true;
+    }
+
+    if(bScrubingPlayhead) { // send playhead data
+        cout << "PLAYHEAD IS BEING SCRUBBED in UPDATE" << endl;
+        sendData("sendPlayhead");
+        bSending = true;
     }
 
 
@@ -719,10 +725,10 @@ void testApp::sendData(string e){
 
         oscAddress = "/setPlayheadFrame/int";
         myMessage.addIntArg(playheadFrame);
-        //cout << "playheadFrame currently at: " << playheadFrame << endl;
+        cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
 
     } else if (e == "addCamera") {
-        cout << " OSC add camera" << endl;
+        cout << " OSC add camera" << endl; // TODO: this is now in its own classes in kCamManager
     }
 
     else if (e == "removeCamera") {
@@ -829,7 +835,8 @@ void testApp::keyPressed (int key){
     if(key == 't') {
         // toggle scrub state
         bScrubingPlayhead = true;
-        sendData("sendPlayheadData");
+        //sendData("sendPlayhead");
+        cout << "PLAYHEAD AT " << playheadFrame << endl;
     }
 
 }
@@ -878,6 +885,9 @@ void testApp::keyReleased(int key){
         case('r'):
             manager.removeCamera();
             break;
+        case('t'):
+            bScrubingPlayhead=false;
+            cout << "STOPPED SCUBBING MODE" << endl;
     }
 
 }
