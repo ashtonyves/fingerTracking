@@ -23,8 +23,6 @@ class testApp : public ofBaseApp, public Actor
 
 	public:
 
-        int totalNumFrames;
-
         ofTrueTypeFont type;
 
 		void setup();
@@ -99,22 +97,29 @@ class testApp : public ofBaseApp, public Actor
 
         int     bufferLength;
 
-        int     playheadFrame;
-        int     oldPlayheadFrame;   // to caluclate distanace from old to new and add or subtract that value
-
         bool    bFoundMat;
         bool    bFingerOut;
         bool    bTwoHands;
-
         bool    bCameraSelected;    // maybe this should be a property of kCamManager
-
         bool    bSending;
         bool    bScrubingPlayhead;
         // bool bPalmOut
 
         // TODO: these should both be camera objects assigned after fired events
         // Assigned because the camera's start time preceded the playheadFrame
-        int     selectedCamera; // This is actually the active camera, set in the kCamManagerClass.
+        int         selectedCamera; // This is actually the active camera, set in the kCamManagerClass.
+
+
+        // PLAYHEAD STUFF
+        int         oldActiveHandX;     // pixel value
+        int         deltaHandX;         // pixel value
+
+        int         totalNumFrames;     // frame value
+        int         playheadFrame;      // frame value
+        int         oldPlayheadFrame;   // to caluclate distanace from old to new and add or subtract that value
+
+        int         mapPosToFrame(int pos);
+
 
 
         int         fistFactor;

@@ -42,6 +42,10 @@ void testApp::setup(){
 
     fistFactor=0;
 
+
+    oldActiveHandX = -1; // start with the impossible value
+    deltaHandX = 0;
+
     offsetVector=Vector3f(400,600,3);
 
     ofSetFrameRate(30);
@@ -204,8 +208,6 @@ void testApp::update(){
     bSending=false;
     bFoundMat=false;
     bFingerOut=false;
-    //bTwoHands=false;
-
     //bScrubingPlayhead=false;
 
 	ofBackground(100, 100, 100);
@@ -653,26 +655,45 @@ bool testApp::findFinger(){
 void testApp::findHands() {
 
     if(contourFinder.nBlobs == 2) {
-        // later encapsulate in
-        // if (both hands fists.....
+        // TODO encapsulate in if (both hands fists) grab active camera .....
         bTwoHands=true;
 
-        ofxCvBlob activeHand;
-
         // find the blob with the highest x value (the one on the right) and set it to activeHand
+        ofxCvBlob activeHand;
         if(contourFinder.blobs[0].centroid.x > contourFinder.blobs[1].centroid.x) {
             activeHand = contourFinder.blobs[0];
         } else  {
             activeHand = contourFinder.blobs[1];
         }
 
+        // scrubPlayhead
+        // based on delta x for the activeHand
 
+        if(oldActiveHandX != -1) {
+            // get change in hand position position
+            // delta = new - old
+            deltaHandX = activeHand.centroid.x - oldActiveHandX;
+        } else { // the hand just entered the frame. Just store its value on this run.
+            deltaHandX = 0; // spit out a value so the program doesn't cry.
+        }
+        // store activeHandX for next run
+        oldActiveHandX = activeHand.centroid.x;
+        //cout << "ACTIVE HAND X: " << activeHand.centroid.x << endl;
+        //cout << "DELTA HAND X: " << deltaHandX << endl;
 
-        //scrubPlayhead(activeHand.centriod.x);
-        cout << activeHand.centroid.x << endl; // not quite, we want the difference.
+        playheadFrame += mapPosToFrame(deltaHandX); // maybe?
+
     } else {
+        // only one hand.
         bTwoHands=false;
+        oldActiveHandX = -1; // reset the key for the two-handed delta value
     }
+}
+
+int testApp::mapPosToFrame(int pixelPos) { // called by findHands - convert the pixel value from the kinect to a frame on the timeline
+
+    int frameValue = (totalNumFrames*pixelPos)/640;  // 640 is the Kinect width. Perhaps...should be a constant?
+    return frameValue;
 }
 
 void testApp::scrubPlayhead(int pos) {
