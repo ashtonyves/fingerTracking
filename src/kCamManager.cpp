@@ -31,21 +31,21 @@ void kCamManager::addCamera(int frame) {
     selectedCam = activeCam;    // and select it
 
     // TODO: send this information out VIA OSC
+    cout<< "camKey before calling OSC " << camKey << endl;
+
     ofxOscMessage myMessage;
     string oscAddress = "/cameraAdded";
-    myMessage.addIntArg(c.id);
-    myMessage.addIntArg(c.startFrame);
-    myMessage.setAddress(oscAddress);
-
-    if(c.id !=0) {
+    if(camKey !=0) {
+        myMessage.addIntArg(camKey);
+        myMessage.addIntArg(frame);
+        myMessage.setAddress(oscAddress);
         ofSender.sendMessage(myMessage);
     }
-
-
 
     camKey++;               // increment unique key
 
     updateSortOrder();
+
 
 
 }
@@ -66,8 +66,14 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
                 cout << "You cannot delete the first camera" << endl;
             } else {
 
-           // TODO: send OSC
-
+           // send OSC
+                ofxOscMessage myMessage;
+                string oscAddress = "/cameraRemoved";
+                if(camKey !=0) {
+                    myMessage.addIntArg(activeCam);
+                    myMessage.setAddress(oscAddress);
+                    ofSender.sendMessage(myMessage);
+                }
                 // set the activeCam to the one prior to the camera we just deleted
                 activeCam = roster[i-1].id;
                 // erase the camera from the roster
@@ -75,6 +81,8 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
             }
         }
     }
+
+
 
 
 

@@ -23,6 +23,8 @@ class testApp : public ofBaseApp, public Actor
 
 	public:
 
+        int totalNumFrames;
+
         ofTrueTypeFont type;
 
 		void setup();
@@ -34,7 +36,9 @@ class testApp : public ofBaseApp, public Actor
 
         bool findFingerMatrix();
         bool findFinger();
-        bool findHands();
+        void findHands();
+
+        int mapFrame();
 
 		void sendData(string e);
 

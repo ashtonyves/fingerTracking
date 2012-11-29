@@ -14,6 +14,8 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
+    totalNumFrames = 3600; // 120 second minutes at 30fps
+
     type.loadFont("DroidSans.ttf", 12);
 
  // TODO: create kCamManager Class to handle Camera vector array?
@@ -202,7 +204,7 @@ void testApp::update(){
     bSending=false;
     bFoundMat=false;
     bFingerOut=false;
-    bTwoHands=false;
+    //bTwoHands=false;
 
     //bScrubingPlayhead=false;
 
@@ -240,12 +242,12 @@ void testApp::update(){
     // set booleans by running functions on each loop
     bFoundMat=findFingerMatrix();
     bFingerOut=findFinger();
-    bTwoHands=findHands();  //and additionally this will check if both hands are palms or palm and fist
+    findHands();  //and additionally this will check if both hands are palms or palm and fist
 
     // there are two hands.
     if(bTwoHands) {
-        cout << "two hands" << endl;
-        // now track the right blob and scrub its playhead playhead based on its lateral position.
+        cout << "two hands in frame" << endl;
+        // now track the right blob and change playheadFrame based on the CHANGE in x
         // run that on update
         // and if the right hand is a fist, then we grab the active camera
     }
@@ -256,11 +258,9 @@ void testApp::update(){
     }
 
     if(bScrubingPlayhead) { // send playhead data
-        cout << "PLAYHEAD IS BEING SCRUBBED in UPDATE" << endl;
         sendData("sendPlayhead");
         bSending = true;
     }
-
 
 }
 
@@ -650,25 +650,28 @@ bool testApp::findFinger(){
 
 }
 
-bool testApp::findHands() {
+void testApp::findHands() {
 
     if(contourFinder.nBlobs == 2) {
         // later encapsulate in
         // if (both hands fists.....
+        bTwoHands=true;
 
         ofxCvBlob activeHand;
 
-        // find the blob with the highest x value. It's the one on the right.
+        // find the blob with the highest x value (the one on the right) and set it to activeHand
         if(contourFinder.blobs[0].centroid.x > contourFinder.blobs[1].centroid.x) {
             activeHand = contourFinder.blobs[0];
         } else  {
             activeHand = contourFinder.blobs[1];
         }
 
+
+
         //scrubPlayhead(activeHand.centriod.x);
-        cout << activeHand.centroid.x << endl;
+        cout << activeHand.centroid.x << endl; // not quite, we want the difference.
     } else {
-        return false;
+        bTwoHands=false;
     }
 }
 
@@ -831,12 +834,9 @@ void testApp::keyPressed (int key){
     input->normalKeyDown(key,mouseX,mouseY);
     input->specialKeyDown(key,mouseX,mouseY);
 
-  //replace for kinect input
+  //TODO: replace with kinect input
     if(key == 't') {
-        // toggle scrub state
         bScrubingPlayhead = true;
-        //sendData("sendPlayhead");
-        cout << "PLAYHEAD AT " << playheadFrame << endl;
     }
 
 }
