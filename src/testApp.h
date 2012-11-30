@@ -97,12 +97,19 @@ class testApp : public ofBaseApp, public Actor
 
         int     bufferLength;
 
-        bool    bFoundMat;
-        bool    bFingerOut;
         bool    bTwoHands;
+        bool    bOneHand;
+
+        bool    bFoundMat;          //one hand checks
+        bool    bFingerOut;
+
+        bool    bScrubingPlayhead;  // two hand checks
+        bool    bScrubbingCamera;
+
         bool    bCameraSelected;    // maybe this should be a property of kCamManager
         bool    bSending;
-        bool    bScrubingPlayhead;
+
+
         // bool bPalmOut
 
         // TODO: these should both be camera objects assigned after fired events
@@ -134,7 +141,7 @@ class testApp : public ofBaseApp, public Actor
                           six;
 
 
-        void    scrubPlayhead(int pos);
+        void    scrubPlayhead();
 
         kCamManager     manager; // camera manager key
 

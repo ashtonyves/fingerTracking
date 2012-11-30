@@ -21,8 +21,8 @@ void testApp::setup(){
  // TODO: create kCamManager Class to handle Camera vector array?
     // ------------ cameras
     playheadFrame = 0;      // starting position of the playhead. GUI should start the same way
-    oldPlayheadFrame = 0;
-    selectedCamera=0; // perhaps change this to the first camera in the created vector array?
+
+    selectedCamera = 0; // perhaps change this to the first camera in the created vector array?
 
     bFullscreen=false;
     bLearnBackground=true;
@@ -34,7 +34,9 @@ void testApp::setup(){
 
     bFoundMat=false;
     bFingerOut=false;
-    bTwoHands=false;
+
+    bTwoHands = false;
+    bOneHand = false;
 
     bSending=false;
     bCameraSelected=false;
@@ -201,14 +203,18 @@ int testApp::shareMemory(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    //cout << "UPDATE TIME" << glutGet(GLUT_ELAPSED_TIME) << "\n";
-    fingerStart*=0;
-    fingerEnd*=0;
 
-    bSending=false;
+    fingerStart*= 0;
+    fingerEnd*= 0;
+
+    bSending = false;
+
+    bTwoHands = false;
+    bOneHand = false;
+
     bFoundMat=false;
     bFingerOut=false;
-    //bScrubingPlayhead=false;
+    bScrubingPlayhead=false;
 
 	ofBackground(100, 100, 100);
 	kinect.update();
@@ -241,28 +247,31 @@ void testApp::update(){
     Matrix4f idMatrix;
     idMatrix.identity();
 
-    // set booleans by running functions on each loop
-    bFoundMat=findFingerMatrix();
-    bFingerOut=findFinger();
+
+
     findHands();  //and additionally this will check if both hands are palms or palm and fist
 
-    // there are two hands.
     if(bTwoHands) {
-        cout << "two hands in frame" << endl;
-        // now track the right blob and change playheadFrame based on the CHANGE in x
-        // run that on update
+
+        if(bScrubingPlayhead) {
+            sendData("sendPlayhead");
+            bSending = true;
+        }
+
         // and if the right hand is a fist, then we grab the active camera
+    } else if (bOneHand) {
+        // set booleans by running functions on each loop
+        bFoundMat=findFingerMatrix();
+        bFingerOut=findFinger();
+        if (bFoundMat && bFingerOut){ // do not set position if two hands are in the frame
+            sendData("setCameraPos");
+            bSending=true;
+        }
     }
 
-    if (bFoundMat && bFingerOut && !bTwoHands){ // do not set position if two hands are in the frame
-        sendData("setCameraPos");
-        bSending=true;
-    }
 
-    if(bScrubingPlayhead) { // send playhead data
-        sendData("sendPlayhead");
-        bSending = true;
-    }
+
+
 
 }
 
@@ -653,65 +662,69 @@ bool testApp::findFinger(){
 }
 
 void testApp::findHands() {
-
     if(contourFinder.nBlobs == 2) {
-        // TODO encapsulate in if (both hands fists) grab active camera .....
         bTwoHands=true;
+        scrubPlayhead();
+    } else if (contourFinder.nBlobs < 2){
+        oldActiveHandX = -1; // reset the key for the two-handed delta value
+        if(contourFinder.nBlobs == 1) {
+            bOneHand = true;
+        } else if (contourFinder.nBlobs == 0) {
+            // no hands in frame
+        }
+    }
 
-        // find the blob with the highest x value (the one on the right) and set it to activeHand
+}
+
+int testApp::mapPosToFrame(int pixelPos) { // called by findHands - convert the pixel value from the kinect to a frame on the timeline
+    int frameValue = (totalNumFrames*pixelPos)/640;  // 640 is the Kinect width. Perhaps...should be a constant?
+    return frameValue;
+}
+
+void testApp::scrubPlayhead() {
+
+         // find the blob with the highest x value (the one on the right) and set it to activeHand
         ofxCvBlob activeHand;
+
         if(contourFinder.blobs[0].centroid.x > contourFinder.blobs[1].centroid.x) {
             activeHand = contourFinder.blobs[0];
         } else  {
             activeHand = contourFinder.blobs[1];
         }
 
-        // scrubPlayhead
-        // based on delta x for the activeHand
-
         if(oldActiveHandX != -1) {
-            // get change in hand position position
-            // delta = new - old
             deltaHandX = activeHand.centroid.x - oldActiveHandX;
-        } else { // the hand just entered the frame. Just store its value on this run.
+        } else {            // hand just entered the frame. Just store its value on this run.
             deltaHandX = 0; // spit out a value so the program doesn't cry.
         }
-        // store activeHandX for next run
-        oldActiveHandX = activeHand.centroid.x;
+        oldActiveHandX = activeHand.centroid.x; // store activeHandX for next run
         //cout << "ACTIVE HAND X: " << activeHand.centroid.x << endl;
         //cout << "DELTA HAND X: " << deltaHandX << endl;
 
-        playheadFrame += mapPosToFrame(deltaHandX); // maybe?
+    // TODO Check if we are scrubbing the playhead or moving a camera as well:
+            //if (activeHand is a palm) -->
+                //bScrubbingPlayhead = true
+            // else if (activeHand is a fist)
+                //bScrubbingCamera = true
+    bScrubingPlayhead = true; // temp
 
-    } else {
-        // only one hand.
-        bTwoHands=false;
-        oldActiveHandX = -1; // reset the key for the two-handed delta value
-    }
-}
+    if(bScrubingPlayhead) { // we are moving the playhead
+        int newPlayheadFrame = playheadFrame + mapPosToFrame(deltaHandX);
 
-int testApp::mapPosToFrame(int pixelPos) { // called by findHands - convert the pixel value from the kinect to a frame on the timeline
-
-    int frameValue = (totalNumFrames*pixelPos)/640;  // 640 is the Kinect width. Perhaps...should be a constant?
-    return frameValue;
-}
-
-void testApp::scrubPlayhead(int pos) {
-
-        int distance = pos - oldPlayheadFrame;
-
-        //cout << "distance = " << distance << endl; // positive for forward, negative for backward
-        int newPlayheadFrame = playheadFrame + distance;
-
+        // set upper and lower bounds for frames we can scrub to
         if (newPlayheadFrame < 0) {
-            newPlayheadFrame = 0;
-        } // playhead stops at the beginning of the timeline
+            playheadFrame = 0;
+        } else if (newPlayheadFrame > totalNumFrames) {
+            playheadFrame = totalNumFrames;
+        } else {
+            playheadFrame = newPlayheadFrame;
+        }
+    } else if (bScrubbingCamera) { // we are moving a camera (AND the playhead? this may need to do inside the previous function
+        // first snap playhead to first frame of active camera
+        // then start moving playhead with camera. (see how this affects Brandon's tick movement.
+    }
 
-        playheadFrame = newPlayheadFrame;
-        cout<< "playhead =  " << playheadFrame << endl;
 
-        //save playhead before you change it.
-        oldPlayheadFrame = playheadFrame;
 
 }
 
@@ -855,11 +868,6 @@ void testApp::keyPressed (int key){
     input->normalKeyDown(key,mouseX,mouseY);
     input->specialKeyDown(key,mouseX,mouseY);
 
-  //TODO: replace with kinect input
-    if(key == 't') {
-        bScrubingPlayhead = true;
-    }
-
 }
 
 void testApp::keyReleased(int key){
@@ -899,16 +907,13 @@ void testApp::keyReleased(int key){
 
     }
 
-    switch(key) {
+    switch(key) { // TODO: replace for big ol' imputs.
         case('a'):
             manager.addCamera(playheadFrame);
             break;
         case('r'):
             manager.removeCamera();
             break;
-        case('t'):
-            bScrubingPlayhead=false;
-            cout << "STOPPED SCUBBING MODE" << endl;
     }
 
 }
@@ -918,16 +923,6 @@ void testApp::mouseMoved(int x, int y){
 
     input->moveMouse(x,y);
 
-        if(bScrubingPlayhead) {
-
-            int distance = x - oldPlayheadFrame;
-            //cout << "distance = " << distance << endl; // positive for forward, negative for backward
-            int newPlayheadFrame = playheadFrame + distance;
-            if (newPlayheadFrame < 0) {newPlayheadFrame = 0;} // playhead stops at the beginning of the timeline
-            playheadFrame = newPlayheadFrame;
-            cout<< "playhead =  " << playheadFrame << endl;
-        }
-        oldPlayheadFrame = x;
 }
 
 //--------------------------------------------------------------
