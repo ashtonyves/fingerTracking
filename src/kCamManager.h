@@ -26,11 +26,13 @@ public:
 
     void updateSortOrder();     // runs a comparison function to easily identify the start times of previous and next shots in the sequence
 
+    bool bChangeActiveCam(int playhead);     // listen if the activeCam changes based on the playhead position
+
     // getters
     int getNumCams();
-    kCam getActiveCam();
-    kCam getSelectedCam();
 
+    int getActiveCamKey();
+    kCam getActiveKCam();
 
     ofxOscSender ofSender;
 

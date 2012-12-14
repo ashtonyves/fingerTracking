@@ -127,8 +127,6 @@ class testApp : public ofBaseApp, public Actor
 
         int         mapPosToFrame(int pos);
 
-
-
         int         fistFactor;
 
         ofPoint     fingerStart,

@@ -256,6 +256,10 @@ void testApp::update(){
         if(bScrubingPlayhead) {
             sendData("sendPlayhead");
             bSending = true;
+            manager.bChangeActiveCam(playheadFrame);
+        } if(bScrubbingCamera) {
+            //TODO sendData("moveCamera");
+            //bSending = true;
         }
 
         // and if the right hand is a fist, then we grab the active camera
@@ -275,7 +279,7 @@ void testApp::update(){
 
 }
 
-
+//--------------------------------------------------------------
 bool testApp::findFingerMatrix(){
 
     for (int i = 0; i < contourFinder.nBlobs; i++){
@@ -574,7 +578,7 @@ bool testApp::findFingerMatrix(){
     return false;
 }
 
-
+//--------------------------------------------------------------
 bool testApp::findFinger(){
 
         Vector3f vec;
@@ -661,6 +665,7 @@ bool testApp::findFinger(){
 
 }
 
+//--------------------------------------------------------------
 void testApp::findHands() {
     if(contourFinder.nBlobs == 2) {
         bTwoHands=true;
@@ -676,11 +681,13 @@ void testApp::findHands() {
 
 }
 
+//--------------------------------------------------------------
 int testApp::mapPosToFrame(int pixelPos) { // called by findHands - convert the pixel value from the kinect to a frame on the timeline
     int frameValue = (totalNumFrames*pixelPos)/640;  // 640 is the Kinect width. Perhaps...should be a constant?
     return frameValue;
 }
 
+//--------------------------------------------------------------
 void testApp::scrubPlayhead() {
 
          // find the blob with the highest x value (the one on the right) and set it to activeHand
@@ -729,12 +736,13 @@ void testApp::scrubPlayhead() {
 }
 
 
+
+//--------------------------------------------------------------
 void testApp::sendData(string e){
 
     ofxOscMessage myMessage;
-    cout<< "I am sending stuff to:" << ipAddressMSB << endl;
-
     string oscAddress;
+
     if(e == "setCameraPos") {
             //fingerTransformation.transpose();
             oscAddress = "/setPropertyForSelected/string/matrix4f";
@@ -764,12 +772,6 @@ void testApp::sendData(string e){
         myMessage.addIntArg(playheadFrame);
         cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
 
-    } else if (e == "addCamera") {
-        cout << " OSC add camera" << endl; // TODO: this is now in its own classes in kCamManager
-    }
-
-    else if (e == "removeCamera") {
-        cout << " OSC remove camera" << endl;
     }
 
         myMessage.setAddress(oscAddress);
@@ -836,7 +838,7 @@ void testApp::draw(){
 
     glPopMatrix();
 
-    //contourFinder.draw(0,0);
+    contourFinder.draw(0,0);
 
     ofSetColor(255,255,255);
      // print report String to interface

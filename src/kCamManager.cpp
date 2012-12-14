@@ -5,15 +5,16 @@
 bool lessThanKey(kCam a, kCam b) {
     return a.startFrame < b.startFrame;
 }
-
+//---------------------------------------------
 kCamManager::kCamManager() {
     // set the initial properties
 }
-
+//---------------------------------------------
 void kCamManager::setup() {
     camKey = 0;              // start unique key at 0
     addCamera(0);            // add one camera at the beginning of the playhead
     ofSender.setup("127.0.0.1", 31842);
+    activeCam = 0;
 }
 
 //---------------------------------------------
@@ -30,9 +31,7 @@ void kCamManager::addCamera(int frame) {
     activeCam = c.id;           // set new camera as active
     selectedCam = activeCam;    // and select it
 
-    // TODO: send this information out VIA OSC
-    cout<< "camKey before calling OSC " << camKey << endl;
-
+    // send OSC
     ofxOscMessage myMessage;
     string oscAddress = "/cameraAdded";
     if(camKey !=0) {
@@ -45,8 +44,34 @@ void kCamManager::addCamera(int frame) {
     camKey++;               // increment unique key
 
     updateSortOrder();
+}
 
+//---------------------------------------------
+bool kCamManager::bChangeActiveCam(int frame) {
 
+    int camIndex = getActiveCamKey();
+    cout << camIndex << endl;
+
+    int previousCamStartFrame;
+    int nextCamStartFrame;
+
+    // TODO: WHY DOES THE START FRAME READ OUT ZERO
+    if((camIndex > 1) && (camIndex < getNumCams() - 1)) {
+        previousCamStartFrame = roster[camIndex - 1].startFrame;
+        nextCamStartFrame = roster[camIndex + 1].startFrame;
+    } else if (camIndex == 0) {
+        previousCamStartFrame = -1;
+        nextCamStartFrame = roster[camIndex + 1].startFrame;
+    } else if (camIndex == (getNumCams() - 1)) {
+        previousCamStartFrame = roster[camIndex - 1].startFrame;
+        nextCamStartFrame = -1;
+    }
+
+    cout << "previousCamStartFrame: " << previousCamStartFrame << endl;
+    cout << "CAM INDEX: " << camIndex << endl;
+    cout << "nextCamStartFrame: " << previousCamStartFrame << endl;
+
+    return false;
 
 }
 
@@ -82,10 +107,6 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
         }
     }
 
-
-
-
-
     // and update the sort order to reflect the new arrangement
     updateSortOrder();
 }
@@ -106,7 +127,7 @@ int kCamManager::getNumCams() {
 }
 
 //---------------------------------------------
-kCam kCamManager::getActiveCam(){
+kCam kCamManager::getActiveKCam(){
     for(int i = 0; i < getNumCams(); i++) {
         if(roster[i].id == activeCam) {
             return roster[i];
@@ -115,10 +136,10 @@ kCam kCamManager::getActiveCam(){
 }
 
 //---------------------------------------------
-kCam kCamManager::getSelectedCam(){
-    for(int i = 0; i < getNumCams(); i++) {
-       if(roster[i].id == selectedCam) {
-            return roster[i];
+int kCamManager::getActiveCamKey() {
+     for(int i = 0; i < getNumCams(); i++) {
+        if(roster[i].id == activeCam) {
+            return i;
         }
     }
 }

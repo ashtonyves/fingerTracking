@@ -49,22 +49,22 @@
 	<File name="src\kCam.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="179" topLine="0" />
 	</File>
-	<File name="src\kCam.h" open="0" top="0" tabpos="5">
+	<File name="src\kCam.h" open="1" top="0" tabpos="5">
 		<Cursor position="764" topLine="0" />
 	</File>
-	<File name="src\kCamManager.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="2079" topLine="47" />
+	<File name="src\kCamManager.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="105" topLine="0" />
 	</File>
 	<File name="src\kCamManager.h" open="1" top="0" tabpos="1">
-		<Cursor position="396" topLine="0" />
+		<Cursor position="901" topLine="0" />
 	</File>
 	<File name="src\main.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="1" top="1" tabpos="4">
-		<Cursor position="20305" topLine="638" />
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="6730" topLine="126" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="3">
-		<Cursor position="602" topLine="24" />
+		<Cursor position="3224" topLine="103" />
 	</File>
 </CodeBlocks_layout_file>
