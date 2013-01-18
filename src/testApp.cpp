@@ -256,7 +256,8 @@ void testApp::update(){
         if(bScrubingPlayhead) {
             sendData("sendPlayhead");
             bSending = true;
-            manager.bChangeActiveCam(playheadFrame);
+            //manager.bChangeActiveCam(playheadFrame);
+            manager.updateActiveCamera(playheadFrame);
         } if(bScrubbingCamera) {
             //TODO sendData("moveCamera");
             //bSending = true;
@@ -858,6 +859,7 @@ void testApp::draw(){
     }
 }
 
+
 //--------------------------------------------------------------
 void testApp::exit(){
 
@@ -915,6 +917,7 @@ void testApp::keyReleased(int key){
             break;
         case('r'):
             manager.removeCamera();
+            manager.updateActiveCamera(playheadFrame);
             break;
     }
 

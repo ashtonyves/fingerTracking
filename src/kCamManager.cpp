@@ -43,7 +43,8 @@ void kCamManager::addCamera(int frame) {
 
     camKey++;               // increment unique key
 
-    updateSortOrder();
+    updateActiveCamera(frame);
+    //updateSortOrder();
 }
 
 //---------------------------------------------
@@ -102,13 +103,25 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
                 // set the activeCam to the one prior to the camera we just deleted
                 activeCam = roster[i-1].id;
                 // erase the camera from the roster
-                roster.erase(roster.begin() + i);
+                roster.erase(roster.begin()+i);
             }
+
         }
     }
 
     // and update the sort order to reflect the new arrangement
     updateSortOrder();
+}
+
+// Checks the current scrub location and sets the appropriate camera to be the active camera
+void kCamManager::updateActiveCamera(int playheadFrame){
+    updateSortOrder();
+    int i = 0;
+    while(roster[i].startFrame < playheadFrame && i<roster.size()){
+        std::cout << roster[i].startFrame << " < " << playheadFrame << "--";
+        i++;
+    }
+    activeCam = roster[i-1].id;
 }
 
 

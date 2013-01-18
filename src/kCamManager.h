@@ -36,6 +36,8 @@ public:
 
     ofxOscSender ofSender;
 
+    void updateActiveCamera(int playheadFrame);
+
 };
 
 #endif
