@@ -1,65 +1,58 @@
 #include "testApp.h"
 
 #include "actor.h"
-#include "kCam.h"
 #include "sliderButton.h"
 #include "textInputButton.h"
 #include "assignButton.h"
 #include "msbLight.h"
 
 #define BUF_SIZE 640*480*4*32
-#define NUM_CAMS 20
 
 
 //--------------------------------------------------------------
 void testApp::setup(){
 
-    totalNumFrames = 3600; // 120 second minutes at 30fps
-
-    type.loadFont("DroidSans.ttf", 12);
-
- // TODO: create kCamManager Class to handle Camera vector array?
-    // ------------ cameras
-    playheadFrame = 0;      // starting position of the playhead. GUI should start the same way
-
-    selectedCamera = 0; // perhaps change this to the first camera in the created vector array?
-
     bFullscreen=false;
     bLearnBackground=true;
     cutOffDepth=4096;
     bSetCutoffToZero=false;
+    channelMSB=1;
+    channelProc=2;
     bufferLength=10;
 
+    selectedCamera=0;
     thresh= 66;
 
     bFoundMat=false;
     bFingerOut=false;
-
-    bTwoHands = false;
-    bOneHand = false;
-
     bSending=false;
-    bCameraSelected=false;
-    bScrubingPlayhead=false; // do not scrub playhead to start
 
     fistFactor=0;
 
-
-    oldActiveHandX = -1; // start with the impossible value
-    deltaHandX = 0;
-
     offsetVector=Vector3f(400,600,3);
 
-    ofSetFrameRate(30);
+    ofSetFrameRate(25);
 
-    ipAddressMSB="143.215.199.192";
+    //ipAddress="128.61.22.174"; // Nick's IP
+    //ipAddressMSB="192.168.1.3";
+    ipAddressMSB="169.254.75.192";
+    //ipAddress="169.254.208.35";
+    //ipAddressMSB="127.0.0.1";
+    //ipAddressMSB="143.215.199.192";
+
     ipAddressProc="127.0.0.1";
+    //ipAddress="192.168.1.24";
+
+    // osc_senderMSB.setup(ipAddressMSB,3184+channelMSB);
+    // osc_senderProcessing.setup(ipAddressProc,3184+channelProc);
+
     osc_senderMSB.setup(ipAddressMSB,31841);
     osc_senderProcessing.setup(ipAddressProc,31842);
 
     msbSetup();
+
+    //interface setup
     interfaceSetup();
-    manager.setup();    // add one camera at 0
 
     //OF_STUFF
 
@@ -71,13 +64,14 @@ void testApp::setup(){
 	myImage.allocate(640,480, OF_IMAGE_COLOR);
 	myImage.setUseTexture(true);
 
+
 	colorImg.allocate(640,480);
 	grayImage.allocate(640,480);
 	grayBg.allocate(640,480);
 	grayDiff.allocate(640,480);
 
-	pixelData=new unsigned char[640*480*3];
 
+	pixelData=new unsigned char[640*480*3];
 }
 
 void testApp::msbSetup(){
@@ -99,7 +93,6 @@ void testApp::msbSetup(){
     if (!kinect.bImage)
         return;
 
-    // AG: what is this?
     //Adding MSB content
     //heightfield based on videoTexture from OF
     Actor* myActor = new Actor;
@@ -118,16 +111,16 @@ void testApp::msbSetup(){
     renderer->layerList[0]->actorList.push_back(myActor);
 
     patchActor=myActor;
-
 }
 
 void testApp::interfaceSetup(){
 
+
     TextInputButton *tiBut;
 
     tiBut= new TextInputButton;
-    tiBut->location.x=650;
-    tiBut->location.y=5;
+    tiBut->location.x=10;
+    tiBut->location.y=550;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
@@ -143,8 +136,8 @@ void testApp::interfaceSetup(){
 
 
     tiBut= new TextInputButton;
-    tiBut->location.x=650;
-    tiBut->location.y=20;
+    tiBut->location.x=100;
+    tiBut->location.y=650;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
@@ -158,10 +151,12 @@ void testApp::interfaceSetup(){
     tiBut->bPermanent=true;
     tiBut->setup();
 
+
 }
 
 
 void testApp::registerProperties(){
+
    createMemberID("OFFSETVECTOR",&offsetVector,this);
    createMemberID("THRESH",&thresh,this);
 }
@@ -199,22 +194,21 @@ int testApp::shareMemory(){
         }
 	}
    // _getch();
+
+
+
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
-    fingerStart*= 0;
-    fingerEnd*= 0;
+    fingerStart*=0;
+    fingerEnd*=0;
 
-    bSending = false;
-
-    bTwoHands = false;
-    bOneHand = false;
-
+    bSending=false;
     bFoundMat=false;
     bFingerOut=false;
-    bScrubingPlayhead=false;
+
 
 	ofBackground(100, 100, 100);
 	kinect.update();
@@ -233,53 +227,36 @@ void testApp::update(){
             }
     }
 
-    colorImg.setFromPixels(pixelData, 640,480);
+   colorImg.setFromPixels(pixelData, 640,480);
 
-    grayImage = colorImg;
+
+   grayImage = colorImg;
+
     grayImage.threshold(thresh);
     grayImage.invert();
 
     // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
     // also, find holes is set to true so we will get interior contours as well....
-    // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
-    contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// no find holes
+    contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// find holes
+
 
     Matrix4f idMatrix;
     idMatrix.identity();
 
 
+    bFoundMat=findFingerMatrix();
+    bFingerOut=findFinger();
 
-    findHands();  //and additionally this will check if both hands are palms or palm and fist
-
-    if(bTwoHands) {
-
-        if(bScrubingPlayhead) {
-            sendData("sendPlayhead");
-            bSending = true;
-            manager.bChangeActiveCam(playheadFrame);
-        } if(bScrubbingCamera) {
-            //TODO sendData("moveCamera");
-            //bSending = true;
-        }
-
-        // and if the right hand is a fist, then we grab the active camera
-    } else if (bOneHand) {
-        // set booleans by running functions on each loop
-        bFoundMat=findFingerMatrix();
-        bFingerOut=findFinger();
-        if (bFoundMat && bFingerOut){ // do not set position if two hands are in the frame
-            sendData("setCameraPos");
-            bSending=true;
-        }
+    //I made these changes to test data transfer, please remove comments!
+    if (bFoundMat && bFingerOut){
+        sendData();
+        bSending=true;
     }
-
-
-
 
 
 }
 
-//--------------------------------------------------------------
+
 bool testApp::findFingerMatrix(){
 
     for (int i = 0; i < contourFinder.nBlobs; i++){
@@ -303,7 +280,7 @@ bool testApp::findFingerMatrix(){
 
                 //find furthest point
 
-                //if wider than tall - figure out if point closest to edge is left or right
+                //if wider than long - figure out if point closest to edge is left or right
                 if (contourFinder.blobs[i].boundingRect.width>contourFinder.blobs[i].boundingRect.height){
 
 
@@ -348,7 +325,7 @@ bool testApp::findFingerMatrix(){
 
 
                 //find furthest point
-                // Things flip to longer than wide here!
+                ///Things flip to longer than wide here!
                 //if longer than wide - figure out if point closest to edge is up or right
                 if (contourFinder.blobs[i].boundingRect.width<contourFinder.blobs[i].boundingRect.height){
 
@@ -395,10 +372,10 @@ bool testApp::findFingerMatrix(){
 
 
                 //find furthest point
-                // Things flip to longer than wide here!
+                ///Things flip to longer than wide here!
                 //if longer than wide - figure out if point closest to edge is up or right
                 if (contourFinder.blobs[i].boundingRect.width<contourFinder.blobs[i].boundingRect.height){
-                cout << "right" << endl;
+
 
                     //find lower edge point
                     for (int b=0;b<contourFinder.blobs[i].nPts;b++){
@@ -420,8 +397,6 @@ bool testApp::findFingerMatrix(){
                         edge=edTwo;
                     }
 
-
-
                 }
                 //if wider (width) than long(height)
                 else{
@@ -437,6 +412,7 @@ bool testApp::findFingerMatrix(){
         ///BOTTOM
         if (contourFinder.blobs[i].boundingRect.height + contourFinder.blobs[i].boundingRect.y > 470){
 
+
                 //not in picture enough
                 if (contourFinder.blobs[i].boundingRect.y>400)
                     return false;
@@ -446,7 +422,6 @@ bool testApp::findFingerMatrix(){
 
                 //if wider than long - figure out if point closest to edge is left or right
                 if (contourFinder.blobs[i].boundingRect.width>contourFinder.blobs[i].boundingRect.height){
-
 
 
                     //find right edge point
@@ -578,7 +553,7 @@ bool testApp::findFingerMatrix(){
     return false;
 }
 
-//--------------------------------------------------------------
+
 bool testApp::findFinger(){
 
         Vector3f vec;
@@ -665,120 +640,47 @@ bool testApp::findFinger(){
 
 }
 
-//--------------------------------------------------------------
-void testApp::findHands() {
-    if(contourFinder.nBlobs == 2) {
-        bTwoHands=true;
-        scrubPlayhead();
-    } else if (contourFinder.nBlobs < 2){
-        oldActiveHandX = -1; // reset the key for the two-handed delta value
-        if(contourFinder.nBlobs == 1) {
-            bOneHand = true;
-        } else if (contourFinder.nBlobs == 0) {
-            // no hands in frame
-        }
-    }
-
-}
-
-//--------------------------------------------------------------
-int testApp::mapPosToFrame(int pixelPos) { // called by findHands - convert the pixel value from the kinect to a frame on the timeline
-    int frameValue = (totalNumFrames*pixelPos)/640;  // 640 is the Kinect width. Perhaps...should be a constant?
-    return frameValue;
-}
-
-//--------------------------------------------------------------
-void testApp::scrubPlayhead() {
-
-         // find the blob with the highest x value (the one on the right) and set it to activeHand
-        ofxCvBlob activeHand;
-
-        if(contourFinder.blobs[0].centroid.x > contourFinder.blobs[1].centroid.x) {
-            activeHand = contourFinder.blobs[0];
-        } else  {
-            activeHand = contourFinder.blobs[1];
-        }
-
-        if(oldActiveHandX != -1) {
-            deltaHandX = activeHand.centroid.x - oldActiveHandX;
-        } else {            // hand just entered the frame. Just store its value on this run.
-            deltaHandX = 0; // spit out a value so the program doesn't cry.
-        }
-        oldActiveHandX = activeHand.centroid.x; // store activeHandX for next run
-        //cout << "ACTIVE HAND X: " << activeHand.centroid.x << endl;
-        //cout << "DELTA HAND X: " << deltaHandX << endl;
-
-    // TODO Check if we are scrubbing the playhead or moving a camera as well:
-            //if (activeHand is a palm) -->
-                //bScrubbingPlayhead = true
-            // else if (activeHand is a fist)
-                //bScrubbingCamera = true
-    bScrubingPlayhead = true; // temp
-
-    if(bScrubingPlayhead) { // we are moving the playhead
-        int newPlayheadFrame = playheadFrame + mapPosToFrame(deltaHandX);
-
-        // set upper and lower bounds for frames we can scrub to
-        if (newPlayheadFrame < 0) {
-            playheadFrame = 0;
-        } else if (newPlayheadFrame > totalNumFrames) {
-            playheadFrame = totalNumFrames;
-        } else {
-            playheadFrame = newPlayheadFrame;
-        }
-    } else if (bScrubbingCamera) { // we are moving a camera (AND the playhead? this may need to do inside the previous function
-        // first snap playhead to first frame of active camera
-        // then start moving playhead with camera. (see how this affects Brandon's tick movement.
-    }
+void testApp::sendData(){
 
 
-
-}
-
+        ofxOscMessage myMessage;
 
 
-//--------------------------------------------------------------
-void testApp::sendData(string e){
+        cout<< "I am sending stuff to:" << ipAddressMSB << endl;
 
-    ofxOscMessage myMessage;
-    string oscAddress;
+        //fingerTransformation.transpose();
 
-    if(e == "setCameraPos") {
-            //fingerTransformation.transpose();
-            oscAddress = "/setPropertyForSelected/string/matrix4f";
-            //oscAddress = "/pilot/float/float"
-            myMessage.addStringArg("TRANSFORMMATRIX");
-            myMessage.addFloatArg(fingerTransformation.data[0]);
-            myMessage.addFloatArg(fingerTransformation.data[1]);
-            myMessage.addFloatArg(fingerTransformation.data[2]);
-            myMessage.addFloatArg(fingerTransformation.data[3]);
-            myMessage.addFloatArg(fingerTransformation.data[4]);
-            myMessage.addFloatArg(fingerTransformation.data[5]);
-            myMessage.addFloatArg(fingerTransformation.data[6]);
-            myMessage.addFloatArg(fingerTransformation.data[7]);
-            myMessage.addFloatArg(fingerTransformation.data[8]);
-            myMessage.addFloatArg(fingerTransformation.data[9]);
-            myMessage.addFloatArg(fingerTransformation.data[10]);
-            myMessage.addFloatArg(fingerTransformation.data[11]);
-            myMessage.addFloatArg(fingerTransformation.data[12]);
-            myMessage.addFloatArg(fingerTransformation.data[13]);
-            myMessage.addFloatArg(fingerTransformation.data[14]);
-            myMessage.addFloatArg(fingerTransformation.data[15]);
-    }
+        string oscAddress = "/setPropertyForSelected/string/matrix4f";
+        //oscAddress = "/pilot/float/float"
 
-    else if(e == "sendPlayhead") { // scrub mode
-
-        oscAddress = "/setPlayheadFrame/int";
-        myMessage.addIntArg(playheadFrame);
-        cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
-
-    }
+        myMessage.addStringArg("TRANSFORMMATRIX");
+        myMessage.addFloatArg(fingerTransformation.data[0]);
+        myMessage.addFloatArg(fingerTransformation.data[1]);
+        myMessage.addFloatArg(fingerTransformation.data[2]);
+        myMessage.addFloatArg(fingerTransformation.data[3]);
+        myMessage.addFloatArg(fingerTransformation.data[4]);
+        myMessage.addFloatArg(fingerTransformation.data[5]);
+        myMessage.addFloatArg(fingerTransformation.data[6]);
+        myMessage.addFloatArg(fingerTransformation.data[7]);
+        myMessage.addFloatArg(fingerTransformation.data[8]);
+        myMessage.addFloatArg(fingerTransformation.data[9]);
+        myMessage.addFloatArg(fingerTransformation.data[10]);
+        myMessage.addFloatArg(fingerTransformation.data[11]);
+        myMessage.addFloatArg(fingerTransformation.data[12]);
+        myMessage.addFloatArg(fingerTransformation.data[13]);
+        myMessage.addFloatArg(fingerTransformation.data[14]);
+        myMessage.addFloatArg(fingerTransformation.data[15]);
 
         myMessage.setAddress(oscAddress);
+
         osc_senderMSB.sendMessage(myMessage);
+
+        //send to Processing
         osc_senderProcessing.sendMessage(myMessage);
 
+    //cout << "sending..." << fingerTransformation << endl;
 }
+
 
 //--------------------------------------------------------------
 void testApp::draw(){
@@ -807,13 +709,15 @@ void testApp::draw(){
         glPushMatrix();
 
         ofSetColor(0,255,0);
-        ofLine(fingerStart.x+5,fingerStart.y,fingerEnd.x+5,fingerEnd.y);
+        ofLine(fingerStart.x,fingerStart.y,fingerEnd.x,fingerEnd.y);
+
 
         ofSetColor(128,0,0);
         ofRect(fingerStart.x,fingerStart.y,10,10);
 
         ofSetColor(255,0,0);
         ofRect(fingerEnd.x,fingerEnd.y,10,10);
+
 
         ofSetColor(64,64,255);
         ofRect(one.x,one.y,5,5);
@@ -828,34 +732,18 @@ void testApp::draw(){
          ofSetColor(0,255,0);
      else
          ofSetColor(128,128,128);
+
     ofCircle(700,500,20);
 
     if (bSending)
         ofSetColor(255,0,0);
     else
         ofSetColor(0,0,0);
+
     ofCircle(700,550,20);
 
+
     glPopMatrix();
-
-    contourFinder.draw(0,0);
-
-    ofSetColor(255,255,255);
-     // print report String to interface
-    char CameraReportStr[1024];
-    sprintf(CameraReportStr, "CAMERA INFO\nnumber of cameras: %i\nselected camera id: %i\nactive camera id: %i\n", manager.getNumCams(), manager.selectedCam, manager.activeCam);
-
-    char BlobReportStr[1024];
-    sprintf(BlobReportStr, "BLOB INFO\nnumber of blobs %i\nFist factor: %i", contourFinder.nBlobs, fistFactor);
-
-    type.drawString(CameraReportStr, 20, 600);
-    type.drawString(BlobReportStr, 320, 600);
-    type.drawString("Playhead: " + ofToString(playheadFrame),20, 550);
-
-    type.drawString("CAMERAS", 650, 380);
-    for(int i = 0; i < manager.getNumCams(); i++) {
-       type.drawString("id: " + ofToString(manager.roster[i].id) + " start: " + ofToString(manager.roster[i].startFrame), 650, 400 + 20*i);
-    }
 }
 
 //--------------------------------------------------------------
@@ -877,9 +765,6 @@ void testApp::keyReleased(int key){
     input->keyUp(key,mouseX,mouseY);
     input->specialKeyUp(key,mouseX,mouseY);
 
-    // change to select cameras by selecting the camera from the data manager class that has a start time
-    // closest the the value for playheadFrame.
-    // set that camera as activeCam, and run this OSC message when it is selected
     if (key>'0' && key<='4'){
         selectedCamera=key-'1';
 
@@ -907,15 +792,6 @@ void testApp::keyReleased(int key){
         osc_senderMSB.sendMessage(myMessageSwitch);
 
 
-    }
-
-    switch(key) { // TODO: replace for big ol' imputs.
-        case('a'):
-            manager.addCamera(playheadFrame);
-            break;
-        case('r'):
-            manager.removeCamera();
-            break;
     }
 
 }

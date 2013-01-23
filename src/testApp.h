@@ -1,19 +1,16 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
+
+
+
 #include "ofMain.h"
 
+#include "ofxKinect.h"
 #include "ofxOsc.h"
 #include "ofxOpenCv.h"
 #include "msbOFCore.h"
-
-#include "kCam.h"
-#include "kCamManager.h"
-#include "ofxKinect.h"
-
 #include "actor.h"
-
-
 
 struct actorID;
 struct memberID;
@@ -23,9 +20,8 @@ class testApp : public ofBaseApp, public Actor
 
 	public:
 
-        ofTrueTypeFont type;
-
 		void setup();
+
         void msbSetup();
 		void interfaceSetup();
 		void filemappingSetup();
@@ -34,11 +30,8 @@ class testApp : public ofBaseApp, public Actor
 
         bool findFingerMatrix();
         bool findFinger();
-        void findHands();
 
-        int mapFrame();
-
-		void sendData(string e);
+		void sendData();
 
         void draw();
 		void exit();
@@ -58,12 +51,15 @@ class testApp : public ofBaseApp, public Actor
         void trigger(Actor* other);
 
         ofxKinect           kinect;
-
         ofxOscSender        osc_senderMSB;
         ofxOscSender        osc_senderProcessing;
 
+
         string              ipAddressMSB;
         string              ipAddressProc;
+        int                     channelMSB;
+        int                     channelProc;
+
 
         bool                bSetCutoffToZero;
         bool                bFullscreen;
@@ -78,9 +74,11 @@ class testApp : public ofBaseApp, public Actor
         Actor*          patchActor;
 
         float           cutOffDepth;
+
         float           thresh;
 
-        ofxCvColorImage		    colorImg;
+        ofxCvColorImage		colorImg;
+
         ofxCvGrayscaleImage 	grayImage;
 		ofxCvGrayscaleImage 	grayBg;
 		ofxCvGrayscaleImage 	grayDiff;
@@ -88,7 +86,7 @@ class testApp : public ofBaseApp, public Actor
         ofxCvContourFinder 	contourFinder;
 
         ofImage         myImage;
-        unsigned char*  pixelData;
+        unsigned char*           pixelData;
 
         Matrix4f        fingerTransformation;
         Vector3f        offsetVector;
@@ -97,35 +95,11 @@ class testApp : public ofBaseApp, public Actor
 
         int     bufferLength;
 
-        bool    bTwoHands;
-        bool    bOneHand;
+        int     selectedCamera;
 
-        bool    bFoundMat;          //one hand checks
+        bool    bFoundMat;
         bool    bFingerOut;
-
-        bool    bScrubingPlayhead;  // two hand checks
-        bool    bScrubbingCamera;
-
-        bool    bCameraSelected;    // maybe this should be a property of kCamManager
         bool    bSending;
-
-
-        // bool bPalmOut
-
-        // TODO: these should both be camera objects assigned after fired events
-        // Assigned because the camera's start time preceded the playheadFrame
-        int         selectedCamera; // This is actually the active camera, set in the kCamManagerClass.
-
-
-        // PLAYHEAD STUFF
-        int         oldActiveHandX;     // pixel value
-        int         deltaHandX;         // pixel value
-
-        int         totalNumFrames;     // frame value
-        int         playheadFrame;      // frame value
-        int         oldPlayheadFrame;   // to caluclate distanace from old to new and add or subtract that value
-
-        int         mapPosToFrame(int pos);
 
         int         fistFactor;
 
@@ -138,12 +112,6 @@ class testApp : public ofBaseApp, public Actor
                           five,
                           six;
 
-
-        void    scrubPlayhead();
-
-        kCamManager     manager; // camera manager key
-
-        // int camKey;
 
 };
 
