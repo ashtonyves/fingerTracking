@@ -258,6 +258,8 @@ void testApp::update(){
             bSending = true;
             //manager.bChangeActiveCam(playheadFrame);
             manager.updateActiveCamera(playheadFrame);
+            sendData("activeCamera");
+
         } if(bScrubbingCamera) {
             //TODO sendData("moveCamera");
             //bSending = true;
@@ -580,6 +582,7 @@ bool testApp::findFingerMatrix(){
 }
 
 //--------------------------------------------------------------
+//
 bool testApp::findFinger(){
 
         Vector3f vec;
@@ -768,13 +771,21 @@ void testApp::sendData(string e){
     }
 
     else if(e == "sendPlayhead") { // scrub mode
-
         oscAddress = "/setPlayheadFrame/int";
         myMessage.addIntArg(playheadFrame);
         cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
-
     }
-
+    else if(e == "cameraAdded") { // Added camera. We assume the camera has already been added to the roster (in testApp), and that it is now active.
+        oscAddress = "/cameraAdded/int/int";
+        myMessage.addIntArg(manager.activeCam);
+        myMessage.addIntArg(manager.getActiveKCam().startFrame);
+     //   myMessage.addIntArg(playheadFrame);
+     //   cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
+    }
+    else if(e == "activeCamera") { // Sends across the currently active camera
+        oscAddress = "/activeCamera/int";
+        myMessage.addIntArg(manager.activeCam);
+    }
         myMessage.setAddress(oscAddress);
         osc_senderMSB.sendMessage(myMessage);
         osc_senderProcessing.sendMessage(myMessage);
@@ -857,6 +868,13 @@ void testApp::draw(){
     for(int i = 0; i < manager.getNumCams(); i++) {
        type.drawString("id: " + ofToString(manager.roster[i].id) + " start: " + ofToString(manager.roster[i].startFrame), 650, 400 + 20*i);
     }
+
+
+
+
+
+
+
 }
 
 
@@ -914,10 +932,13 @@ void testApp::keyReleased(int key){
     switch(key) { // TODO: replace for big ol' imputs.
         case('a'):
             manager.addCamera(playheadFrame);
+            sendData("cameraAdded");
+            sendData("activeCamera");
             break;
         case('r'):
             manager.removeCamera();
             manager.updateActiveCamera(playheadFrame);
+            sendData("activeCamera");
             break;
     }
 
@@ -955,3 +976,7 @@ void testApp::windowResized(int w, int h)
 void testApp::trigger(Actor* other){
 
 }
+
+//--------------------------------------------------------------
+// hand tracking stuff
+//--------------------------------------------------------------

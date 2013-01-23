@@ -90,9 +90,9 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
         if(roster[i].id == activeCam) {
             if (i == 0) {
                 cout << "You cannot delete the first camera" << endl;
-            } else {
-
-           // send OSC
+            }
+            else {
+                // send OSC
                 ofxOscMessage myMessage;
                 string oscAddress = "/cameraRemoved";
                 if(camKey !=0) {
@@ -116,9 +116,8 @@ void kCamManager::removeCamera() { // we can only remove the activeCam
 // Checks the current scrub location and sets the appropriate camera to be the active camera
 void kCamManager::updateActiveCamera(int playheadFrame){
     updateSortOrder();
-    int i = 0;
+    int i = 0, newActiveId = -1;
     while(roster[i].startFrame < playheadFrame && i<roster.size()){
-        std::cout << roster[i].startFrame << " < " << playheadFrame << "--";
         i++;
     }
     activeCam = roster[i-1].id;

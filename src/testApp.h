@@ -145,6 +145,9 @@ class testApp : public ofBaseApp, public Actor
 
         // int camKey;
 
+        // Hand Recognition Stuff
+
+
 };
 
 #endif
