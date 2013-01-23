@@ -2849,10 +2849,25 @@
 	"ofxKinect.h"
 	"ofMain.h"
 
-1299014838 source:c:\openframeworks0062\apps\dwig\fingertracking\src\main.cpp
+1334864686 source:c:\openframeworks0062\addons\msbofcore\actor.cpp
+	<sstream>
+	"actor.h"
+	"input.h"
+	"interpolationHelper.h"
+	"renderer.h"
+	"node.h"
+	"meshData.h"
+
+1347319164 c:\openframeworks0062\addons\msbofcore\actor.h
+	"includes.h"
+	"tinyxml.h"
+
+1334864686 c:\openframeworks0062\addons\msbofcore\includes.h
+	"shlobj.h"
+	"windows.h"
 	"ofMain.h"
-	"testApp.h"
-	"ofAppGlutWindow.h"
+	"vmath.h"
+	<typeinfo>
 
 1290010956 c:\openframeworks0062\libs\openframeworks\ofmain.h
 	"ofConstants.h"
@@ -3560,178 +3575,6 @@
 	"ofGstUtils.h"
 	"ofQtUtils.h"
 
-1334442211 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
-	"ofMain.h"
-	"ofxKinect.h"
-	"ofxOsc.h"
-	"ofxOpenCv.h"
-	"msbOFCore.h"
-	"actor.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxosc.h
-	"ofxOscArg.h"
-	"ofxOscMessage.h"
-	"ofxOscSender.h"
-	"ofxOscReceiver.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscarg.h
-	"ofConstants.h"
-	<string>
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.h
-	"ofxOscArg.h"
-	<vector>
-	<string>
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.h
-	<string>
-	"OscTypes.h"
-	"OscOutboundPacketStream.h"
-	"ofxOscBundle.h"
-	"ofxOscMessage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
-	"OscTypes.h"
-	"OscException.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
-	<exception>
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.h
-	<vector>
-	"ofxOscMessage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.h
-	<deque>
-	"ofMain.h"
-	<windows.h>
-	<pthread.h>
-	"OscTypes.h"
-	"OscPacketListener.h"
-	"UdpSocket.h"
-	"ofxOscMessage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
-	"OscReceivedElements.h"
-	"../ip/PacketListener.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
-	"OscTypes.h"
-	"OscException.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
-	"NetworkingUtils.h"
-	"IpEndpointName.h"
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
-
-1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxopencv.h
-	"ofxCvConstants.h"
-	"ofxCvImage.h"
-	"ofxCvGrayscaleImage.h"
-	"ofxCvColorImage.h"
-	"ofxCvFloatImage.h"
-	"ofxCvShortImage.h"
-	"ofxCvContourFinder.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvconstants.h
-	"cv.h"
-	<vector>
-	"ofMain.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.h
-	<chdl.h>
-	"cxcore.h"
-	"cvtypes.h"
-	"cv.hpp"
-	"cvcompat.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.h
-	"ipl.h"
-	"ipl/ipl.h"
-	"cxtypes.h"
-	"cxerror.h"
-	"cvver.h"
-	"cxcore.hpp"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxtypes.h
-	<assert.h>
-	<stdlib.h>
-	<string.h>
-	<float.h>
-	<emmintrin.h>
-	<fastmath.h>
-	<mathimf.h>
-	<math.h>
-	<ipl.h>
-	<ipl/ipl.h>
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxerror.h
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvver.h
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.hpp
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvtypes.h
-	<assert.h>
-	<stdlib.h>
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.hpp
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvcompat.h
-	<string.h>
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.h
-	"ofxCvConstants.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.h
-	"ofxCvImage.h"
-	"ofxCvBlob.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvblob.h
-	"ofxCvConstants.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.h
-	"ofxCvImage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.h
-	"ofxCvImage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.h
-	"ofxCvImage.h"
-
-1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.h
-	"ofxCvConstants.h"
-	"ofxCvBlob.h"
-	"ofxCvGrayscaleImage.h"
-	<algorithm>
-
-1334864686 source:c:\openframeworks0062\addons\msbofcore\actor.cpp
-	<sstream>
-	"actor.h"
-	"input.h"
-	"interpolationHelper.h"
-	"renderer.h"
-	"node.h"
-	"meshData.h"
-
-1347319164 c:\openframeworks0062\addons\msbofcore\actor.h
-	"includes.h"
-	"tinyxml.h"
-
-1334864686 c:\openframeworks0062\addons\msbofcore\includes.h
-	"shlobj.h"
-	"windows.h"
-	"ofMain.h"
-	"vmath.h"
-	<typeinfo>
-
 1334864687 c:\openframeworks0062\addons\msbofcore\vmath\vmath.h
 	<cmath>
 	<cstring>
@@ -4197,8 +4040,80 @@
 	"ofxCvFloatImage.h"
 	"ofxCvShortImage.h"
 
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.h
+	"ofxCvImage.h"
+	"ofxCvBlob.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.h
+	"ofxCvConstants.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvconstants.h
+	"cv.h"
+	<vector>
+	"ofMain.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.h
+	<chdl.h>
+	"cxcore.h"
+	"cvtypes.h"
+	"cv.hpp"
+	"cvcompat.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.h
+	"ipl.h"
+	"ipl/ipl.h"
+	"cxtypes.h"
+	"cxerror.h"
+	"cvver.h"
+	"cxcore.hpp"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxtypes.h
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	<emmintrin.h>
+	<fastmath.h>
+	<mathimf.h>
+	<math.h>
+	<ipl.h>
+	<ipl/ipl.h>
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxerror.h
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvver.h
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.hpp
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvtypes.h
+	<assert.h>
+	<stdlib.h>
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.hpp
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvcompat.h
+	<string.h>
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvblob.h
+	"ofxCvConstants.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.h
+	"ofxCvImage.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.h
+	"ofxCvImage.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.h
+	"ofxCvImage.h"
+
 1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.cpp
 	"ofxCvContourFinder.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.h
+	"ofxCvConstants.h"
+	"ofxCvBlob.h"
+	"ofxCvGrayscaleImage.h"
+	<algorithm>
 
 1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.cpp
 	"ofxCvGrayscaleImage.h"
@@ -4228,6 +4143,19 @@
 1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.cpp
 	"ofxOscBundle.h"
 
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.h
+	<vector>
+	"ofxOscMessage.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.h
+	"ofxOscArg.h"
+	<vector>
+	<string>
+
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscarg.h
+	"ofConstants.h"
+	<string>
+
 1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.cpp
 	"ofxOscMessage.h"
 	<iostream>
@@ -4239,10 +4167,54 @@
 	<iostream>
 	<assert.h>
 
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.h
+	<deque>
+	"ofMain.h"
+	<windows.h>
+	<pthread.h>
+	"OscTypes.h"
+	"OscPacketListener.h"
+	"UdpSocket.h"
+	"ofxOscMessage.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
+	"OscReceivedElements.h"
+	"../ip/PacketListener.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
+	"OscTypes.h"
+	"OscException.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
+	<exception>
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
+	"NetworkingUtils.h"
+	"IpEndpointName.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
+
 1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.cpp
 	"ofxOscSender.h"
 	"UdpSocket.h"
 	<assert.h>
+
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.h
+	<string>
+	"OscTypes.h"
+	"OscOutboundPacketStream.h"
+	"ofxOscBundle.h"
+	"ofxOscMessage.h"
+
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
+	"OscTypes.h"
+	"OscException.h"
 
 1290010956 source:c:\openframeworks0062\addons\ofxthread\src\ofxthread.cpp
 	"ofxThread.h"
@@ -4260,24 +4232,12 @@
 	"ofxQuaternion.h"
 	"ofxMatrix4x4.h"
 
-1334864687 c:\openframeworks0062\addons\msbofcore\msbofcore.h
-	"renderer.h"
-	"input.h"
-
-1334443104 source:c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.cpp
-	"testApp.h"
-	"actor.h"
-	"sliderButton.h"
-	"textInputButton.h"
-	"assignButton.h"
-	"msbLight.h"
-
-1299014838 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\main.cpp
+1299014838 source:c:\openframeworks0062\apps\dwig\fingertracking\src\main.cpp
 	"ofMain.h"
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1334442212 c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.h
+1331565374 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
 	"ofMain.h"
 	"ofxKinect.h"
 	"ofxOsc.h"
@@ -4285,7 +4245,26 @@
 	"msbOFCore.h"
 	"actor.h"
 
-1348001687 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\testapp.cpp
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxosc.h
+	"ofxOscArg.h"
+	"ofxOscMessage.h"
+	"ofxOscSender.h"
+	"ofxOscReceiver.h"
+
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxopencv.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1334864687 c:\openframeworks0062\addons\msbofcore\msbofcore.h
+	"renderer.h"
+	"input.h"
+
+1347319125 source:c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.cpp
 	"testApp.h"
 	"actor.h"
 	"sliderButton.h"

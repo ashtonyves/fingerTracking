@@ -29,25 +29,22 @@ void testApp::setup(){
 
     fistFactor=0;
 
-    offsetVector=Vector3f(400,600,3);
 
     ofSetFrameRate(25);
 
     //ipAddress="128.61.22.174"; // Nick's IP
-    //ipAddressMSB="192.168.1.3";
-    ipAddressMSB="169.254.75.192";
+    //ipAddress="192.168.0.102";
     //ipAddress="169.254.208.35";
     //ipAddressMSB="127.0.0.1";
-    //ipAddressMSB="143.215.199.192";
-
+    //ipAddressMSB="143.215.199.16";
+    ipAddressMSB="143.215.199.192";
+    //ipAddressProc="143.215.199.192";
     ipAddressProc="127.0.0.1";
+    //ipAddressProc="143.215.199.32";
     //ipAddress="192.168.1.24";
-
-    // osc_senderMSB.setup(ipAddressMSB,3184+channelMSB);
-    // osc_senderProcessing.setup(ipAddressProc,3184+channelProc);
-
-    osc_senderMSB.setup(ipAddressMSB,31841);
-    osc_senderProcessing.setup(ipAddressProc,31842);
+    osc_senderMSB.setup(ipAddressMSB,3184+channelMSB);
+    //osc_senderProcessing.setup(ipAddressProc,31840+channelProc);
+    osc_senderProcessing.setup(ipAddressProc,3184+channelProc);
 
     msbSetup();
 
@@ -116,6 +113,25 @@ void testApp::msbSetup(){
 void testApp::interfaceSetup(){
 
 
+    SliderButton *but;
+
+    but= new SliderButton;
+    but->location.x=10;
+    but->location.y=740;
+    but->scale.x=1000;
+    but->color=Vector4f(0.3,0.3,0.3,1.0);
+    but->scale.y=10;
+    but->name="RotateViewX";
+    but->tooltip="drag to Change";
+    but->setLocation(but->location);
+    but->textureID="icon_flat";
+    but->setup();
+    but->bDrawName=true;
+    but->parent=this;
+    but->bVertical=false;
+    but->sliderValue=0.5;
+    renderer->buttonList.push_back(but);
+
     TextInputButton *tiBut;
 
     tiBut= new TextInputButton;
@@ -125,19 +141,66 @@ void testApp::interfaceSetup(){
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
     tiBut->textureID="icon_flat";
-    tiBut->name="offsetVector";
+    tiBut->name="cutOffDepth";
     tiBut->bDrawName=true;
     tiBut->setLocation(tiBut->location);
     tiBut->parent=this;
-    tiBut->buttonProperty="OFFSETVECTOR";
+    tiBut->buttonProperty="CUTOFFDEPTH";
     renderer->buttonList.push_back(tiBut);
     tiBut->bPermanent=true;
     tiBut->setup();
 
+    tiBut= new TextInputButton;
+    tiBut->location.x=10;
+    tiBut->location.y=570;
+    tiBut->scale.x=100;
+    tiBut->scale.y=12;
+    tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
+    tiBut->textureID="icon_flat";
+    tiBut->name="previewRes";
+    tiBut->bDrawName=true;
+    tiBut->setLocation(tiBut->location);
+    tiBut->parent=patchActor;
+    tiBut->buttonProperty="PARTICLESCALE";
+    renderer->buttonList.push_back(tiBut);
+    tiBut->bPermanent=true;
+    tiBut->setup();
 
     tiBut= new TextInputButton;
-    tiBut->location.x=100;
-    tiBut->location.y=650;
+    tiBut->location.x=10;
+    tiBut->location.y=600;
+    tiBut->scale.x=100;
+    tiBut->scale.y=12;
+    tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
+    tiBut->textureID="icon_flat";
+    tiBut->name="setCutoffZero";
+    tiBut->bDrawName=true;
+    tiBut->setLocation(tiBut->location);
+    tiBut->parent=this;
+    tiBut->buttonProperty="BSETCUTOFFTOZERO";
+    renderer->buttonList.push_back(tiBut);
+    tiBut->bPermanent=true;
+    tiBut->setup();
+
+    tiBut= new TextInputButton;
+    tiBut->location.x=10;
+    tiBut->location.y=640;
+    tiBut->scale.x=100;
+    tiBut->scale.y=12;
+    tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
+    tiBut->textureID="icon_flat";
+    tiBut->name="learnBkg";
+    tiBut->bDrawName=true;
+    tiBut->setLocation(tiBut->location);
+    tiBut->parent=this;
+    tiBut->buttonProperty="BLEARNBACKGROUND";
+    renderer->buttonList.push_back(tiBut);
+    tiBut->bPermanent=true;
+    tiBut->setup();
+
+    tiBut= new TextInputButton;
+    tiBut->location.x=200;
+    tiBut->location.y=400;
     tiBut->scale.x=100;
     tiBut->scale.y=12;
     tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
@@ -157,8 +220,10 @@ void testApp::interfaceSetup(){
 
 void testApp::registerProperties(){
 
-   createMemberID("OFFSETVECTOR",&offsetVector,this);
+   createMemberID("CUTOFFDEPTH",&cutOffDepth,this);
+   createMemberID("BSETCUTOFFTOZERO",&bSetCutoffToZero,this);
    createMemberID("THRESH",&thresh,this);
+   createMemberID("BLEARNBACKGROUND",&bLearnBackground,this);
 }
 
 int testApp::shareMemory(){
@@ -247,7 +312,6 @@ void testApp::update(){
     bFoundMat=findFingerMatrix();
     bFingerOut=findFinger();
 
-    //I made these changes to test data transfer, please remove comments!
     if (bFoundMat && bFingerOut){
         sendData();
         bSending=true;
@@ -513,19 +577,14 @@ bool testApp::findFingerMatrix(){
             fingerTransformation.data[15]=1.0;
             //fingerTransformation=fingerTransformation.transpose();
 
-            fingerTransformation.setTranslation(Vector3f(edge->x*offsetVector.z -offsetVector.x,-(depthCtroid-1000.0),(-edge->y* offsetVector.z)+offsetVector.y  )*0.1);
+            fingerTransformation.setTranslation(Vector3f(edge->x*1.5 -250,-(depthCtroid-1000.0),(-edge->y* 2.0)+280  )*0.1);
 
             Vector3f myT=fingerTransformation.getTranslation();
 
             myT.x=64.0-myT.x;
             myT.z=-48-myT.z;
-
-            //myT+=offsetVector;
-
             fingerTransformation.setTranslation(myT);
-
-            //cout << myT << endl;
-
+            cout << myT << endl;
 
             transformBuffer.push_back(fingerTransformation);
             if (transformBuffer.size()>bufferLength)
@@ -541,8 +600,6 @@ bool testApp::findFingerMatrix(){
             //cout << fingerTransformation << endl;
 
             fingerTransformation.data[15]=1.0;
-
-
 
             free(edge);
             free(ctroid);
@@ -642,16 +699,12 @@ bool testApp::findFinger(){
 
 void testApp::sendData(){
 
-
+        //cout << "message sent to MSB" << endl;
         ofxOscMessage myMessage;
-
-
-        cout<< "I am sending stuff to:" << ipAddressMSB << endl;
 
         //fingerTransformation.transpose();
 
         string oscAddress = "/setPropertyForSelected/string/matrix4f";
-        //oscAddress = "/pilot/float/float"
 
         myMessage.addStringArg("TRANSFORMMATRIX");
         myMessage.addFloatArg(fingerTransformation.data[0]);
@@ -827,4 +880,11 @@ void testApp::windowResized(int w, int h)
 
 void testApp::trigger(Actor* other){
 
+    if (other->name=="RotateViewX"){
+        float slValue= 0.0f;
+        slValue= ((SliderButton*)other)->sliderValue;
+        patchActor->setRotation(Vector3f(0,slValue * 360.0,0));
+    }
+    if (other->name=="cutOffDepth")
+        kinect.cutOffFar=cutOffDepth;
 }

@@ -89,8 +89,6 @@ class testApp : public ofBaseApp, public Actor
         unsigned char*           pixelData;
 
         Matrix4f        fingerTransformation;
-        Vector3f        offsetVector;
-
         vector<Matrix4f> transformBuffer;
 
         int     bufferLength;

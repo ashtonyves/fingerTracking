@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="release" />
-	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="19253" topLine="612" />
+	<ActiveTarget name="debug" />
+	<File name="..\..\..\addons\msbOFCore\actor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2198" topLine="117" />
 	</File>
-	<File name="src\testApp.h" open="1" top="0" tabpos="2">
-		<Cursor position="1641" topLine="46" />
+	<File name="..\..\..\addons\msbOFCore\actor.h" open="0" top="0" tabpos="0">
+		<Cursor position="84" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1624" topLine="64" />
+	<File name="..\..\..\addons\msbOFCore\renderer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="5435" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\renderer.h" open="1" top="0" tabpos="4">
-		<Cursor position="9542" topLine="0" />
-	</File>
-	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="3">
-		<Cursor position="49186" topLine="0" />
+	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="0">
+		<Cursor position="23534" topLine="966" />
 	</File>
 	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="13237" topLine="62" />
@@ -24,5 +21,11 @@
 	</File>
 	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="0">
 		<Cursor position="3000" topLine="0" />
+	</File>
+	<File name="src\testApp.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1164" topLine="0" />
+	</File>
+	<File name="src\testApp.h" open="0" top="0" tabpos="2">
+		<Cursor position="469" topLine="13" />
 	</File>
 </CodeBlocks_layout_file>
