@@ -3560,7 +3560,7 @@
 	"ofGstUtils.h"
 	"ofQtUtils.h"
 
-1358539363 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
+1358982552 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
 	"ofMain.h"
 	"ofxOsc.h"
 	"ofxOpenCv.h"
@@ -4335,7 +4335,7 @@
 	"ofMain.h"
 	"msbOFCore.h"
 
-1358972263 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.cpp
+1358982552 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.cpp
 	"kCamManager.h"
 	"msbOFCore.h"
 	"kCam.h"

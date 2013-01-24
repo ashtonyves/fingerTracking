@@ -54,6 +54,7 @@ void testApp::setup(){
 
     ipAddressMSB="143.215.199.192";
     ipAddressProc="127.0.0.1";
+
     osc_senderMSB.setup(ipAddressMSB,31841);
     osc_senderProcessing.setup(ipAddressProc,31842);
 
