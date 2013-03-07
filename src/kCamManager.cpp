@@ -22,7 +22,7 @@ void kCamManager::addCamera(int frame) {
     kCam c;
     c.id=camKey;
     c.startFrame = frame;   // start the camera where the playhead is. TODO: THIS IS NOT SAVING THE RIGHT NUMBER - ONLY 0
-    c.transform.data[15];
+    c.camTransform->data[15];
 
     roster.push_back(c);    // push this camera to the end of the stack by default
     cout << "added camera : " << c.id << endl;
@@ -142,6 +142,7 @@ int kCamManager::getNumCams() {
 kCam kCamManager::getActiveKCam(){
     for(int i = 0; i < getNumCams(); i++) {
         if(roster[i].id == activeCam) {
+//            cout << "CAM IN ROSTER: " << i;
             return roster[i];
         }
     }

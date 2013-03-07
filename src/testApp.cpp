@@ -52,7 +52,10 @@ void testApp::setup(){
 
     ofSetFrameRate(30);
 
-    ipAddressMSB="143.215.199.192";
+   // ipAddressMSB="143.215.199.192"; // NORMAL VERSION
+    ipAddressMSB = "143.215.199.31";
+   // ipAddressMSB="143.215.199.228";
+  // ipAddressMSB="127.0.0.1";
     ipAddressProc="127.0.0.1";
 
     osc_senderMSB.setup(ipAddressMSB,31841);
@@ -260,6 +263,11 @@ void testApp::update(){
             //manager.bChangeActiveCam(playheadFrame);
             manager.updateActiveCamera(playheadFrame);
             sendData("activeCamera");
+
+            fingerTransformation = manager.getActiveKCam().getCameraPosition();
+  //          cout<<"NEWPOS: " <<fingerTransformation;
+            sendData("setCameraPos");
+
 
         } if(bScrubbingCamera) {
             //TODO sendData("moveCamera");
@@ -572,15 +580,20 @@ bool testApp::findFingerMatrix(){
             fingerTransformation.data[15]=1.0;
 
 
+            manager.getActiveKCam().setCameraPosition(&fingerTransformation);
+            cout << "POS " << ((manager.getActiveKCam()).getCameraPosition());
+
+        //    cout << "FINGERTRANS " << fingerTransformation;
 
             free(edge);
             free(ctroid);
-
             return true;
     }
 
     return false;
 }
+
+
 
 //--------------------------------------------------------------
 //
@@ -910,7 +923,7 @@ void testApp::keyReleased(int key){
         string sendString="Camera";
         sendString+=key;
 
-        cout << "selected camera " << selectedCamera << "using sting: " << sendString << endl;
+        cout << "selected camera " << selectedCamera << "using string: " << sendString << endl;
 
         myMessage.addStringArg(sendString);
         myMessage.setAddress(oscAddress);
@@ -926,20 +939,26 @@ void testApp::keyReleased(int key){
         oscAddress = "/switchCameraToSelected";
         myMessageSwitch.setAddress(oscAddress);
         osc_senderMSB.sendMessage(myMessageSwitch);
-
-
     }
+
 
     switch(key) { // TODO: replace for big ol' imputs.
         case('a'):
+        {
+
             manager.addCamera(playheadFrame);
             sendData("cameraAdded");
             sendData("activeCamera");
+        }
+
             break;
         case('r'):
+        {
+
             manager.removeCamera();
             manager.updateActiveCamera(playheadFrame);
             sendData("activeCamera");
+        }
             break;
     }
 

@@ -141,7 +141,7 @@ class testApp : public ofBaseApp, public Actor
 
         void    scrubPlayhead();
 
-        kCamManager     manager; // camera manager key
+        kCamManager manager; // camera manager key
 
         // int camKey;
 

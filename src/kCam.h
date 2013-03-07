@@ -7,14 +7,14 @@
 class kCam {
 
 public:
+    Matrix4f * camTransform; // transform matrix
+
     // Constructor
     kCam();
 
      // properties
     int id;             // id of the camera
     int startFrame;     // starting frame, corresponding to x position of blob
-    Matrix4f transform; // transform matrix
-
     bool visible;       // TODO:whether to show them in MSB or not
 
     // methods
@@ -24,6 +24,7 @@ public:
     // should just be getters in this class
     int getCameraStartTime();
     Matrix4f getCameraPosition();
+    void setCameraPosition(Matrix4f* newPos);
 
     //void updateSortOrder();
 
