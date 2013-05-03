@@ -23,5 +23,4 @@ void kCam::setCameraPosition(Matrix4f* newPos) {
     for(int i=0;i<16;i++){
         camTransform->data[i] = newPos->data[i];
     }
-    cout << "SET TRANSFORM" << *camTransform;
 }

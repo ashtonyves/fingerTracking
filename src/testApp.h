@@ -130,16 +130,19 @@ class testApp : public ofBaseApp, public Actor
         int         fistFactor;
 
         ofPoint     fingerStart,
-                          fingerEnd,
-                          one,
-                          two,
-                          three,
-                          four,
-                          five,
-                          six;
+                  fingerEnd,
+                  one,
+                  two,
+                  three,
+                  four,
+                  five,
+                  six;
+
+
 
 
         void    scrubPlayhead();
+        void    calibrateToScreen();
 
         kCamManager manager; // camera manager key
 
@@ -147,6 +150,19 @@ class testApp : public ofBaseApp, public Actor
 
         // Hand Recognition Stuff
 
+        int frameCount;
+        bool inCalibrationMode;
+
+        void selectMsbObjectByName(string n);
+
+        ofRectangle interestAreaRect;
+        ofRectangle processingViewArea;
+        bool usingScreenCalibration;
+
+        Matrix4f overheadCameraPos;
+
+        string saveFile;
+        string testMode;
 
 };
 

@@ -11,7 +11,7 @@
 		<Cursor position="48" topLine="0" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\input.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="16604" topLine="676" />
+		<Cursor position="8144" topLine="339" />
 	</File>
 	<File name="..\..\..\addons\msbOFCore\input.h" open="0" top="0" tabpos="7">
 		<Cursor position="4959" topLine="123" />
@@ -34,43 +34,55 @@
 	<File name="..\..\..\addons\msbOFCore\renderer.h" open="0" top="0" tabpos="5">
 		<Cursor position="3997" topLine="39" />
 	</File>
-	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="7">
-		<Cursor position="61629" topLine="39" />
+	<File name="..\..\..\addons\msbOFCore\vMath\vmath.h" open="0" top="0" tabpos="5">
+		<Cursor position="45559" topLine="1826" />
 	</File>
-	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="4662" topLine="231" />
+	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="15572" topLine="509" />
 	</File>
 	<File name="..\..\..\addons\ofxKinectOpenNI\ofxKinect.h" open="0" top="0" tabpos="3">
 		<Cursor position="40" topLine="0" />
 	</File>
-	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" open="0" top="0" tabpos="0">
-		<Cursor position="257" topLine="0" />
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" open="0" top="0" tabpos="6">
+		<Cursor position="1223" topLine="12" />
 	</File>
-	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="0">
-		<Cursor position="3000" topLine="0" />
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2269" topLine="69" />
+	</File>
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="5387" topLine="165" />
+	</File>
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="6128" topLine="158" />
+	</File>
+	<File name="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" open="0" top="0" tabpos="8">
+		<Cursor position="1145" topLine="0" />
 	</File>
 	<File name="..\..\..\addons\ofxOsc\src\ofxOscSender.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="2230" topLine="54" />
 	</File>
-	<File name="src\kCam.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="305" topLine="0" />
+	<File name="..\..\..\addons\ofxVectorMath\src\ofxMatrix4x4.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="8169" topLine="290" />
 	</File>
-	<File name="src\kCam.h" open="1" top="0" tabpos="5">
-		<Cursor position="135" topLine="0" />
+	<File name="src\kCam.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="229" topLine="0" />
 	</File>
-	<File name="src\kCamManager.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1681" topLine="36" />
+	<File name="src\kCam.h" open="1" top="0" tabpos="3">
+		<Cursor position="221" topLine="0" />
 	</File>
-	<File name="src\kCamManager.h" open="0" top="0" tabpos="5">
-		<Cursor position="483" topLine="0" />
+	<File name="src\kCamManager.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="2813" topLine="10" />
 	</File>
-	<File name="src\main.cpp" open="0" top="0" tabpos="4">
+	<File name="src\kCamManager.h" open="0" top="0" tabpos="4">
+		<Cursor position="504" topLine="0" />
+	</File>
+	<File name="src\main.cpp" open="0" top="0" tabpos="7">
 		<Cursor position="431" topLine="0" />
 	</File>
 	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="1318" topLine="27" />
+		<Cursor position="10673" topLine="352" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="2">
-		<Cursor position="3492" topLine="5" />
+		<Cursor position="2204" topLine="65" />
 	</File>
 </CodeBlocks_layout_file>

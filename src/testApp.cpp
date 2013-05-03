@@ -6,6 +6,9 @@
 #include "textInputButton.h"
 #include "assignButton.h"
 #include "msbLight.h"
+#include <iostream>
+#include <fstream>
+#include <ctime>
 
 #define BUF_SIZE 640*480*4*32
 #define NUM_CAMS 20
@@ -14,7 +17,7 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
-    totalNumFrames = 3600; // 120 second minutes at 30fps
+    totalNumFrames = 300; // matches GUI number of frames
 
     type.loadFont("DroidSans.ttf", 12);
 
@@ -49,6 +52,8 @@ void testApp::setup(){
     deltaHandX = 0;
 
     offsetVector=Vector3f(400,600,3);
+    //   offsetVector=Vector3f(0,0,0);
+    testMode="Creativity";
 
     ofSetFrameRate(30);
 
@@ -81,11 +86,36 @@ void testApp::setup(){
 	grayDiff.allocate(640,480);
 
 	pixelData=new unsigned char[640*480*3];
+	frameCount = 0;
+	frameCount = 0;
 
+    interestAreaRect = ofRectangle(0,0,640,480);
+    processingViewArea = ofRectangle(-80, -100, 210, 130);
+
+	inCalibrationMode = true;
+	usingScreenCalibration = true;
+
+	// Create a file to save our run data to.
+    // Get the current date/time and build file name
+    time_t t = time(0);   // get time now
+    struct tm * now = localtime( & t );
+    ostringstream ss;
+    ss  << "output\\"
+        << "MatrixTransform"<< '-'
+        << (now->tm_mon + 1) << '-'
+        << now->tm_mday << '-'
+        << (now->tm_year+1900)<< '-'
+        << now->tm_hour << '-'
+        << now->tm_min << '-'
+        << now->tm_sec
+        <<".txt";
+    saveFile = ss.str();
+    cout << saveFile;
 }
 
 void testApp::msbSetup(){
 
+    //MSB setup
     //MSB setup
     renderer=Renderer::getInstance();
     input=Input::getInstance();
@@ -162,12 +192,30 @@ void testApp::interfaceSetup(){
     tiBut->bPermanent=true;
     tiBut->setup();
 
+
+    tiBut= new TextInputButton;
+    tiBut->location.x=650;
+    tiBut->location.y=35;
+    tiBut->scale.x=100;
+    tiBut->scale.y=12;
+    tiBut->color=Vector4f(0.5,0.5,0.5,1.0);
+    tiBut->textureID="icon_flat";
+    tiBut->name="Mode";
+    tiBut->bDrawName=true;
+    tiBut->setLocation(tiBut->location);
+    tiBut->parent=this;
+    tiBut->buttonProperty="TESTMODE";
+    renderer->buttonList.push_back(tiBut);
+    tiBut->bPermanent=true;
+    tiBut->setup();
+
 }
 
 
 void testApp::registerProperties(){
    createMemberID("OFFSETVECTOR",&offsetVector,this);
    createMemberID("THRESH",&thresh,this);
+   createMemberID("TESTMODE",&testMode,this);
 }
 
 int testApp::shareMemory(){
@@ -207,6 +255,13 @@ int testApp::shareMemory(){
 
 //--------------------------------------------------------------
 void testApp::update(){
+/*
+cout << "X: "<<interestAreaRect.x << endl;
+cout << "Y: "<<interestAreaRect.y << endl;
+cout << "WIDTH: "<<interestAreaRect.width << endl;
+cout << "HEIGHT: "<<interestAreaRect.height << endl;
+*/
+
 
     fingerStart*= 0;
     fingerEnd*= 0;
@@ -225,7 +280,36 @@ void testApp::update(){
 
     renderer->update();
 
-    for (int i=0;i<640*480;i++){
+// --- TEMPORARY CODE FOR TESTING
+    if(usingScreenCalibration){
+ /*       for (int i=0;i<interestAreaRect.width;i++){
+            for(int j=0;j<interestAreaRect.height;j++){
+                int kinectIndex = ((j+interestAreaRect.y)*640)+i+interestAreaRect.x;
+                int pixelDataIndex = (j*interestAreaRect.width)+i;
+                if (kinect.depthPixels[pixelDataIndex]>0){
+                    pixelData[pixelDataIndex*3]=kinect.depthPixels[kinectIndex];
+                    pixelData[pixelDataIndex*3+1]=kinect.depthPixels[kinectIndex];
+                    pixelData[pixelDataIndex*3+2]=kinect.depthPixels[kinectIndex];
+                }else{
+                    pixelData[pixelDataIndex*3]=0;
+                    pixelData[pixelDataIndex*3+1]=0;
+                    pixelData[pixelDataIndex*3+2]=0;
+                }
+            }
+        }
+
+        colorImg.setFromPixels(pixelData, interestAreaRect.width,interestAreaRect.height);
+
+        grayImage = colorImg;
+        grayImage.threshold(thresh);
+        grayImage.invert();
+
+        // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
+        // also, find holes is set to true so we will get interior contours as well....
+        // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
+        contourFinder.findContours(grayImage, 1000,interestAreaRect.width*interestAreaRect.height/2 , 5, false);	// no find holes
+ */
+        for (int i=0;i<640*480;i++){
             if (kinect.depthPixels[i]>0){
                 pixelData[i*3]=kinect.depthPixels[i];
                 pixelData[i*3+1]=kinect.depthPixels[i];
@@ -235,23 +319,52 @@ void testApp::update(){
                 pixelData[i*3+1]=0;
                 pixelData[i*3+2]=0;
             }
+        }
+
+        colorImg.setFromPixels(pixelData, 640,480);
+
+        grayImage = colorImg;
+        grayImage.threshold(thresh);
+        grayImage.invert();
+
+        // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
+        // also, find holes is set to true so we will get interior contours as well....
+        // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
+        contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// no find holes
     }
 
-    colorImg.setFromPixels(pixelData, 640,480);
+    else{
+        for (int i=0;i<640*480;i++){
+                if (kinect.depthPixels[i]>0){
+                    pixelData[i*3]=kinect.depthPixels[i];
+                    pixelData[i*3+1]=kinect.depthPixels[i];
+                    pixelData[i*3+2]=kinect.depthPixels[i];
+                }else{
+                    pixelData[i*3]=0;
+                    pixelData[i*3+1]=0;
+                    pixelData[i*3+2]=0;
+                }
+        }
 
-    grayImage = colorImg;
-    grayImage.threshold(thresh);
-    grayImage.invert();
+        colorImg.setFromPixels(pixelData, 640,480);
 
-    // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
-    // also, find holes is set to true so we will get interior contours as well....
-    // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
-    contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// no find holes
+        grayImage = colorImg;
+        grayImage.threshold(thresh);
+        grayImage.invert();
+
+        // find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
+        // also, find holes is set to true so we will get interior contours as well....
+        // AG: might need to change value for nConsidered from 5 to 10 to track 2 palms
+        contourFinder.findContours(grayImage, 1000,640*480/2 , 5, false);	// no find holes
+    }
+
+// --- END TEMPORARY CODE FOR TESTING
+
+
+
 
     Matrix4f idMatrix;
     idMatrix.identity();
-
-
 
     findHands();  //and additionally this will check if both hands are palms or palm and fist
 
@@ -265,10 +378,7 @@ void testApp::update(){
             sendData("activeCamera");
 
             fingerTransformation = manager.getActiveKCam().getCameraPosition();
-  //          cout<<"NEWPOS: " <<fingerTransformation;
-            sendData("setCameraPos");
-
-
+            //sendData("setCameraPos"); //  oh noes. Don't set the camera position when two hands are in the frame... AG 5-2-2013
         } if(bScrubbingCamera) {
             //TODO sendData("moveCamera");
             //bSending = true;
@@ -278,17 +388,19 @@ void testApp::update(){
     } else if (bOneHand) {
         // set booleans by running functions on each loop
         bFoundMat=findFingerMatrix();
-        bFingerOut=findFinger();
-        if (bFoundMat && bFingerOut){ // do not set position if two hands are in the frame
-            sendData("setCameraPos");
-            bSending=true;
+        if(bFoundMat){
+            bFingerOut=findFinger();
+            if (bFoundMat && bFingerOut){ // do not set position if two hands are in the frame
+                sendData("setCameraPos");
+                bSending=true;
+            }
         }
     }
 
-
-
-
-
+    if(usingScreenCalibration && inCalibrationMode){
+        calibrateToScreen();
+    }
+    frameCount ++;
 }
 
 //--------------------------------------------------------------
@@ -410,7 +522,6 @@ bool testApp::findFingerMatrix(){
                 // Things flip to longer than wide here!
                 //if longer than wide - figure out if point closest to edge is up or right
                 if (contourFinder.blobs[i].boundingRect.width<contourFinder.blobs[i].boundingRect.height){
-                cout << "right" << endl;
 
                     //find lower edge point
                     for (int b=0;b<contourFinder.blobs[i].nPts;b++){
@@ -516,19 +627,19 @@ bool testApp::findFingerMatrix(){
             Vector3f pointHand=Vector3f(ctroid->x,depthCtroid,ctroid->y);   //because we're watching from the top, so y is z
             Vector3f pointFinger=Vector3f(edge->x,depthEdge,edge->y);
             Vector3f zA=pointHand-pointFinger;
-            zA=pointFinger- pointHand;
+          //  zA=pointFinger- pointHand;
             //zA.y=0.0;
             zA.normalize();
 
             zA.z=-zA.z;
-            zA=-zA;
+         //   zA=-zA;
 
             Vector3f yA=Vector3f(0,-1,0);
             Vector3f xA=zA.crossProduct(yA);
             //xA.y=0.0;
             xA.normalize();
 
-            yA=zA.crossProduct(xA);
+            yA=xA.crossProduct(zA);
 
             yA.normalize();
 
@@ -550,7 +661,19 @@ bool testApp::findFingerMatrix(){
             fingerTransformation.data[15]=1.0;
             //fingerTransformation=fingerTransformation.transpose();
 
-            fingerTransformation.setTranslation(Vector3f(edge->x*offsetVector.z -offsetVector.x,-(depthCtroid-1000.0),(-edge->y* offsetVector.z)+offsetVector.y  )*0.1);
+           // fingerTransformation.setTranslation(Vector3f(edge->x*offsetVector.z -offsetVector.x,-(depthCtroid-1000.0),(-edge->y* offsetVector.z)+offsetVector.y  )*0.1);
+            if(   edge->x > interestAreaRect.x && edge->x < interestAreaRect.x+interestAreaRect.width
+               && edge->y > interestAreaRect.y && edge->y < interestAreaRect.y+interestAreaRect.height){
+                fingerTransformation.setTranslation(Vector3f((1-(edge->x-interestAreaRect.x)/interestAreaRect.width)*processingViewArea.width+processingViewArea.x,(1000-depthCtroid)*0.1,(1-(edge->y-interestAreaRect.y)/interestAreaRect.height)*processingViewArea.height+processingViewArea.y));
+              // fingerTransformation.setTranslation(Vector3f(30,13,-20));
+
+              //  cout << Vector3f((1-(edge->x-interestAreaRect.x)/interestAreaRect.width)*processingViewArea.width+processingViewArea.x,(1000-depthCtroid)*0.1,-((((edge->y-interestAreaRect.y)/interestAreaRect.height)*processingViewArea.height)+processingViewArea.y));
+            }
+            else {
+                return false; // Finger out of bounds. Do not use.
+                //fingerTransformation.setTranslation(Vector3f(edge->x,-(depthCtroid-1000.0),-edge->y)*0.1);
+            }
+  //          fingerTransformation.setTranslation(Vector3f((edge->x/interestAreaRect.width)*169-52,(1000-depthCtroid)*0.1,(edge->y/interestAreaRect.height)*105.25-68));
 
             Vector3f myT=fingerTransformation.getTranslation();
 
@@ -581,9 +704,6 @@ bool testApp::findFingerMatrix(){
 
 
             manager.getActiveKCam().setCameraPosition(&fingerTransformation);
-            cout << "POS " << ((manager.getActiveKCam()).getCameraPosition());
-
-        //    cout << "FINGERTRANS " << fingerTransformation;
 
             free(edge);
             free(ctroid);
@@ -591,6 +711,124 @@ bool testApp::findFingerMatrix(){
     }
 
     return false;
+}
+
+
+
+void testApp::calibrateToScreen(){
+   // cout << "Frame Count " << frameCount << " -- Mod " << frameCount % 15;
+    if(frameCount % 10 == 0){
+        //check image
+        int centerVal = kinect.getDepthPixels()[(240*640)+320];
+        int numPoints = 10;
+        int depthTolerance = 7;
+
+        ofPoint testPoint = ofPoint(0,0);
+
+        int pixCol = 0, pixRow = 0;
+        int numInThresh = 0;
+        int testVal = 0;
+
+        bool bFound = false;
+
+        // Start X
+        while(pixCol<320 && !bFound){
+            testPoint.x = pixCol;
+            testPoint.y = 0;
+            numInThresh = 0;
+            for(int i=0;i<numPoints;i++){
+               // cout << "x: " << testPoint.x << "y: "<< testPoint.y << endl;
+                if( ( abs(      kinect.getDepthPixels()[(int)((testPoint.y*640)+testPoint.x)]  ) - centerVal) < depthTolerance ){
+                    numInThresh++;
+                }
+                testPoint.y += (int)480/numPoints;
+            }
+            if(numInThresh >= numPoints/2){
+                bFound=true;
+                //cout << "Screen edge found at: " << pixCol << endl;
+                interestAreaRect.x = pixCol;
+            }
+            else {
+                pixCol++;
+            }
+        }
+
+        // Start Y
+        pixRow = 0;
+        bFound = false;
+        while(pixRow<240 && !bFound){
+            testPoint.x = 0;
+            testPoint.y = pixRow;
+            numInThresh = 0;
+            for(int i=0;i<numPoints;i++){
+               // cout << "x: " << testPoint.x << "y: "<< testPoint.y << endl;
+                if( ( abs(      kinect.getDepthPixels()[(int)((testPoint.y*640)+testPoint.x)]  ) - centerVal) < depthTolerance ){
+                    numInThresh++;
+                }
+                testPoint.x += (int)640/numPoints;
+            }
+            if(numInThresh >= numPoints/2){
+                bFound=true;
+               // cout << "Screen edge found at: " << pixCol << endl;
+                interestAreaRect.y = pixRow;
+            }
+            else {
+                pixRow++;
+            }
+        }
+
+        // End X
+        pixCol = 640;
+        bFound = false;
+        while(pixCol>320 && !bFound){
+            testPoint.x = pixCol;
+            testPoint.y = 0;
+            numInThresh = 0;
+            for(int i=0;i<numPoints;i++){
+               // cout << "x: " << testPoint.x << "y: "<< testPoint.y << endl;
+                if( ( abs(      kinect.getDepthPixels()[(int)((testPoint.y*640)+testPoint.x)]  ) - centerVal) < depthTolerance ){
+                    numInThresh++;
+                }
+                testPoint.y += (int)480/numPoints;
+            }
+            if(numInThresh >= numPoints/2){
+                bFound=true;
+               // cout << "Screen edge found at: " << pixCol << endl;
+                interestAreaRect.width = pixCol-interestAreaRect.x;
+            }
+            else {
+                pixCol--;
+            }
+        }
+
+        // End Y
+        pixRow = 479;
+        bFound = false;
+        while(pixRow>240 && !bFound){
+            testPoint.x = 0;
+            testPoint.y = pixRow;
+            numInThresh = 0;
+            for(int i=0;i<numPoints;i++){
+               // cout << "x: " << testPoint.x << "y: "<< testPoint.y << endl;
+                if( ( abs(      kinect.getDepthPixels()[(int)((testPoint.y*640)+testPoint.x)]  ) - centerVal) < depthTolerance ){
+                    numInThresh++;
+                }
+                testPoint.x += (int)640/numPoints;
+            }
+            if(numInThresh >= numPoints/2){
+                bFound=true;
+               // cout << "Screen edge found at: " << pixCol << endl;
+                interestAreaRect.height = pixRow-interestAreaRect.y;
+            }
+            else {
+                pixRow--;
+            }
+        }
+
+        // colorImg = ofxCvColorImage();
+      //  colorImg.resize(interestAreaRect.width,interestAreaRect.height);
+      //  grayImage.resize(interestAreaRect.width,interestAreaRect.height);
+    }
 }
 
 
@@ -642,7 +880,7 @@ bool testApp::findFinger(){
 
                     bool bIn=false;
 
-                     if (wb[i*640+j]>0)   bIn=true;
+                     if (wb[i*((int)640)+j]>0)   bIn=true;
 
                     //check point one
                     if (abs(one.y-i)<grain && abs(one.x-j)<grain ){
@@ -694,6 +932,7 @@ void testApp::findHands() {
             bOneHand = true;
         } else if (contourFinder.nBlobs == 0) {
             // no hands in frame
+            sendData("noContours");
         }
     }
 
@@ -761,7 +1000,9 @@ void testApp::sendData(string e){
     ofxOscMessage myMessage;
     string oscAddress;
 
-    if(e == "setCameraPos") {
+
+    //if(e == "setCameraPos" && !bTwoHands) {
+        if(e == "setCameraPos") {
             //fingerTransformation.transpose();
             oscAddress = "/setPropertyForSelected/string/matrix4f";
             //oscAddress = "/pilot/float/float"
@@ -791,8 +1032,12 @@ void testApp::sendData(string e){
     }
     else if(e == "cameraAdded") { // Added camera. We assume the camera has already been added to the roster (in testApp), and that it is now active.
         oscAddress = "/cameraAdded/int/int";
-        myMessage.addIntArg(manager.activeCam);
-        myMessage.addIntArg(manager.getActiveKCam().startFrame);
+        //myMessage.addIntArg(manager.activeCam);
+        //myMessage.addIntArg(manager.getActiveKCam().startFrame);
+
+        myMessage.addIntArg(24);
+        myMessage.addIntArg(200);
+
      //   myMessage.addIntArg(playheadFrame);
      //   cout << "OSC playheadFrame currently at: " << playheadFrame << endl;
     }
@@ -800,9 +1045,30 @@ void testApp::sendData(string e){
         oscAddress = "/activeCamera/int";
         myMessage.addIntArg(manager.activeCam);
     }
+    else if(e=="noContours") { // no hands in staging area
+        oscAddress = "/anyBlobs/string";
+        myMessage.addStringArg("false");
+        //cout << "no counters" << endl;
+    }
         myMessage.setAddress(oscAddress);
         osc_senderMSB.sendMessage(myMessage);
         osc_senderProcessing.sendMessage(myMessage);
+
+
+}
+
+void testApp::selectMsbObjectByName(string n){
+    ofxOscMessage myMessage;
+
+    string oscAddress = "/selectActorByName";
+    string sendString=n;
+
+    cout << "Selected actor " << n;
+
+    myMessage.addStringArg(n);
+    myMessage.setAddress(oscAddress);
+
+    osc_senderMSB.sendMessage(myMessage);
 
 }
 
@@ -828,12 +1094,33 @@ void testApp::draw(){
     }
         //kinect.draw(420, 50, 400, 300);
         //colorImg.draw(420,50,400,300);
+        //colorImg.draw(420,50,400,300);
+
         grayImage.draw(660,50,320,240);
+        //grayImage.draw(660,50);
 
         glPushMatrix();
+/*
+        ofSetColor(0,255,0);
+        ofLine(fingerStart.x+interestAreaRect.x,fingerStart.y+interestAreaRect.y,fingerEnd.x+interestAreaRect.x,fingerEnd.y+interestAreaRect.y);
+
+        ofSetColor(128,0,0);
+        ofRect(fingerStart.x+interestAreaRect.x,fingerStart.y+interestAreaRect.y,10,10);
+
+        ofSetColor(255,0,0);
+        ofRect(fingerEnd.x+interestAreaRect.x,fingerEnd.y+interestAreaRect.y,10,10);
+
+        ofSetColor(64,64,255);
+        ofRect(one.x+interestAreaRect.x,one.y+interestAreaRect.y,5,5);
+        ofRect(two.x+interestAreaRect.x,two.y+interestAreaRect.y,5,5);
+        ofRect(three.x+interestAreaRect.x,three.y+interestAreaRect.y,5,5);
+        ofRect(four.x+interestAreaRect.x,four.y+interestAreaRect.y,5,5);
+        ofRect(five.x+interestAreaRect.x,five.y+interestAreaRect.y,5,5);
+        ofRect(six.x+interestAreaRect.x,six.y+interestAreaRect.y,5,5);
+*/
 
         ofSetColor(0,255,0);
-        ofLine(fingerStart.x+5,fingerStart.y,fingerEnd.x+5,fingerEnd.y);
+        ofLine(fingerStart.x,fingerStart.y,fingerEnd.x,fingerEnd.y);
 
         ofSetColor(128,0,0);
         ofRect(fingerStart.x,fingerStart.y,10,10);
@@ -848,6 +1135,21 @@ void testApp::draw(){
         ofRect(four.x,four.y,5,5);
         ofRect(five.x,five.y,5,5);
         ofRect(six.x,six.y,5,5);
+        if(usingScreenCalibration && inCalibrationMode) {
+            // Draw edge calibration debug
+            ofSetColor(255,64,64);
+            ofRect(interestAreaRect.x,0,4,480);
+            ofRect(0,interestAreaRect.y,640,4);
+            ofRect(interestAreaRect.x+interestAreaRect.width,0,4,480);
+            ofRect(0,interestAreaRect.y+interestAreaRect.height,640,4);
+
+            ofSetColor(64,255,64,75);
+            ofRect(interestAreaRect.x+4, interestAreaRect.y+4, interestAreaRect.width-4, interestAreaRect.height-4);
+
+            ofSetColor(255,64,64);
+
+            type.drawString("Calibrate: Press ENTER when you are satisfied with position of the play zone.", 15,500);
+        }
 
 
      if (bFingerOut)
@@ -864,7 +1166,13 @@ void testApp::draw(){
 
     glPopMatrix();
 
-    contourFinder.draw(0,0);
+    if(usingScreenCalibration){
+        //contourFinder.draw(interestAreaRect.x,interestAreaRect.y);
+        contourFinder.draw(0,0);
+    }
+    else {
+        contourFinder.draw(0,0);
+    }
 
     ofSetColor(255,255,255);
      // print report String to interface
@@ -903,6 +1211,136 @@ void testApp::keyPressed (int key){
 
     input->normalKeyDown(key,mouseX,mouseY);
     input->specialKeyDown(key,mouseX,mouseY);
+
+
+    switch(key) {
+        case(13): // ENTER key is pressed
+        {
+            if(usingScreenCalibration){
+                inCalibrationMode = !inCalibrationMode;
+                if(!inCalibrationMode){
+                    interestAreaRect.x -= 0;
+                    interestAreaRect.y -= 0;
+                    interestAreaRect.width += 0*2;
+                    interestAreaRect.height += 0*2;
+              //     colorImg.resize(interestAreaRect.width,interestAreaRect.height);
+              //     grayImage.resize(interestAreaRect.width,interestAreaRect.height);
+                }
+            }
+        }
+        break;
+        case('c'): // ENTER key is pressed
+        {
+ /*           cout << fingerTransformation.data[0] << endl;
+            cout << fingerTransformation.data[1]<< endl;
+            cout << fingerTransformation.data[2]<< endl;
+            cout << fingerTransformation.data[3]<< endl;
+            cout << fingerTransformation.data[4]<< endl;
+            cout << fingerTransformation.data[5]<< endl;
+            cout << fingerTransformation.data[6]<< endl;
+            cout << fingerTransformation.data[7]<< endl;
+            cout << fingerTransformation.data[8]<< endl;
+            cout << fingerTransformation.data[9]<< endl;
+            cout << fingerTransformation.data[10]<< endl;
+            cout << fingerTransformation.data[11]<< endl;
+            cout << fingerTransformation.data[12]<< endl;
+            cout << fingerTransformation.data[13]<< endl;
+            cout << fingerTransformation.data[14]<< endl;
+            cout << fingerTransformation.data[15]<< endl;
+*/
+
+
+
+            selectMsbObjectByName("Camera1");
+            /*
+            fingerTransformation.data[0]=-0.1231;
+            fingerTransformation.data[1]=0;
+            fingerTransformation.data[2]=0.5121;
+
+            fingerTransformation.data[4]=-0.01638;
+            fingerTransformation.data[5]=0.9272;
+            fingerTransformation.data[6]=-0.3067;
+
+            fingerTransformation.data[8]=-0.5316;
+            fingerTransformation.data[9]=-0.3915;
+            fingerTransformation.data[10]=0.04186;
+
+            fingerTransformation.data[15]=1.0;
+            fingerTransformation.setTranslation(Vector3f(41,32,24));
+
+            */
+            fingerTransformation.data[0]=1;
+            fingerTransformation.data[1]=0;
+            fingerTransformation.data[2]=0;
+
+            fingerTransformation.data[4]=0;
+            fingerTransformation.data[5]=1;
+            fingerTransformation.data[6]=0;
+
+            fingerTransformation.data[8]=0;
+            fingerTransformation.data[9]=0;
+            fingerTransformation.data[10]=1;
+
+            fingerTransformation.data[15]=1.0;
+            fingerTransformation.setTranslation(Vector3f(100,30,-30));
+
+            sendData("setCameraPos");
+
+            selectMsbObjectByName("SkeletalActor31");
+
+        }
+        break;
+        case('s'):
+        {
+           // Save out
+            cout << "Saving contents to file: "<< saveFile.c_str();
+            ofstream ofile;
+            ifstream ifile(saveFile.c_str());
+            ofile.open(saveFile.c_str(), std::ios_base::app);
+
+
+            // Create a file to save our run data to.
+            // Get the current date/time and build file name
+            time_t t = time(0);   // get time now
+            struct tm * now = localtime( & t );
+            ostringstream ss;
+            ss  << "Time: "
+                << now->tm_hour << ':'
+                << now->tm_min << ':'
+                << now->tm_sec
+                << endl;
+             ofile << ss.str();
+
+            ofile << "Test Mode: " << testMode;
+
+
+            ofile << "\n----------\n";
+            ofile <<"["<<fingerTransformation.data[0]<<"]";
+            ofile <<"["<<fingerTransformation.data[1]<<"]";
+            ofile <<"["<<fingerTransformation.data[2]<<"]";
+            ofile <<"["<<fingerTransformation.data[3]<<"]";
+            ofile << endl;
+            ofile <<"["<<fingerTransformation.data[4]<<"]";
+            ofile <<"["<<fingerTransformation.data[5]<<"]";
+            ofile <<"["<<fingerTransformation.data[6]<<"]";
+            ofile <<"["<<fingerTransformation.data[7]<<"]";
+            ofile << endl;
+            ofile <<"["<<fingerTransformation.data[8]<<"]";
+            ofile <<"["<<fingerTransformation.data[9]<<"]";
+            ofile <<"["<<fingerTransformation.data[10]<<"]";
+            ofile <<"["<<fingerTransformation.data[11]<<"]";
+            ofile << endl;
+            ofile <<"["<<fingerTransformation.data[12]<<"]";
+            ofile <<"["<<fingerTransformation.data[13]<<"]";
+            ofile <<"["<<fingerTransformation.data[14]<<"]";
+            ofile <<"["<<fingerTransformation.data[15]<<"]";
+
+            ofile << "\n----------\n";
+            ofile << endl;
+            ofile.close();
+        }
+        break;
+    }
 
 }
 

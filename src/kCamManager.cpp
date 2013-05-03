@@ -25,7 +25,8 @@ void kCamManager::addCamera(int frame) {
     c.camTransform->data[15];
 
     roster.push_back(c);    // push this camera to the end of the stack by default
-    cout << "added camera : " << c.id << endl;
+    cout << "added camera: " << camKey << " at frame: " << frame << endl;
+
 
     // and then make this added camera active
     activeCam = c.id;           // set new camera as active

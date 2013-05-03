@@ -2849,12 +2849,12 @@
 	"ofxKinect.h"
 	"ofMain.h"
 
-1299011238 source:c:\openframeworks0062\apps\dwig\fingertracking\src\main.cpp
+1299014838 source:c:\openframeworks0062\apps\dwig\fingertracking\src\main.cpp
 	"ofMain.h"
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\ofmain.h
+1290010956 c:\openframeworks0062\libs\openframeworks\ofmain.h
 	"ofConstants.h"
 	"ofMath.h"
 	"ofUtils.h"
@@ -2873,7 +2873,7 @@
 	"ofVideoPlayer.h"
 	"ofEvents.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\utils\ofconstants.h
+1290010956 c:\openframeworks0062\libs\openframeworks\utils\ofconstants.h
 	<TargetConditionals.h>
 	<windows.h>
 	"GLee.h"
@@ -2899,7 +2899,7 @@
 	<iomanip>
 	<fstream>
 
-1290007356 c:\openframeworks0062\libs\glee\include\glee.h
+1290010956 c:\openframeworks0062\libs\glee\include\glee.h
 	<windows.h>
 	<GL/gl.h>
 	<OpenGL/gl.h>
@@ -2907,23 +2907,23 @@
 	<GL/glx.h>
 	<stddef.h>
 
-1290007356 c:\openframeworks0062\libs\glu\include\glu.h
+1290010956 c:\openframeworks0062\libs\glu\include\glu.h
 	"glu_mangle.h"
 	<GL/gl.h>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\utils\ofmath.h
+1290010956 c:\openframeworks0062\libs\openframeworks\utils\ofmath.h
 	"ofConstants.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\utils\oftypes.h
+1290010956 c:\openframeworks0062\libs\openframeworks\utils\oftypes.h
 	"ofConstants.h"
 	"ofUtils.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\utils\ofutils.h
+1290010956 c:\openframeworks0062\libs\openframeworks\utils\ofutils.h
 	"ofConstants.h"
 	<shellapi.h>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\communication\ofserial.h
+1290010956 c:\openframeworks0062\libs\openframeworks\communication\ofserial.h
 	"ofConstants.h"
 	<termios.h>
 	<sys/ioctl.h>
@@ -2944,7 +2944,7 @@
 	<errno.h>
 	<ctype.h>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\communication\ofarduino.h
+1290010956 c:\openframeworks0062\libs\openframeworks\communication\ofarduino.h
 	<list>
 	<vector>
 	<string>
@@ -2952,24 +2952,24 @@
 	"ofEvents.h"
 	"ofSerial.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\events\ofevents.h
+1290010956 c:\openframeworks0062\libs\openframeworks\events\ofevents.h
 	"ofConstants.h"
 	"ofUtils.h"
 	"ofEventUtils.h"
 	"ofxEventUtils.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\events\ofeventutils.h
+1290010956 c:\openframeworks0062\libs\openframeworks\events\ofeventutils.h
 	"ofConstants.h"
 	"Poco/FIFOEvent.h"
 	"Poco/Delegate.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\fifoevent.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\fifoevent.h
 	"Poco/AbstractEvent.h"
 	"Poco/FIFOStrategy.h"
 	"Poco/AbstractDelegate.h"
 	"Poco/CompareFunctions.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\abstractevent.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\abstractevent.h
 	"Poco/Foundation.h"
 	"Poco/SingletonHolder.h"
 	"Poco/SharedPtr.h"
@@ -2977,7 +2977,7 @@
 	"Poco/ActiveMethod.h"
 	"Poco/Mutex.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\foundation.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\foundation.h
 	"Poco/Config.h"
 	"Poco/Platform.h"
 	"Poco/Platform_WIN32.h"
@@ -2987,62 +2987,62 @@
 	"Poco/Types.h"
 	<string>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\config.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\config.h
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\platform.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\platform.h
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\platform_win32.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\platform_win32.h
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\platform_vms.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\platform_vms.h
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\platform_posix.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\platform_posix.h
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\bugcheck.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\bugcheck.h
 	"Poco/Foundation.h"
 	<string>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\types.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\types.h
 	"Poco/Foundation.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\singletonholder.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\singletonholder.h
 	"Poco/Foundation.h"
 	"Poco/Mutex.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\mutex.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\mutex.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	"Poco/ScopedLock.h"
 	"Poco/Mutex_WIN32.h"
 	"Poco/Mutex_POSIX.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\exception.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\exception.h
 	"Poco/Foundation.h"
 	<stdexcept>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\scopedlock.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\scopedlock.h
 	"Poco/Foundation.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\mutex_win32.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\mutex_win32.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	"Poco/UnWindows.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\unwindows.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\unwindows.h
 	<windows.h>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\mutex_posix.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\mutex_posix.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	<pthread.h>
 	<errno.h>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\sharedptr.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\sharedptr.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	"Poco/Mutex.h"
 	<algorithm>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\activeresult.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\activeresult.h
 	"Poco/Foundation.h"
 	"Poco/Mutex.h"
 	"Poco/Event.h"
@@ -3050,35 +3050,35 @@
 	"Poco/Exception.h"
 	<algorithm>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\event.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\event.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	"Poco/Event_WIN32.h"
 	"Poco/Event_POSIX.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\event_win32.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\event_win32.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	"Poco/UnWindows.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\event_posix.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\event_posix.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	<pthread.h>
 	<errno.h>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\refcountedobject.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\refcountedobject.h
 	"Poco/Foundation.h"
 	"Poco/Mutex.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\activemethod.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\activemethod.h
 	"Poco/Foundation.h"
 	"Poco/ActiveResult.h"
 	"Poco/ActiveRunnable.h"
 	"Poco/ActiveStarter.h"
 	"Poco/AutoPtr.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\activerunnable.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\activerunnable.h
 	"Poco/Foundation.h"
 	"Poco/ActiveResult.h"
 	"Poco/Runnable.h"
@@ -3086,37 +3086,37 @@
 	"Poco/AutoPtr.h"
 	"Poco/Exception.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\runnable.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\runnable.h
 	"Poco/Foundation.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\autoptr.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\autoptr.h
 	"Poco/Foundation.h"
 	"Poco/Exception.h"
 	<algorithm>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\activestarter.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\activestarter.h
 	"Poco/Foundation.h"
 	"Poco/ThreadPool.h"
 	"Poco/ActiveRunnable.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\threadpool.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\threadpool.h
 	"Poco/Foundation.h"
 	"Poco/Thread.h"
 	"Poco/Mutex.h"
 	<vector>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\thread.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\thread.h
 	"Poco/Foundation.h"
 	"Poco/Mutex.h"
 	"Poco/Thread_WIN32.h"
 	"Poco/Thread_POSIX.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\thread_win32.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\thread_win32.h
 	"Poco/Foundation.h"
 	"Poco/Runnable.h"
 	"Poco/UnWindows.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\thread_posix.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\thread_posix.h
 	"Poco/Foundation.h"
 	"Poco/Runnable.h"
 	"Poco/SignalHandler.h"
@@ -3127,61 +3127,61 @@
 	<sys/select.h>
 	<errno.h>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\signalhandler.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\signalhandler.h
 	"Poco/Foundation.h"
 	<vector>
 	<setjmp.h>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\fifostrategy.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\fifostrategy.h
 	"Poco/NotificationStrategy.h"
 	<map>
 	<list>
 	<memory>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\notificationstrategy.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\notificationstrategy.h
 	"Poco/Foundation.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\abstractdelegate.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\abstractdelegate.h
 	"Poco/Foundation.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\comparefunctions.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\comparefunctions.h
 	"Poco/Foundation.h"
 	<functional>
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\delegate.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\delegate.h
 	"Poco/Foundation.h"
 	"Poco/AbstractDelegate.h"
 	"Poco/FunctionDelegate.h"
 	"Poco/Expire.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\functiondelegate.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\functiondelegate.h
 	"Poco/Foundation.h"
 	"Poco/AbstractDelegate.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\expire.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\expire.h
 	"Poco/Foundation.h"
 	"Poco/AbstractDelegate.h"
 	"Poco/Timestamp.h"
 
-1290007356 c:\openframeworks0062\libs\poco\include\poco\timestamp.h
+1290010956 c:\openframeworks0062\libs\poco\include\poco\timestamp.h
 	"Poco/Foundation.h"
 	<ctime>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\graphics\oftexture.h
+1290010956 c:\openframeworks0062\libs\openframeworks\graphics\oftexture.h
 	"ofConstants.h"
 	"ofGraphics.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\graphics\ofgraphics.h
+1290010956 c:\openframeworks0062\libs\openframeworks\graphics\ofgraphics.h
 	"ofConstants.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\graphics\oftruetypefont.h
+1290010956 c:\openframeworks0062\libs\openframeworks\graphics\oftruetypefont.h
 	"ofConstants.h"
 	"ofGraphics.h"
 	"ofUtils.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\graphics\ofimage.h
+1290010956 c:\openframeworks0062\libs\openframeworks\graphics\ofimage.h
 	"ofConstants.h"
 	"ofTexture.h"
 	"ofGraphics.h"
@@ -3189,60 +3189,60 @@
 	"FreeImage.h"
 	"ofUtils.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\app\ofapprunner.h
+1290010956 c:\openframeworks0062\libs\openframeworks\app\ofapprunner.h
 	"ofMain.h"
 	"ofBaseApp.h"
 	"ofAppBaseWindow.h"
 	"ofAppGlutWindow.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\app\ofbaseapp.h
+1290010956 c:\openframeworks0062\libs\openframeworks\app\ofbaseapp.h
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\app\ofappbasewindow.h
+1290010956 c:\openframeworks0062\libs\openframeworks\app\ofappbasewindow.h
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\app\ofappglutwindow.h
+1290010956 c:\openframeworks0062\libs\openframeworks\app\ofappglutwindow.h
 	"ofConstants.h"
 	"ofAppBaseWindow.h"
 	"glut.h"
 	<GLUT/glut.h>
 	<GL/glut.h>
 
-1290007356 c:\openframeworks0062\libs\glut\include\glut.h
+1290010956 c:\openframeworks0062\libs\glut\include\glut.h
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 
-1290007356 c:\openframeworks0062\libs\freeimage\include\freeimage.h
+1290010956 c:\openframeworks0062\libs\freeimage\include\freeimage.h
 	<wchar.h>
 	<inttypes.h>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\sound\ofsoundstream.h
+1290010956 c:\openframeworks0062\libs\openframeworks\sound\ofsoundstream.h
 	"ofConstants.h"
 	"ofBaseApp.h"
 	"ofEvents.h"
 	"ofMath.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\sound\ofsoundplayer.h
+1290010956 c:\openframeworks0062\libs\openframeworks\sound\ofsoundplayer.h
 	"ofConstants.h"
 	"fmod.h"
 	"fmod_errors.h"
 
-1290007356 c:\openframeworks0062\libs\fmodex\include\fmod.h
+1290010956 c:\openframeworks0062\libs\fmodex\include\fmod.h
 	"fmod_codec.h"
 	"fmod_dsp.h"
 	"fmod_memoryinfo.h"
 
-1290007356 c:\openframeworks0062\libs\fmodex\include\fmod_codec.h
+1290010956 c:\openframeworks0062\libs\fmodex\include\fmod_codec.h
 
-1290007356 c:\openframeworks0062\libs\fmodex\include\fmod_dsp.h
+1290010956 c:\openframeworks0062\libs\fmodex\include\fmod_dsp.h
 
-1290007356 c:\openframeworks0062\libs\fmodex\include\fmod_memoryinfo.h
+1290010956 c:\openframeworks0062\libs\fmodex\include\fmod_memoryinfo.h
 
-1290007356 c:\openframeworks0062\libs\fmodex\include\fmod_errors.h
+1290010956 c:\openframeworks0062\libs\fmodex\include\fmod_errors.h
 	"fmod.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\video\ofvideograbber.h
+1290010956 c:\openframeworks0062\libs\openframeworks\video\ofvideograbber.h
 	"ofConstants.h"
 	"ofTexture.h"
 	"ofGraphics.h"
@@ -3252,7 +3252,7 @@
 	"ofUCUtils.h"
 	"ofGstUtils.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\video\ofqtutils.h
+1290010956 c:\openframeworks0062\libs\openframeworks\video\ofqtutils.h
 	"ofConstants.h"
 	"ofGraphics.h"
 	<QuickTime/QuickTime.h>
@@ -3264,26 +3264,26 @@
 	<TextUtils.h>
 	<MediaHandlers.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\qtml.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\qtml.h
 	<MacTypes.h>
 	<MacMemory.h>
 	<MacWindows.h>
 	<OSUtils.h>
 	<Files.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\mactypes.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\mactypes.h
 	<ConditionalMacros.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\conditionalmacros.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\conditionalmacros.h
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\macmemory.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\macmemory.h
 	<MacTypes.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\mixedmode.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\mixedmode.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\macwindows.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\macwindows.h
 	<MacTypes.h>
 	<Aliases.h>
 	<AppleEvents.h>
@@ -3298,16 +3298,16 @@
 	<Icons.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\aliases.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\aliases.h
 	<MacTypes.h>
 	<AppleTalk.h>
 	<Files.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\appletalk.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\appletalk.h
 	<MacTypes.h>
 	<OSUtils.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\osutils.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\osutils.h
 	<MacTypes.h>
 	<MixedMode.h>
 	<MacMemory.h>
@@ -3315,18 +3315,18 @@
 	<DateTimeUtils.h>
 	<Endian.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\patches.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\patches.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\datetimeutils.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\datetimeutils.h
 	<ConditionalMacros.h>
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\endian.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\endian.h
 	<ConditionalMacros.h>
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\files.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\files.h
 	<MacTypes.h>
 	<MixedMode.h>
 	<OSUtils.h>
@@ -3334,67 +3334,67 @@
 	<UTCUtils.h>
 	<Finder.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\textcommon.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\textcommon.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\utcutils.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\utcutils.h
 	<MacTypes.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\macerrors.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\macerrors.h
 	<ConditionalMacros.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\finder.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\finder.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\appleevents.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\appleevents.h
 	<MacTypes.h>
 	<MixedMode.h>
 	<Notification.h>
 	<Events.h>
 	<AEDataModel.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\notification.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\notification.h
 	<MacTypes.h>
 	<OSUtils.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\events.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\events.h
 	<OSUtils.h>
 	<Quickdraw.h>
 	<MacTypes.h>
 	<Endian.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\quickdraw.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\quickdraw.h
 	<Components.h>
 	<MacTypes.h>
 	<MixedMode.h>
 	<QuickdrawText.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\components.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\components.h
 	<MacErrors.h>
 	<MacTypes.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\quickdrawtext.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\quickdrawtext.h
 	<MacTypes.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\aedatamodel.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\aedatamodel.h
 	<MacTypes.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\collections.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\collections.h
 	<MacTypes.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\drag.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\drag.h
 	<MacTypes.h>
 	<Events.h>
 	<Files.h>
 	<AppleEvents.h>
 	<Quickdraw.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\menus.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\menus.h
 	<MacTypes.h>
 	<Events.h>
 	<Quickdraw.h>
@@ -3405,36 +3405,36 @@
 	<Collections.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\fonts.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\fonts.h
 	<MacTypes.h>
 	<Files.h>
 	<Quickdraw.h>
 	<TextCommon.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\processes.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\processes.h
 	<MacTypes.h>
 	<Events.h>
 	<Files.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\qdoffscreen.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\qdoffscreen.h
 	<MacErrors.h>
 	<Quickdraw.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\icons.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\icons.h
 	<MacTypes.h>
 	<Quickdraw.h>
 	<Files.h>
 	<CodeFragments.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\codefragments.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\codefragments.h
 	<MacTypes.h>
 	<Files.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\fixmath.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\fixmath.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\quicktimecomponents.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\quicktimecomponents.h
 	<MacTypes.h>
 	<MixedMode.h>
 	<Components.h>
@@ -3445,19 +3445,19 @@
 	<Sound.h>
 	<QuickTimeMusic.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\imagecompression.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\imagecompression.h
 	<MacTypes.h>
 	<Quickdraw.h>
 	<QDOffscreen.h>
 	<Components.h>
 	<StandardFile.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\standardfile.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\standardfile.h
 	<MacTypes.h>
 	<Dialogs.h>
 	<Files.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\dialogs.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\dialogs.h
 	<MacTypes.h>
 	<MixedMode.h>
 	<Events.h>
@@ -3466,12 +3466,12 @@
 	<Controls.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\textedit.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\textedit.h
 	<MacTypes.h>
 	<Quickdraw.h>
 	<MixedMode.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\controls.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\controls.h
 	<MacTypes.h>
 	<Quickdraw.h>
 	<Menus.h>
@@ -3481,7 +3481,7 @@
 	<Collections.h>
 	<MacErrors.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\movies.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\movies.h
 	<Quickdraw.h>
 	<Aliases.h>
 	<Events.h>
@@ -3489,17 +3489,17 @@
 	<Components.h>
 	<ImageCompression.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\video.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\video.h
 	<Quickdraw.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\sound.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\sound.h
 	<MacTypes.h>
 	<Dialogs.h>
 	<Components.h>
 	<MixedMode.h>
 	<Movies.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\quicktimemusic.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\quicktimemusic.h
 	<Components.h>
 	<ImageCompression.h>
 	<Movies.h>
@@ -3509,39 +3509,39 @@
 	<Sound.h>
 	<Endian.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\textutils.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\textutils.h
 	<MacTypes.h>
 	<NumberFormatting.h>
 	<StringCompare.h>
 	<DateTimeUtils.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\numberformatting.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\numberformatting.h
 	<ConditionalMacros.h>
 	<MacTypes.h>
 	<IntlResources.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\intlresources.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\intlresources.h
 	<MacTypes.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\stringcompare.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\stringcompare.h
 	<MacTypes.h>
 	<TextCommon.h>
 	<Script.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\script.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\script.h
 	<MacTypes.h>
 	<Quickdraw.h>
 	<IntlResources.h>
 	<Events.h>
 
-1290007356 c:\openframeworks0062\libs\quicktime\include\mediahandlers.h
+1290010956 c:\openframeworks0062\libs\quicktime\include\mediahandlers.h
 	<ConditionalMacros.h>
 	<MacTypes.h>
 	<Components.h>
 	<Movies.h>
 	<Sound.h>
 
-1290007356 c:\openframeworks0062\libs\videoinput\include\videoinput.h
+1290010956 c:\openframeworks0062\libs\videoinput\include\videoinput.h
 	<stdlib.h>
 	<stdio.h>
 	<math.h>
@@ -3549,18 +3549,18 @@
 	<wchar.h>
 	<windows.h>
 
-1290007356 c:\openframeworks0062\libs\openframeworks\video\ofgstutils.h
+1290010956 c:\openframeworks0062\libs\openframeworks\video\ofgstutils.h
 	<gst/gst.h>
 	<pthread.h>
 	"ofConstants.h"
 
-1290007356 c:\openframeworks0062\libs\openframeworks\video\ofvideoplayer.h
+1290010956 c:\openframeworks0062\libs\openframeworks\video\ofvideoplayer.h
 	"ofConstants.h"
 	"ofTexture.h"
 	"ofGstUtils.h"
 	"ofQtUtils.h"
 
-1358982552 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
+1365697448 c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.h
 	"ofMain.h"
 	"ofxOsc.h"
 	"ofxOpenCv.h"
@@ -3570,42 +3570,42 @@
 	"ofxKinect.h"
 	"actor.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxosc.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxosc.h
 	"ofxOscArg.h"
 	"ofxOscMessage.h"
 	"ofxOscSender.h"
 	"ofxOscReceiver.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxoscarg.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscarg.h
 	"ofConstants.h"
 	<string>
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.h
 	"ofxOscArg.h"
 	<vector>
 	<string>
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.h
 	<string>
 	"OscTypes.h"
 	"OscOutboundPacketStream.h"
 	"ofxOscBundle.h"
 	"ofxOscMessage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
 	"OscTypes.h"
 	"OscException.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
 	<exception>
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.h
 	<vector>
 	"ofxOscMessage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.h
+1290010956 c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.h
 	<deque>
 	"ofMain.h"
 	<windows.h>
@@ -3615,25 +3615,25 @@
 	"UdpSocket.h"
 	"ofxOscMessage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
 	"OscReceivedElements.h"
 	"../ip/PacketListener.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
 	"OscTypes.h"
 	"OscException.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
 	"NetworkingUtils.h"
 	"IpEndpointName.h"
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
 
-1290007356 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
+1290010956 c:\openframeworks0062\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxopencv.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxopencv.h
 	"ofxCvConstants.h"
 	"ofxCvImage.h"
 	"ofxCvGrayscaleImage.h"
@@ -3642,19 +3642,19 @@
 	"ofxCvShortImage.h"
 	"ofxCvContourFinder.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvconstants.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvconstants.h
 	"cv.h"
 	<vector>
 	"ofMain.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.h
 	<chdl.h>
 	"cxcore.h"
 	"cvtypes.h"
 	"cv.hpp"
 	"cvcompat.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.h
 	"ipl.h"
 	"ipl/ipl.h"
 	"cxtypes.h"
@@ -3662,7 +3662,7 @@
 	"cvver.h"
 	"cxcore.hpp"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxtypes.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxtypes.h
 	<assert.h>
 	<stdlib.h>
 	<string.h>
@@ -3674,47 +3674,47 @@
 	<ipl.h>
 	<ipl/ipl.h>
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxerror.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxerror.h
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvver.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvver.h
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.hpp
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cxcore.hpp
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvtypes.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvtypes.h
 	<assert.h>
 	<stdlib.h>
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.hpp
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cv.hpp
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvcompat.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\libs\opencv\include\cvcompat.h
 	<string.h>
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.h
 	"ofxCvConstants.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.h
 	"ofxCvImage.h"
 	"ofxCvBlob.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvblob.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvblob.h
 	"ofxCvConstants.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.h
 	"ofxCvImage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.h
 	"ofxCvImage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.h
 	"ofxCvImage.h"
 
-1290007356 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.h
+1290010956 c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.h
 	"ofxCvConstants.h"
 	"ofxCvBlob.h"
 	"ofxCvGrayscaleImage.h"
 	<algorithm>
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\actor.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\actor.cpp
 	<sstream>
 	"actor.h"
 	"input.h"
@@ -3723,24 +3723,24 @@
 	"node.h"
 	"meshData.h"
 
-1347315566 c:\openframeworks0062\addons\msbofcore\actor.h
+1347319166 c:\openframeworks0062\addons\msbofcore\actor.h
 	"includes.h"
 	"tinyxml.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\includes.h
+1334864688 c:\openframeworks0062\addons\msbofcore\includes.h
 	"shlobj.h"
 	"windows.h"
 	"ofMain.h"
 	"vmath.h"
 	<typeinfo>
 
-1334861088 c:\openframeworks0062\addons\msbofcore\vmath\vmath.h
+1334864688 c:\openframeworks0062\addons\msbofcore\vmath\vmath.h
 	<cmath>
 	<cstring>
 	<iostream>
 	<cassert>
 
-1334861088 c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxml.h
+1334864688 c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxml.h
 	<ctype.h>
 	<stdio.h>
 	<stdlib.h>
@@ -3751,12 +3751,12 @@
 	<sstream>
 	"tinystr.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\input.h
+1334864688 c:\openframeworks0062\addons\msbofcore\input.h
 	"includes.h"
 	"actor.h"
 	"renderer.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\renderer.h
+1334864688 c:\openframeworks0062\addons\msbofcore\renderer.h
 	"includes.h"
 	"layer.h"
 	"basicButton.h"
@@ -3764,71 +3764,71 @@
 	"msbLight.h"
 	"node.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\layer.h
+1334864688 c:\openframeworks0062\addons\msbofcore\layer.h
 	"basicButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\basicbutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\basicbutton.h
 	"actor.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\textfile.h
+1334864688 c:\openframeworks0062\addons\msbofcore\textfile.h
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msblight.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msblight.h
 	"actor.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\node.h
+1334864688 c:\openframeworks0062\addons\msbofcore\node.h
 	"listButton.h"
 	"nodeIO.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\listbutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\listbutton.h
 	"basicButton.h"
 	"sliderButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\sliderbutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\sliderbutton.h
 	"basicButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\nodeio.h
+1334864688 c:\openframeworks0062\addons\msbofcore\nodeio.h
 	"basicButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\interpolationhelper.h
+1334864688 c:\openframeworks0062\addons\msbofcore\interpolationhelper.h
 	"actor.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\meshdata.h
+1334864688 c:\openframeworks0062\addons\msbofcore\meshdata.h
 	"actor.h"
 	"renderer.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\basicbutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\basicbutton.cpp
 	"basicButton.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\boneactor.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\boneactor.cpp
 	"skeletalDrawing.h"
 	"boneActor.h"
 	"renderer.h"
 	"input.h"
 	"meshData.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\skeletaldrawing.h
+1334864688 c:\openframeworks0062\addons\msbofcore\skeletaldrawing.h
 	"particleSystem.h"
 	"boneActor.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\particlesystem.h
+1334864688 c:\openframeworks0062\addons\msbofcore\particlesystem.h
 	"includes.h"
 	"actor.h"
 	"textfile.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\boneactor.h
+1334864688 c:\openframeworks0062\addons\msbofcore\boneactor.h
 	"actor.h"
 	"particleSystem.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\colladaloader.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\colladaloader.cpp
 	"colladaLoader.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\colladaloader.h
+1334864688 c:\openframeworks0062\addons\msbofcore\colladaloader.h
 	"includes.h"
 	"renderer.h"
 	"meshData.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\input.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\input.cpp
 	"input.h"
 	"basicButton.h"
 	"listButton.h"
@@ -3837,90 +3837,90 @@
 	"assignButton.h"
 	"userPopUp.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\textinputbutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\textinputbutton.h
 	"basicButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\assignbutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\assignbutton.h
 	<basicButton.h>
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\userpopup.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\userpopup.h
 	"textInputButton.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\interpolationhelper.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\interpolationhelper.cpp
 	"interpolationHelper.h"
 	"skeletalActor.h"
 	"renderer.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\skeletalactor.h
+1334864688 c:\openframeworks0062\addons\msbofcore\skeletalactor.h
 	"skeletalDrawing.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\layer.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\layer.cpp
 	"layer.h"
 	"renderer.h"
 	"input.h"
 	"msbLight.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\meshdata.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\meshdata.cpp
 	"meshData.h"
 	"renderer.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\assignbutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\assignbutton.cpp
 	"assignButton.h"
 	"renderer.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\listbutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\listbutton.cpp
 	"listButton.h"
 	"renderer.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\movebutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\movebutton.cpp
 	"moveButton.h"
 	"input.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\movebutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\movebutton.h
 	"rotateButton.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbbuttons\rotatebutton.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbbuttons\rotatebutton.h
 	"basicButton.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\rotatebutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\rotatebutton.cpp
 	"rotateButton.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\sliderbutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\sliderbutton.cpp
 	"sliderButton.h"
 	"renderer.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\textinputbutton.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\textinputbutton.cpp
 	"textInputButton.h"
 	"renderer.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\userpopup.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msbbuttons\userpopup.cpp
 	"userPopUp.h"
 	"renderer.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\msblight.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\msblight.cpp
 	"msbLight.h"
 	"renderer.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\node.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\node.cpp
 	"node.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\nodeio.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\nodeio.cpp
 	"nodeIO.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\particlesystem.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\particlesystem.cpp
 	"particleSystem.h"
 	"input.h"
 	"meshData.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\renderer.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\renderer.cpp
 	"input.h"
 	"spriteMeshLoader.h"
 	"colladaLoader.h"
@@ -3940,19 +3940,19 @@
 	<conio.h>
 	<tchar.h>
 
-1334861088 c:\openframeworks0062\addons\msbofcore\spritemeshloader.h
+1334864688 c:\openframeworks0062\addons\msbofcore\spritemeshloader.h
 	"includes.h"
 	"skeletalDrawing.h"
 	"meshData.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\skeletalactor.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\skeletalactor.cpp
 	"skeletalActor.h"
 	"renderer.h"
 	"input.h"
 	"boneActor.h"
 	"meshData.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\skeletaldrawing.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\skeletaldrawing.cpp
 	"skeletalDrawing.h"
 	"renderer.h"
 	"boneActor.h"
@@ -3960,43 +3960,43 @@
 	"spriteMeshLoader.h"
 	"input.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\spritemeshloader.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\spritemeshloader.cpp
 	"spriteMeshLoader.h"
 	"renderer.h"
 	"input.h"
 	"base64Encode.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\base64encode.h
+1334864688 c:\openframeworks0062\addons\msbofcore\base64encode.h
 	"includes.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\textfile.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\textfile.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxml.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxml.cpp
 	<ctype.h>
 	<sstream>
 	<iostream>
 	"tinyxml.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxmlerror.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxmlerror.cpp
 	"tinyxml.h"
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxmlparser.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\tinyxml\tinyxmlparser.cpp
 	<ctype.h>
 	<stddef.h>
 	"tinyxml.h"
 	<windows.h>
 
-1334861088 source:c:\openframeworks0062\addons\msbofcore\vmath\vmath.cpp
+1334864688 source:c:\openframeworks0062\addons\msbofcore\vmath\vmath.cpp
 	"vmath.h"
 
-1334861056 source:c:\openframeworks0062\addons\ofxkinectopenni\ofxkinect.cpp
+1334864656 source:c:\openframeworks0062\addons\ofxkinectopenni\ofxkinect.cpp
 	"ofxKinect.h"
 	"ofMain.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\ofxkinect.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\ofxkinect.h
 	"ofConstants.h"
 	"ofTexture.h"
 	"ofGraphics.h"
@@ -4009,12 +4009,12 @@
 	<XnCppWrapper.h>
 	<XnFPSCalculator.h>
 
-1290007356 c:\openframeworks0062\addons\ofxthread\src\ofxthread.h
+1290010956 c:\openframeworks0062\addons\ofxthread\src\ofxthread.h
 	"ofConstants.h"
 	<process.h>
 	<pthread.h>
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxvectormath.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxvectormath.h
 	"ofxVec2f.h"
 	"ofxVec3f.h"
 	"ofxVec4f.h"
@@ -4022,32 +4022,32 @@
 	"ofxMatrix4x4.h"
 	"ofxQuaternion.h"
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec2f.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec2f.h
 	"ofConstants.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec3f.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec3f.h
 	"ofConstants.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec4f.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxvec4f.h
 	"ofConstants.h"
 	"ofTypes.h"
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix3x3.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix3x3.h
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix4x4.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix4x4.h
 	"ofxVec3f.h"
 	"ofxVec4f.h"
 	"ofxQuaternion.h"
 	<cmath>
 
-1290007356 c:\openframeworks0062\addons\ofxvectormath\src\ofxquaternion.h
+1290010956 c:\openframeworks0062\addons\ofxvectormath\src\ofxquaternion.h
 	"ofxVec3f.h"
 	"ofxVec4f.h"
 	<cmath>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnopenni.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnopenni.h
 	"XnTypes.h"
 	"XnContext.h"
 	"XnLicensing.h"
@@ -4060,14 +4060,14 @@
 	"XnStatusCodes.h"
 	"XnStatus.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xntypes.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xntypes.h
 	<XnStatus.h>
 	<XnOS.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnstatus.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnstatus.h
 	"XnPlatform.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnplatform.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnplatform.h
 	"Win32/XnPlatformWin32.h"
 	"Android-Arm/XnPlatformAndroid-Arm.h"
 	"Linux-x86/XnPlatformLinux-x86.h"
@@ -4075,7 +4075,7 @@
 	"ARC/XnPlatformARC.h"
 	"MacOSX/XnPlatformMacOSX.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\win32\xnplatformwin32.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\win32\xnplatformwin32.h
 	<windows.h>
 	<stdlib.h>
 	<stdio.h>
@@ -4085,7 +4085,7 @@
 	<assert.h>
 	<float.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-x86\xnplatformlinux-x86.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-x86\xnplatformlinux-x86.h
 	<unistd.h>
 	<stdlib.h>
 	<stdio.h>
@@ -4093,14 +4093,14 @@
 	<assert.h>
 	<limits.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-arm\xnplatformlinux-arm.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-arm\xnplatformlinux-arm.h
 	"../Linux-x86/XnPlatformLinux-x86.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\macosx\xnplatformmacosx.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\macosx\xnplatformmacosx.h
 	"../Linux-x86/XnPlatformLinux-x86.h"
 	<sys/time.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnos.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnos.h
 	"XnPlatform.h"
 	"XnMacros.h"
 	"XnStatusCodes.h"
@@ -4111,23 +4111,23 @@
 	"ARC/XnOSARC.h"
 	<new>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnmacros.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnmacros.h
 	"XnStatusCodes.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnstatuscodes.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnstatuscodes.h
 	"XnStatus.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnosstrings.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnosstrings.h
 	"XnPlatform.h"
 	<stdarg.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnosmemory.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnosmemory.h
 	"XnPlatform.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\win32\xnoswin32.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\win32\xnoswin32.h
 	<XnPlatform.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-x86\xnoslinux-x86.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\linux-x86\xnoslinux-x86.h
 	<sys/types.h>
 	<stdarg.h>
 	<time.h>
@@ -4135,138 +4135,138 @@
 	<sys/stat.h>
 	<fcntl.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncontext.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncontext.h
 	<XnTypes.h>
 	<XnQueries.h>
 	<XnPrdNodeInfoList.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnqueries.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnqueries.h
 	"XnTypes.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnodeinfolist.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnodeinfolist.h
 	<XnTypes.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlicensing.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlicensing.h
 	<XnTypes.h>
 
-1334861058 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnutils.h
+1334864658 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnutils.h
 	<XnTypes.h>
 	<XnModuleInterface.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnmoduleinterface.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnmoduleinterface.h
 	<XnTypes.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnodeinfo.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnodeinfo.h
 	<XnTypes.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnode.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnprdnode.h
 	<XnTypes.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnenumerationerrors.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnenumerationerrors.h
 	<XnTypes.h>
 
-1334861058 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnversion.h
+1334864658 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnversion.h
 	"XnPlatform.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlog.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlog.h
 	"XnOS.h"
 	"XnLogTypes.h"
 	"XnDump.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlogtypes.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnlogtypes.h
 	"XnPlatform.h"
 	"XnTypes.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xndump.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xndump.h
 	"XnPlatform.h"
 	"XnStatus.h"
 	"XnOS.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncodecids.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncodecids.h
 	"XnTypes.h"
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncppwrapper.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xncppwrapper.h
 	<XnOpenNI.h>
 	<XnCodecIDs.h>
 
-1334861056 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnfpscalculator.h
+1334864656 c:\openframeworks0062\addons\ofxkinectopenni\openni\include\xnfpscalculator.h
 	<XnPlatform.h>
 	<XnStatus.h>
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvcolorimage.cpp
 	"ofxCvGrayscaleImage.h"
 	"ofxCvColorImage.h"
 	"ofxCvFloatImage.h"
 	"ofxCvShortImage.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvcontourfinder.cpp
 	"ofxCvContourFinder.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvfloatimage.cpp
 	"ofxCvGrayscaleImage.h"
 	"ofxCvColorImage.h"
 	"ofxCvFloatImage.h"
 	"ofxCvShortImage.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvgrayscaleimage.cpp
 	"ofxCvGrayscaleImage.h"
 	"ofxCvColorImage.h"
 	"ofxCvFloatImage.h"
 	"ofxCvShortImage.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvimage.cpp
 	"ofxCvImage.h"
 	"ofxCvGrayscaleImage.h"
 	"ofxCvColorImage.h"
 	"ofxCvFloatImage.h"
 	"ofxCvBlob.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxopencv\src\ofxcvshortimage.cpp
 	"ofxCvGrayscaleImage.h"
 	"ofxCvColorImage.h"
 	"ofxCvFloatImage.h"
 	"ofxCvShortImage.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscbundle.cpp
 	"ofxOscBundle.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscmessage.cpp
 	"ofxOscMessage.h"
 	<iostream>
 	<assert.h>
 
-1290007356 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscreceiver.cpp
 	"ofxOscReceiver.h"
 	<pthread.h>
 	<iostream>
 	<assert.h>
 
-1290007356 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxosc\src\ofxoscsender.cpp
 	"ofxOscSender.h"
 	"UdpSocket.h"
 	<assert.h>
 
-1290007356 source:c:\openframeworks0062\addons\ofxthread\src\ofxthread.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxthread\src\ofxthread.cpp
 	"ofxThread.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix3x3.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix3x3.cpp
 	"ofxMatrix3x3.h"
 
-1290007356 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix4x4.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxmatrix4x4.cpp
 	"ofxMatrix4x4.h"
 	<limits>
 	<stdlib.h>
 
-1290007356 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxquaternion.cpp
+1290010956 source:c:\openframeworks0062\addons\ofxvectormath\src\ofxquaternion.cpp
 	<stdio.h>
 	"ofxQuaternion.h"
 	"ofxMatrix4x4.h"
 
-1334861088 c:\openframeworks0062\addons\msbofcore\msbofcore.h
+1334864688 c:\openframeworks0062\addons\msbofcore\msbofcore.h
 	"renderer.h"
 	"input.h"
 
-1358971470 source:c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.cpp
+1365713210 source:c:\openframeworks0062\apps\dwig\fingertracking\src\testapp.cpp
 	"testApp.h"
 	"actor.h"
 	"kCam.h"
@@ -4274,6 +4274,9 @@
 	"textInputButton.h"
 	"assignButton.h"
 	"msbLight.h"
+	<iostream>
+	<fstream>
+	<ctime>
 
 1299011238 source:c:\openframeworks0062\apps\dwig\fingertrackingdell\src\main.cpp
 	"ofMain.h"
@@ -4327,20 +4330,21 @@
 	"pilot.h"
 	"ofxOsc.h"
 
-1353961896 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcam.cpp
+1362690323 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcam.cpp
 	"kCam.h"
 	"msbOFCore.h"
+	"ofMain.h"
 
-1353961872 c:\openframeworks0062\apps\dwig\fingertracking\src\kcam.h
+1362685279 c:\openframeworks0062\apps\dwig\fingertracking\src\kcam.h
 	"ofMain.h"
 	"msbOFCore.h"
 
-1358982552 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.cpp
+1365181190 source:c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.cpp
 	"kCamManager.h"
 	"msbOFCore.h"
 	"kCam.h"
 
-1358455838 c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.h
+1358995293 c:\openframeworks0062\apps\dwig\fingertracking\src\kcammanager.h
 	"ofMain.h"
 	"msbOFCore.h"
 	"kCam.h"
